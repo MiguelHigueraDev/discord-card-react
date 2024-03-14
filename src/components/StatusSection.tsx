@@ -1,8 +1,8 @@
-const StatusSection = ({ iconUrl, text }: { iconUrl?: string; text: string }) => {
+const StatusSection = ({ iconUrl, status }: { iconUrl?: string; status: string }) => {
   return (
     <section className="discord-status-container">
       {iconUrl && <img src={iconUrl} className="discord-status-image" />}
-      <p className="discord-status-text text">{text}</p>
+      <p className="discord-status-text text">{status}</p>
     </section>
   );
 };
