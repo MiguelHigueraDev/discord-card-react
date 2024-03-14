@@ -1,5 +1,6 @@
 import BasicInfo from './BasicInfo'
 import './DiscordCard.css'
+import Separator from './Separator'
 import Status from './Status'
 const DiscordCard = () => {
   return (
@@ -17,7 +18,7 @@ const DiscordCard = () => {
             <div className="discord-card-inner-body">
                 <BasicInfo displayname="Misfit" username="misfitdude" pronouns="he/him" />
                 <Status iconUrl="raccoon.svg" text="Best HTML programmer" />
-                <div className="discord-card-separator"></div>
+                <Separator />
                 <section className="discord-card-section">
                     <h3 className="text">About Me</h3>
                     <p>
