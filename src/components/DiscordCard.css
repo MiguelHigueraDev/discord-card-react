@@ -217,12 +217,12 @@ ul {
 }
 
 .discord-card-role p {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
 }
 
 .discord-card-role-icon {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
 }
 
