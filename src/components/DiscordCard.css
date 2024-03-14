@@ -1,3 +1,9 @@
+/* General Styling */
+:root {
+    --primary-color: #007777;
+    --accent-color: #8500d3;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -6,23 +12,92 @@ html {
     box-sizing: inherit;
 }
 
-.discord-card-body {
-    width: 300px;
-    background-color: #181818;
-    border-radius: 16px;
-    padding: 16px;
-}
-
-.discord-card-username {
-    font-size: 1.5rem;
+.text {
+    color: white;
+    margin: 0;
+    padding: 0;
     text-align: start;
 }
 
-.discord-card-status {
+/* Container */
+
+.discord-card {
+    margin: 0;
+    padding: 0;
+}
+
+.discord-card-border {
+    /* Remove width restriction */
+    width: 328px;
+    /* Make the color customizable */
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    border-radius: 8px;
+}
+
+.discord-banner-container {
+    padding: 0;
+    margin: 0;
+    width: 328px;
+}
+
+.discord-banner-image {
+    width: 100%;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border-radius: 8px 8px 0px 0px;
+}
+
+.discord-card-outer-body {
+    width: 320px;
+    /* background-color: #282828; */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 8px 8px;
+    padding: 2px;
+    margin: 0 4px 4px 4px;
+}
+
+.discord-card-inner-body {
+    width: 300px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    border-radius: 16px;
+    padding: 16px;
+    margin: 20px auto;
+}
+
+.discord-card-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #282828;
+    margin: 12px 0;
+}
+
+.discord-card-displayname {
+    font-size: 1.4rem;
+    margin-bottom: 3px;
+}
+
+.discord-card-username {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+/* Status */
+
+.discord-status-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.discord-status-image {
+    width: 20px;
+    height: 20px;
+}
+
+.discord-status-text {
     font-size: 1rem;
     text-align: start;
 }
 
-.text {
-    color: white
-}
