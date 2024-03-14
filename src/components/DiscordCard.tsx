@@ -7,6 +7,9 @@ const DiscordCard = () => {
                 <img src="pfp.webp" className="discord-profile-picture" />
             </div>
             <img src="banner.png" className="discord-banner-image" />
+            <div className="discord-badges-container">
+                <img src="developer-badge.png" className="discord-badge" />
+            </div>
         </div>
         <div className="discord-card-outer-body">
             <div className="discord-card-inner-body">
