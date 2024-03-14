@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.discord-card-body {
+    width: 300px;
+    background-color: #181818;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.discord-card-username {
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.discord-card-status {
+    font-size: 1rem;
+    text-align: start;
+}
+
+.text {
+    color: white
+}
