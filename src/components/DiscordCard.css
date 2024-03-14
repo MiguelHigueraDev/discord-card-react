@@ -179,6 +179,26 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: start;
 }
 
+/* Member Since */
+.discord-member-since-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.member-since-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.discord-member-since-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #4b4b4b;
+}
+
 /* Roles */
 .discord-card-role {
     background-color: rgba(75, 75, 75, 0.55);

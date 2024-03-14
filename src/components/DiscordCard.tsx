@@ -2,6 +2,7 @@ import AboutMeSection from './AboutMeSection'
 import BasicInfoSection from './BasicInfoSection'
 import './DiscordCard.css'
 import DiscordLink from './DiscordLink'
+import MemberSinceSection from './MemberSinceSection'
 import Separator from './Separator'
 import StatusSection from './StatusSection'
 const DiscordCard = () => {
@@ -32,6 +33,7 @@ const DiscordCard = () => {
                     href="https://www.youtube.com/watch?v=NN1OtIJu_Bk"/>
                     <p>🦝❤️🦉</p>
                 </AboutMeSection>
+                <MemberSinceSection discordJoinDate="20 Jul 2016" serverJoinDate="20 Jan 2018" />
                 <section className="discord-card-section">
                     <h3 className="text">Discord Member Since</h3>
                     <p>20 Jul 2016</p>
