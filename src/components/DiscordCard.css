@@ -82,6 +82,12 @@ html {
     border-radius: 6px;
 }
 
+.discord-card-roles-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
 /* Profile picture section */
 .discord-banner-container {
     padding: 0;
@@ -138,17 +144,17 @@ html {
     font-size: 0.9rem;
 }
 
-.discord-card-text-section {
+.discord-card-section {
     margin-bottom: 10px;
 }
 
-.discord-card-text-section h3 {
+.discord-card-section h3 {
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-bottom: 6px;
 }
 
-.discord-card-text-section p, .discord-card-text-section a {
+.discord-card-section p, .discord-card-section a {
     font-size: 0.88rem;
     text-align: start;
     margin: 0;
@@ -172,5 +178,36 @@ html {
     font-size: 1rem;
     text-align: start;
 }
+
+/* Roles */
+.discord-card-role {
+    background-color: rgba(75, 75, 75, 0.55);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 0.5px solid rgba(136, 135, 135, 0.414);
+    user-select: none;
+}
+
+.discord-card-role p {
+    font-size: 0.82rem;
+}
+
+.discord-card-role-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Notes */
+.discord-card-note p {
+    font-size: 0.8rem;
+    padding: 4px;
+
+}
+
+/* Message */
 
 

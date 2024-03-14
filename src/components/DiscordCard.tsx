@@ -25,7 +25,7 @@ const DiscordCard = () => {
                     </div>
                 </div>
                 <div className="discord-card-separator"></div>
-                <div className="discord-card-text-section">
+                <section className="discord-card-section">
                     <h3 className="text">About Me</h3>
                     <p>
                         (25 y/o) Just a nerd who loves coding and technology
@@ -37,26 +37,43 @@ const DiscordCard = () => {
                     href="https://www.youtube.com/watch?v=NN1OtIJu_Bk">https://www.youtube.com/watch?v=NN1OtIJu_Bk
                     </a>
                     <p>🦝❤️🦉</p>
-                </div>
-                <div className="discord-card-text-section">
+                </section>
+                <section className="discord-card-section">
                     <h3 className="text">Discord Member Since</h3>
                     <p>20 Jul 2016</p>
-                </div>
-                <div className="discord-card-text-section">
+                </section>
+                <section className="discord-card-section">
                     <h3 className="text">Roles</h3>
                     <div className="discord-card-roles-section">
                         <div className="discord-card-role">
-                            <p className="text">Developer</p>
+                            <div className="discord-card-role-icon" style={{ backgroundColor: "#f7df1e"}}></div>
+                            <p className="text">JavaScript</p>
                         </div>
                         <div className="discord-card-role">
-                            <p className="text">Moderator</p>
+                            <div className="discord-card-role-icon" style={{ backgroundColor: "#007acc"}}></div>
+                            <p className="text">TypeScript</p>
                         </div>
                         <div className="discord-card-role">
-                            <p className="text">Bot</p>
+                            <div className="discord-card-role-icon" style={{ backgroundColor: "#4f3e66"}}></div>
+                            <p className="text">PHP</p>
+                        </div>
+                        <div className="discord-card-role">
+                            <div className="discord-card-role-icon" style={{ backgroundColor: "#4372c4"}}></div>
+                            <p className="text">CSS</p>
+                        </div>
+                        <div className="discord-card-role">
+                            <div className="discord-card-role-icon" style={{ backgroundColor: "#ed731c"}}></div>
+                            <p className="text">HTML</p>
                         </div>
                     </div>
-                </div>
-                
+                </section>
+                <section className="discord-card-section discord-card-note">
+                    <h3 className="text">Note</h3>
+                    <p>I like building stuff!</p>
+                </section>
+                <section className="message-section">
+                    <input type="text" />
+                </section>
             </div>
         </div>
     </div>
