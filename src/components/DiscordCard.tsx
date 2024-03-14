@@ -10,6 +10,7 @@ import RoleSection from "./RoleSection";
 import Separator from "./Separator";
 import StatusSection from "./StatusSection";
 import MessageSection from "./MessageSection";
+import BadgeSection from "./BadgeSection";
 
 const DiscordCard = () => {
   const [note, setNote] = useState("");
@@ -30,9 +31,13 @@ const DiscordCard = () => {
           <img src="pfp.webp" className="discord-profile-picture" />
         </div>
         <img src="banner.png" className="discord-banner-image" />
-        <div className="discord-badges-container">
-          <img src="developer-badge.png" className="discord-badge" />
-        </div>
+        <BadgeSection
+          badges={[
+            { name: "Active Developer", iconUrl: "developer-badge.png" },
+            { name: "Active Developer", iconUrl: "developer-badge.png" },
+            { name: "Active Developer", iconUrl: "developer-badge.png" },
+          ]}
+        />
       </div>
       <div className="discord-card-outer-body">
         <div className="discord-card-inner-body">
@@ -58,7 +63,11 @@ const DiscordCard = () => {
             <Role role="HTML" color="#ed731c" />
           </RoleSection>
           <NoteSection note={note} handleInput={handleNoteChange} />
-          <MessageSection message={message} handleInput={handleMessageChange} placeholder="Message @Misfit" />
+          <MessageSection
+            message={message}
+            handleInput={handleMessageChange}
+            placeholder="Message @Misfit"
+          />
         </div>
       </div>
     </div>
