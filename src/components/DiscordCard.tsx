@@ -3,6 +3,9 @@ const DiscordCard = () => {
   return (
     <div className="discord-card-border">
         <div className="discord-banner-container">
+            <div className="discord-profile-picture-border">
+                <img src="pfp.webp" className="discord-profile-picture" />
+            </div>
             <img src="banner.png" className="discord-banner-image" />
         </div>
         <div className="discord-card-outer-body">

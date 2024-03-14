@@ -27,7 +27,6 @@ html {
 }
 
 .discord-card-border {
-    /* Remove width restriction */
     width: 328px;
     /* Make the color customizable */
     background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
@@ -38,12 +37,29 @@ html {
     padding: 0;
     margin: 0;
     width: 328px;
+    position: relative;
+}
+
+.discord-profile-picture-border {
+    position: absolute;
+    z-index: 10;
+}
+
+.discord-profile-picture {
+    top: 65px;
+    left: 20px;
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--primary-color) 61%, transparent 39%);
+    padding: 3px;
 }
 
 .discord-banner-image {
     width: 100%;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    padding: 4px 4px 0px 4px;
+    margin-bottom: -6px;
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -53,7 +69,7 @@ html {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
     backdrop-filter: blur(10px);
     border-radius: 0 0 8px 8px;
-    padding: 2px;
+    padding: 35px 2px 2px 2px;
     margin: 0 4px 4px 4px;
 }
 
@@ -74,7 +90,7 @@ html {
 
 .discord-card-displayname {
     font-size: 1.4rem;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
 }
 
 .discord-card-username {
