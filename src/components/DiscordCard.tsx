@@ -1,5 +1,6 @@
 import BasicInfo from './BasicInfo'
 import './DiscordCard.css'
+import Status from './Status'
 const DiscordCard = () => {
   return (
     <div className="discord-card-border">
@@ -15,10 +16,7 @@ const DiscordCard = () => {
         <div className="discord-card-outer-body">
             <div className="discord-card-inner-body">
                 <BasicInfo displayname="Misfit" username="misfitdude" pronouns="he/him" />
-                <div className="discord-status-container">
-                    <img src="raccoon.svg" className="discord-status-image" />
-                    <p className="discord-status-text text">Best HTML programmer</p>
-                </div>
+                <Status iconUrl="raccoon.svg" text="Best HTML programmer" />
                 <div className="discord-card-separator"></div>
                 <section className="discord-card-section">
                     <h3 className="text">About Me</h3>
