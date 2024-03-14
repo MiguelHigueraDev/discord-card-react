@@ -12,6 +12,17 @@ html {
     box-sizing: inherit;
 }
 
+.discord-link {
+    color: #237fd5;
+    text-align: start;
+    display: block;
+}
+
+.discord-link:hover {
+    text-decoration: underline;
+    color: #237fd5;
+}
+
 .text {
     color: white;
     margin: 0;
@@ -22,7 +33,7 @@ html {
 .discord-card-separator {
     width: 100%;
     height: 1px;
-    background-color: #282828;
+    background-color: #5a5757;
     margin: 12px 0;
 }
 
@@ -52,7 +63,7 @@ html {
 
 .discord-card-inner-body {
     width: 300px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
     border-radius: 6px;
     padding: 16px;
     margin: 20px auto 10px auto;
@@ -109,6 +120,10 @@ html {
 
 /* Information (text) */
 
+.discord-card-basic-info {
+    margin-bottom: 8px;
+}
+
 .discord-card-displayname {
     font-size: 1.4rem;
     margin-bottom: 1px;
@@ -116,7 +131,27 @@ html {
 
 .discord-card-username {
     font-size: 1rem;
-    margin-bottom: 12px;
+    margin-bottom: 1px;
+}
+
+.discord-card-pronouns {
+    font-size: 0.9rem;
+}
+
+.discord-card-text-section {
+    margin-bottom: 10px;
+}
+
+.discord-card-text-section h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.discord-card-text-section p, .discord-card-text-section a {
+    font-size: 0.88rem;
+    text-align: start;
+    margin: 0;
 }
 
 /* Status */
@@ -137,4 +172,5 @@ html {
     font-size: 1rem;
     text-align: start;
 }
+
 

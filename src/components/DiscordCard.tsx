@@ -14,18 +14,48 @@ const DiscordCard = () => {
         <div className="discord-card-outer-body">
             <div className="discord-card-inner-body">
                 <div>
-                    <h1 className="discord-card-displayname text">Misfit</h1>
-                    <h2 className="discord-card-username text">misfitdude</h2>
+                    <div className="discord-card-basic-info">
+                        <h1 className="discord-card-displayname text">Misfit</h1>
+                        <h2 className="discord-card-username text">misfitdude</h2>
+                        <p className="discord-card-pronouns text">he/him</p>
+                    </div>
                     <div className="discord-status-container">
                         <img src="raccoon.svg" className="discord-status-image" />
                         <p className="discord-status-text text">Best HTML programmer</p>
                     </div>
                 </div>
                 <div className="discord-card-separator"></div>
-                <div>
-
+                <div className="discord-card-text-section">
+                    <h3 className="text">About Me</h3>
+                    <p>
+                        (25 y/o) Just a nerd who loves coding and technology
+                    </p>
+                    <p style={{marginBottom: 10}}>
+                        INTP
+                    </p>
+                    <a className="discord-link"
+                    href="https://www.youtube.com/watch?v=NN1OtIJu_Bk">https://www.youtube.com/watch?v=NN1OtIJu_Bk
+                    </a>
+                    <p>🦝❤️🦉</p>
                 </div>
-
+                <div className="discord-card-text-section">
+                    <h3 className="text">Discord Member Since</h3>
+                    <p>20 Jul 2016</p>
+                </div>
+                <div className="discord-card-text-section">
+                    <h3 className="text">Roles</h3>
+                    <div className="discord-card-roles-section">
+                        <div className="discord-card-role">
+                            <p className="text">Developer</p>
+                        </div>
+                        <div className="discord-card-role">
+                            <p className="text">Moderator</p>
+                        </div>
+                        <div className="discord-card-role">
+                            <p className="text">Bot</p>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </div>
