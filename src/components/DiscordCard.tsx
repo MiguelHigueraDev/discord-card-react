@@ -12,7 +12,13 @@ import StatusSection from "./StatusSection";
 import MessageSection from "./MessageSection";
 import BadgeSection from "./BadgeSection";
 
-const DiscordCard = () => {
+const DiscordCard = ({
+  imageUrl,
+  bannerUrl,
+}: {
+  imageUrl?: string;
+  bannerUrl?: string;
+}) => {
   const [note, setNote] = useState("");
   const [message, setMessage] = useState("");
 
@@ -28,14 +34,14 @@ const DiscordCard = () => {
     <div className="discord-card-border">
       <div className="discord-banner-container">
         <div className="discord-profile-picture-border">
-          <img src="pfp.webp" className="discord-profile-picture" />
+          <img src={imageUrl} className="discord-profile-picture" />
         </div>
-        <img src="banner.png" className="discord-banner-image" />
+        <img src={bannerUrl} className="discord-banner-image" />
         <BadgeSection
           badges={[
             { name: "Active Developer", iconUrl: "developer-badge.png" },
-            { name: "Active Developer", iconUrl: "developer-badge.png" },
-            { name: "Active Developer", iconUrl: "developer-badge.png" },
+            { name: "Active Developers", iconUrl: "developer-badge.png" },
+            { name: "Active Developerxd", iconUrl: "developer-badge.png" },
           ]}
         />
       </div>

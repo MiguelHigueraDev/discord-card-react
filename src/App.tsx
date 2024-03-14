@@ -4,7 +4,7 @@ import "./App.css"
 function App() {
   return (
     <div className="main-container">
-      <DiscordCard />
+      <DiscordCard imageUrl="pfp.webp" bannerUrl="banner.png" />
     </div>
   )
 }
