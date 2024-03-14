@@ -1,3 +1,4 @@
+import BasicInfo from './BasicInfo'
 import './DiscordCard.css'
 const DiscordCard = () => {
   return (
@@ -13,16 +14,10 @@ const DiscordCard = () => {
         </div>
         <div className="discord-card-outer-body">
             <div className="discord-card-inner-body">
-                <div>
-                    <div className="discord-card-basic-info">
-                        <h1 className="discord-card-displayname text">Misfit</h1>
-                        <h2 className="discord-card-username text">misfitdude</h2>
-                        <p className="discord-card-pronouns text">he/him</p>
-                    </div>
-                    <div className="discord-status-container">
-                        <img src="raccoon.svg" className="discord-status-image" />
-                        <p className="discord-status-text text">Best HTML programmer</p>
-                    </div>
+                <BasicInfo displayname="Misfit" username="misfitdude" pronouns="he/him" />
+                <div className="discord-status-container">
+                    <img src="raccoon.svg" className="discord-status-image" />
+                    <p className="discord-status-text text">Best HTML programmer</p>
                 </div>
                 <div className="discord-card-separator"></div>
                 <section className="discord-card-section">
