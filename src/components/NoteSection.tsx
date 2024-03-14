@@ -27,7 +27,7 @@ const NoteSection = ({
 
   return (
     <section className="discord-card-section discord-card-note">
-      {title && <h3>{title}</h3>}
+      {title ? <h3>{title}</h3> : <h3>Note</h3>}
       <textarea
         placeholder={placeholder ? placeholder : "Add a note"}
         value={note}

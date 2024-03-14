@@ -51,10 +51,6 @@ const DiscordCard = () => {
             <Role role="CSS" color="#4372c4" />
             <Role role="HTML" color="#ed731c" />
           </RoleSection>
-          <section className="discord-card-section discord-card-note">
-            <h3 className="text">Note</h3>
-            <p>I like building stuff!</p>
-          </section>
           <NoteSection note={note} handleInput={handleNoteChange} />
           <section className="message-section">
             <textarea placeholder="Message @Misfit"></textarea>
