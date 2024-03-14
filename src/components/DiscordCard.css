@@ -131,12 +131,12 @@ html {
 }
 
 .discord-card-displayname {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-bottom: 1px;
 }
 
 .discord-card-username {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 1px;
 }
 
@@ -175,7 +175,7 @@ html {
 }
 
 .discord-status-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-align: start;
 }
 
