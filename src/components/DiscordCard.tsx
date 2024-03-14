@@ -1,6 +1,7 @@
 import AboutMeSection from './AboutMeSection'
 import BasicInfoSection from './BasicInfoSection'
 import './DiscordCard.css'
+import DiscordLink from './DiscordLink'
 import Separator from './Separator'
 import StatusSection from './StatusSection'
 const DiscordCard = () => {
@@ -27,9 +28,8 @@ const DiscordCard = () => {
                     <p style={{marginBottom: 10}}>
                         INTP
                     </p>
-                    <a className="discord-link"
-                    href="https://www.youtube.com/watch?v=NN1OtIJu_Bk">https://www.youtube.com/watch?v=NN1OtIJu_Bk
-                    </a>
+                    <DiscordLink
+                    href="https://www.youtube.com/watch?v=NN1OtIJu_Bk"/>
                     <p>🦝❤️🦉</p>
                 </AboutMeSection>
                 <section className="discord-card-section">
