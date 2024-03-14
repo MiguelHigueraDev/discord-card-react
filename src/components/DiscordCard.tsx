@@ -3,6 +3,8 @@ import BasicInfoSection from './BasicInfoSection'
 import './DiscordCard.css'
 import DiscordLink from './DiscordLink'
 import MemberSinceSection from './MemberSinceSection'
+import Role from './Role'
+import RoleSection from './RoleSection'
 import Separator from './Separator'
 import StatusSection from './StatusSection'
 const DiscordCard = () => {
@@ -20,7 +22,7 @@ const DiscordCard = () => {
         <div className="discord-card-outer-body">
             <div className="discord-card-inner-body">
                 <BasicInfoSection displayname="Misfit" username="misfitdude" pronouns="he/him" />
-                <StatusSection iconUrl="raccoon.svg" text="Best HTML programmer" />
+                <StatusSection iconUrl="raccoon.svg" status="Best HTML programmer" />
                 <Separator />
                 <AboutMeSection>
                     <p>
@@ -33,36 +35,14 @@ const DiscordCard = () => {
                     href="https://www.youtube.com/watch?v=NN1OtIJu_Bk"/>
                     <p>🦝❤️🦉</p>
                 </AboutMeSection>
-                <MemberSinceSection discordJoinDate="20 Jul 2016" serverJoinDate="20 Jan 2018" />
-                <section className="discord-card-section">
-                    <h3 className="text">Discord Member Since</h3>
-                    <p>20 Jul 2016</p>
-                </section>
-                <section className="discord-card-section">
-                    <h3 className="text">Roles</h3>
-                    <div className="discord-card-roles-section">
-                        <div className="discord-card-role">
-                            <div className="discord-card-role-icon" style={{ backgroundColor: "#f7df1e"}}></div>
-                            <p className="text">JavaScript</p>
-                        </div>
-                        <div className="discord-card-role">
-                            <div className="discord-card-role-icon" style={{ backgroundColor: "#007acc"}}></div>
-                            <p className="text">TypeScript</p>
-                        </div>
-                        <div className="discord-card-role">
-                            <div className="discord-card-role-icon" style={{ backgroundColor: "#4f3e66"}}></div>
-                            <p className="text">PHP</p>
-                        </div>
-                        <div className="discord-card-role">
-                            <div className="discord-card-role-icon" style={{ backgroundColor: "#4372c4"}}></div>
-                            <p className="text">CSS</p>
-                        </div>
-                        <div className="discord-card-role">
-                            <div className="discord-card-role-icon" style={{ backgroundColor: "#ed731c"}}></div>
-                            <p className="text">HTML</p>
-                        </div>
-                    </div>
-                </section>
+                <MemberSinceSection discordJoinDate="20 Jul 2016" />
+                <RoleSection>
+                    <Role role="JavaScript" color="#f7df1e" />
+                    <Role role="TypeScript" color="#007acc" />
+                    <Role role="PHP" color="#4f3e66" />
+                    <Role role="CSS" color="#4372c4" />
+                    <Role role="HTML" color="#ed731c" />
+                </RoleSection>
                 <section className="discord-card-section discord-card-note">
                     <h3 className="text">Note</h3>
                     <p>I like building stuff!</p>

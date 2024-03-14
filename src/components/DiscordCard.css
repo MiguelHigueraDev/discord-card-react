@@ -30,6 +30,11 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: start;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .discord-card-separator {
     width: 100%;
     height: 1px;
