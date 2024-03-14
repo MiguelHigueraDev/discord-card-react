@@ -9,12 +9,18 @@ import Role from "./Role";
 import RoleSection from "./RoleSection";
 import Separator from "./Separator";
 import StatusSection from "./StatusSection";
+import MessageSection from "./MessageSection";
 
 const DiscordCard = () => {
   const [note, setNote] = useState("");
+  const [message, setMessage] = useState("");
 
   function handleNoteChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
     setNote(event.target.value);
+  }
+
+  function handleMessageChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    setMessage(event.target.value);
   }
 
   return (
@@ -52,9 +58,7 @@ const DiscordCard = () => {
             <Role role="HTML" color="#ed731c" />
           </RoleSection>
           <NoteSection note={note} handleInput={handleNoteChange} />
-          <section className="message-section">
-            <textarea placeholder="Message @Misfit"></textarea>
-          </section>
+          <MessageSection message={message} handleInput={handleMessageChange} placeholder="Message @Misfit" />
         </div>
       </div>
     </div>
