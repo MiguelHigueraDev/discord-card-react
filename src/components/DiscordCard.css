@@ -55,7 +55,7 @@ html {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
     border-radius: 6px;
     padding: 16px;
-    margin: 20px auto;
+    margin: 20px auto 10px auto;
 }
 
 .discord-badges-container {
