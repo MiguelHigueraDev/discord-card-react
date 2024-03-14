@@ -1,7 +1,8 @@
-import BasicInfo from './BasicInfo'
+import AboutMeSection from './AboutMeSection'
+import BasicInfoSection from './BasicInfoSection'
 import './DiscordCard.css'
 import Separator from './Separator'
-import Status from './Status'
+import StatusSection from './StatusSection'
 const DiscordCard = () => {
   return (
     <div className="discord-card-border">
@@ -16,11 +17,10 @@ const DiscordCard = () => {
         </div>
         <div className="discord-card-outer-body">
             <div className="discord-card-inner-body">
-                <BasicInfo displayname="Misfit" username="misfitdude" pronouns="he/him" />
-                <Status iconUrl="raccoon.svg" text="Best HTML programmer" />
+                <BasicInfoSection displayname="Misfit" username="misfitdude" pronouns="he/him" />
+                <StatusSection iconUrl="raccoon.svg" text="Best HTML programmer" />
                 <Separator />
-                <section className="discord-card-section">
-                    <h3 className="text">About Me</h3>
+                <AboutMeSection>
                     <p>
                         (25 y/o) Just a nerd who loves coding and technology
                     </p>
@@ -31,7 +31,7 @@ const DiscordCard = () => {
                     href="https://www.youtube.com/watch?v=NN1OtIJu_Bk">https://www.youtube.com/watch?v=NN1OtIJu_Bk
                     </a>
                     <p>🦝❤️🦉</p>
-                </section>
+                </AboutMeSection>
                 <section className="discord-card-section">
                     <h3 className="text">Discord Member Since</h3>
                     <p>20 Jul 2016</p>

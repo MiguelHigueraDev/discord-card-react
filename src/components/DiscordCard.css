@@ -23,7 +23,7 @@ html {
     color: #237fd5;
 }
 
-.text {
+p, h1, h2, h3, h4, h5, h6 {
     color: white;
     margin: 0;
     padding: 0;
