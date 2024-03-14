@@ -72,7 +72,7 @@ const DiscordCard = () => {
                     <p>I like building stuff!</p>
                 </section>
                 <section className="message-section">
-                    <input type="text" />
+                    <textarea placeholder="Message @Misfit"></textarea>
                 </section>
             </div>
         </div>
