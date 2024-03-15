@@ -31,15 +31,16 @@ const DiscordCard = ({
         <div className="discord-profile-picture-border">
           <img
             src={imageUrl}
+            alt="Discord profile picture"
             className="discord-profile-picture"
             style={{
               background: `linear-gradient(to bottom, ${primaryColor} 60%, transparent 40%)`,
             }}
           />
         </div>
-        <img src={bannerUrl} className="discord-banner-image" />
+        <img src={bannerUrl} className="discord-banner-image" alt="" />
         <div className="discord-card-status-container">
-            <img src={`${status}.png`} className="discord-card-status-icon" />
+            <img src={`${status}.png`} className="discord-card-status-icon" alt="" aria-label={`This user's status is ${status}`} />
         </div>
         {badges && <BadgeSection badges={badges} />}
       </div>

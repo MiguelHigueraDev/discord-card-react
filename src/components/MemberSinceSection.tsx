@@ -48,8 +48,8 @@ const MemberSinceSection = ({
             {serverIconUrl && (
               <img
                 className="member-since-icon"
+                alt=""
                 aria-label={serverName}
-                role="img"
                 src={serverIconUrl}
               />
             )}
