@@ -314,6 +314,7 @@ textarea {
 .discord-card-activity-header img {
     width: 20px;
     height: 20px;
+    user-select: none;
 }
 
 .discord-card-activity-body {
@@ -325,6 +326,7 @@ textarea {
 .discord-card-activity-body > div img {
     width: 65px;
     height: 65px;
+    user-select: none;
 }
 
 .discord-card-activity-title {
