@@ -337,3 +337,19 @@ textarea {
 .discord-card-activity-title {
     font-weight: 700;
 }
+
+.discord-card-spotify-button {
+    display: block;
+    width: 100%;
+    background-color: #383838;
+    padding: 6px 4px;
+    text-align: center !important;
+    margin-top: 6px !important;
+    border-radius: 6px;
+    color: white;
+}
+
+.discord-card-spotify-button:hover {
+    background-color: #484848;
+    color: white;
+}

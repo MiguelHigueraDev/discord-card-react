@@ -130,6 +130,8 @@ function App() {
           placeholder: "Message @Misfit",
           accentColor: "#8500d3",
         }}
+        showSpotify={true}
+        showGames={true}
       >
         
       </LanyardDiscordCard>
