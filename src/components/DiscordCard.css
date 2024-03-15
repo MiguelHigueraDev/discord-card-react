@@ -55,6 +55,7 @@ ul {
     /* Make the color customizable */
     background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
     border-radius: 8px;
+    z-index: 20;
 }
 
 .discord-card-outer-body {
@@ -115,15 +116,26 @@ ul {
     height: 85px;
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(to bottom, var(--primary-color) 61%, transparent 39%);
+    background: linear-gradient(to bottom, var(--primary-color) 60%, transparent 40%);
     padding: 3px;
 }
 
 .discord-banner-image {
-    width: 100%;
+    width: 328px;
+    height: 116px;
     padding: 4px 4px 0px 4px;
     margin-bottom: -6px;
     border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+}
+
+.discord-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Change the color and opacity here */
 }
 
 .discord-badge {

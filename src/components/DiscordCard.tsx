@@ -16,8 +16,8 @@ const DiscordCard = ({
   imageUrl,
   bannerUrl,
 }: {
-  imageUrl?: string;
-  bannerUrl?: string;
+  imageUrl: string;
+  bannerUrl: string;
 }) => {
   const [note, setNote] = useState("");
   const [message, setMessage] = useState("");
@@ -40,8 +40,6 @@ const DiscordCard = ({
         <BadgeSection
           badges={[
             { name: "Active Developer", iconUrl: "developer-badge.png" },
-            { name: "Active Developers", iconUrl: "developer-badge.png" },
-            { name: "Active Developerxd", iconUrl: "developer-badge.png" },
           ]}
         />
       </div>
