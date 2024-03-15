@@ -16,6 +16,7 @@ import { MessageSectionProps } from "../interfaces/MessageSectionProps";
 import { NoteSectionProps } from "../interfaces/NoteSectionProps";
 import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
+import SpotifySection from "./SpotifySection";
 
 const LanyardDiscordCard = ({
   userId,
@@ -31,6 +32,8 @@ const LanyardDiscordCard = ({
   roles,
   note,
   message,
+  showSpotify = true,
+  showGames = true,
   children,
 }: {
   userId: string;
@@ -46,6 +49,8 @@ const LanyardDiscordCard = ({
   roles?: RoleSectionProps;
   note?: NoteSectionProps;
   message?: MessageSectionProps;
+  showSpotify?: boolean;
+  showGames?: boolean;
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
   const { status: lanyard } = useLanyard({
@@ -75,10 +80,16 @@ const LanyardDiscordCard = ({
             <Separator />
           </>
         )}
-        {aboutMe && (
-          <AboutMeSection {...aboutMe} />
-        )}
+        {aboutMe && <AboutMeSection {...aboutMe} />}
         {memberSince && <MemberSinceSection {...memberSince} />}
+        {lanyard && (
+          <>
+            {showSpotify && lanyard.spotify && (
+              <SpotifySection artist={lanyard.spotify.artist} song={lanyard.spotify.song} album={lanyard.spotify.album} artUrl={lanyard.spotify.album_art_url} />
+            )}
+          </>
+        )}
+
         {roles && <RoleSection {...roles} />}
         {note && <NoteSection {...note} />}
         {message && <MessageSection {...message} />}
