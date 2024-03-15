@@ -30,6 +30,7 @@ const AboutMeSection = ({
               className="discord-link"
               style={{ marginBottom: item.marginBottom }}
               href={item.href}
+              target="_blank"
             >
               {item.text}
             </a>
