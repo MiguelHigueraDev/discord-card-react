@@ -12,6 +12,10 @@ import AboutMeSection from "./AboutMeSection";
 import Separator from "./Separator";
 import MemberSinceSection from "./MemberSinceSection";
 import RoleSection from "./RoleSection";
+import { MessageSectionProps } from "../interfaces/MessageSectionProps";
+import { NoteSectionProps } from "../interfaces/NoteSectionProps";
+import NoteSection from "./NoteSection";
+import MessageSection from "./MessageSection";
 
 const LanyardDiscordCard = ({
   userId,
@@ -25,6 +29,8 @@ const LanyardDiscordCard = ({
   aboutMe,
   memberSince,
   roles,
+  note,
+  message,
   children,
 }: {
   userId: string;
@@ -38,10 +44,11 @@ const LanyardDiscordCard = ({
   aboutMe?: AboutMeSectionProps;
   memberSince?: MemberSinceSectionProps;
   roles?: RoleSectionProps;
-  pronouns?: string;
+  note?: NoteSectionProps;
+  message?: MessageSectionProps;
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
-  const { status: lanyardStatus } = useLanyard({
+  const { status: lanyard } = useLanyard({
     userId,
     socket: true,
   });
@@ -53,7 +60,7 @@ const LanyardDiscordCard = ({
       primaryColor={primaryColor}
       accentColor={accentColor}
       badges={badges}
-      status={lanyardStatus ? lanyardStatus.discord_status : "offline"}
+      status={lanyard ? lanyard.discord_status : "offline"}
     >
       <>
         {basicInfo && (
@@ -73,6 +80,8 @@ const LanyardDiscordCard = ({
         )}
         {memberSince && <MemberSinceSection {...memberSince} />}
         {roles && <RoleSection {...roles} />}
+        {note && <NoteSection {...note} />}
+        {message && <MessageSection {...message} />}
       </>
 
       <>{children}</>

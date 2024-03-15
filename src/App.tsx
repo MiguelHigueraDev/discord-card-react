@@ -120,6 +120,16 @@ function App() {
             { name: "HTML", color: "#ed731c" },
           ],
         }}
+        note={{
+          note: note,
+          handleInput: handleNoteChange,
+        }}
+        message={{
+          message: message,
+          handleInput: handleMessageChange,
+          placeholder: "Message @Misfit",
+          accentColor: "#8500d3",
+        }}
       >
         
       </LanyardDiscordCard>
