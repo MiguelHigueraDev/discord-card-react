@@ -30,6 +30,10 @@ function App() {
         imageUrl="pfp.webp"
         bannerUrl="banner.png"
         primaryColor="#007777"
+        badges={[
+          { name: "Active Developer", iconUrl: "developer-badge.png" },
+        ]}
+        status={"dnd"}
         accentColor="#8500d3"
       >
         <BasicInfoSection

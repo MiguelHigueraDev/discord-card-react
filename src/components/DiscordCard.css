@@ -181,6 +181,27 @@ ul {
     margin: 0;
 }
 
+.discord-card-status-container {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(34, 34, 34, 0.913);
+    top: 125px;
+    right: 226px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discord-card-status-icon {
+    top: 125px;
+    right: 226px;
+    width: 14px;
+    height: 14px;
+}
+
 /* Status */
 
 .discord-status-container {

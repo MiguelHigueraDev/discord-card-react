@@ -1,0 +1,1 @@
+export type Status = "online" | "dnd" | "idle" | "offline";
