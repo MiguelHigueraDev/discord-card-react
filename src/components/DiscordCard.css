@@ -86,6 +86,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 6px;
     padding: 3px;
+    user-select: none;
 }
 
 .discord-card-roles-section {
@@ -100,6 +101,7 @@ ul {
     margin: 0;
     width: 328px;
     position: relative;
+    user-select: none;
 }
 
 .discord-profile-picture-border {
@@ -193,6 +195,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 .discord-card-status-icon {
