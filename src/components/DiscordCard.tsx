@@ -27,9 +27,9 @@ const DiscordCard = ({
   bannerUrl,
   primaryColor,
   accentColor,
+  basicInfo,
   connectionStatus = "online",
   badges,
-  basicInfo,
   status,
   aboutMe,
   memberSince,
@@ -44,9 +44,9 @@ const DiscordCard = ({
   bannerUrl: string;
   primaryColor: string;
   accentColor: string;
+  basicInfo: BasicInfoSectionProps;
   connectionStatus?: ConnectionStatus;
   badges?: Badge[];
-  basicInfo?: BasicInfoSectionProps;
   status?: StatusSectionProps;
   aboutMe?: AboutMeSectionProps;
   memberSince?: MemberSinceSectionProps;
@@ -67,12 +67,10 @@ const DiscordCard = ({
       connectionStatus={connectionStatus}
     >
       <>
-        {basicInfo && (
-          <>
-            <BasicInfoSection {...basicInfo} />
-            <>{status == null && <Separator />}</>
-          </>
-        )}
+        <>
+          <BasicInfoSection {...basicInfo} />
+          <>{status == null && <Separator />}</>
+        </>
         {status && (
           <>
             <StatusSection {...status} />

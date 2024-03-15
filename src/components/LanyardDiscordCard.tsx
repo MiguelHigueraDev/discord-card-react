@@ -26,8 +26,8 @@ const LanyardDiscordCard = ({
   bannerUrl,
   primaryColor,
   accentColor,
-  badges,
   basicInfo,
+  badges,
   status,
   aboutMe,
   memberSince,
@@ -44,8 +44,8 @@ const LanyardDiscordCard = ({
   bannerUrl: string;
   primaryColor: string;
   accentColor: string;
+  basicInfo: BasicInfoSectionProps;
   badges?: Badge[];
-  basicInfo?: BasicInfoSectionProps;
   status?: StatusSectionProps;
   aboutMe?: AboutMeSectionProps;
   memberSince?: MemberSinceSectionProps;
@@ -73,6 +73,7 @@ const LanyardDiscordCard = ({
    * If priority is "game" and showGames is true, and currentGame is not null render GameSection
    * If priority is "default", behavior is the same as "spotify" (This is how Discord behaves)
    * If priority is "none", render both SpotifySection and GameSection if they are not null
+   * WARNING: MESSY CODE
    */
   const renderSections = () => {
     if (priority === "spotify") {
@@ -223,12 +224,8 @@ const LanyardDiscordCard = ({
       connectionStatus={lanyard ? lanyard.discord_status : "offline"}
     >
       <>
-        {basicInfo && (
-          <>
-            <BasicInfoSection {...basicInfo} />
-            <>{status == null && <Separator />}</>
-          </>
-        )}
+        <BasicInfoSection {...basicInfo} />
+        <>{status == null && <Separator />}</>
         {status && (
           <>
             <StatusSection {...status} />

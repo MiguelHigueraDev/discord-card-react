@@ -78,13 +78,15 @@ function App() {
         bannerUrl="banner.png"
         primaryColor="#007777"
         accentColor="#8500d3"
-        badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
         connectionStatus="dnd"
         basicInfo={{
           displayname: "Misfit",
           username: "misfitdude",
+          // Pronouns are optional
           pronouns: "he/him",
         }}
+        // All these are optional
+        badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
         status={{
           status: "Best HTML Programmer",
           iconUrl: "raccoon.svg",
@@ -148,12 +150,13 @@ function App() {
         bannerUrl="banner.png"
         primaryColor="#007777"
         accentColor="#8500d3"
-        badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
         basicInfo={{
           displayname: "Misfit",
           username: "misfitdude",
           pronouns: "he/him",
         }}
+        // All these are optional
+        badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
         status={{
           status: "Best HTML Programmer",
           iconUrl: "raccoon.svg",
@@ -203,7 +206,7 @@ function App() {
         }}
         showSpotify={true}
         showGames={true}
-        priority="default"
+        priority="spotify"
       ></LanyardDiscordCard>
     </div>
   );
