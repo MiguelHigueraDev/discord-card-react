@@ -85,7 +85,7 @@ const LanyardDiscordCard = ({
         {lanyard && (
           <>
             {showSpotify && lanyard.spotify && (
-              <SpotifySection artist={lanyard.spotify.artist} song={lanyard.spotify.song} album={lanyard.spotify.album} artUrl={lanyard.spotify.album_art_url} />
+              <SpotifySection artist={lanyard.spotify.artist} song={lanyard.spotify.song} album={lanyard.spotify.album} artUrl={lanyard.spotify.album_art_url} trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`} />
             )}
           </>
         )}

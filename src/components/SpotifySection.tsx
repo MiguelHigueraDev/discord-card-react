@@ -22,13 +22,17 @@ const SpotifySection = ({
       <div className="discord-card-activity-body">
         {artUrl && (
           <div>
-            <img src={artUrl} />
+            {trackUrl ? (
+              <a href={trackUrl} target="_blank"><img src={artUrl} alt={album} /></a>
+            ): (
+              <img src={artUrl} alt={album} />
+            )}
           </div>
         )}
         <div>
-          <p className="discord-card-activity-title">{song.length <= 30 ? song : `${song.substring(0, 30)}...`}</p>
-          <p className="discord-card-activity-text">{artist.length <= 30 ? artist : `${artist.substring(0, 30)}...`}</p>
-          <p className="discord-card-activity-text">{album.length <= 30 ? album : `${album.substring(0, 30)}...`}</p>
+          <p className="discord-card-activity-title">{song.length <= 20 ? song : `${song.substring(0, 20)}...`}</p>
+          <p className="discord-card-activity-text">{artist.length <= 20 ? artist : `${artist.substring(0, 20)}...`}</p>
+          <p className="discord-card-activity-text">{album.length <= 20 ? album : `${album.substring(0, 20)}...`}</p>
         </div>
       </div>
     </section>
