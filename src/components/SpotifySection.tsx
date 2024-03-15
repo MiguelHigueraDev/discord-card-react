@@ -4,12 +4,14 @@ const SpotifySection = ({
   artist,
   album,
   artUrl,
+  trackUrl,
 }: {
   title?: string;
   song: string;
   artist: string;
   album: string;
   artUrl?: string;
+  trackUrl?: string;
 }) => {
   return (
     <section className="discord-card-section">
