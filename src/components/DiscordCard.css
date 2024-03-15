@@ -236,6 +236,7 @@ ul {
 .member-since-icon {
     width: 14px;
     height: 14px;
+    border-radius: 50%;
 }
 
 .discord-member-since-dot {
