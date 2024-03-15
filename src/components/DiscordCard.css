@@ -327,7 +327,9 @@ textarea {
 .discord-card-activity-body > div img {
     width: 65px;
     height: 65px;
+    border-radius: 6px;
     user-select: none;
+    object-fit: cover;
 }
 
 .discord-card-activity p {
