@@ -330,7 +330,10 @@ textarea {
     user-select: none;
 }
 
+.discord-card-activity p {
+    font-size: 0.8rem;
+}
+
 .discord-card-activity-title {
-    font-weight: 800;
-    font-size: 1.1rem;
+    font-weight: 700;
 }
