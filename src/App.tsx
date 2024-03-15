@@ -23,6 +23,7 @@ function App() {
   function handleMessageChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
     setMessage(event.target.value);
   }
+  
   return (
     <div className="main-container">
       <DiscordCard
@@ -57,6 +58,7 @@ function App() {
           message={message}
           handleInput={handleMessageChange}
           placeholder="Message @Misfit"
+          accentColor="#8500d3"
         />
       </DiscordCard>
     </div>

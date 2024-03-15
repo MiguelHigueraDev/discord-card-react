@@ -267,7 +267,6 @@ textarea {
     width: 100%;
     height: 40px;
     border-radius: 8px;
-    border: 0.5px solid var(--accent-color);
     background-color: rgba(75, 75, 75, 0);
     padding: 12px 12px;
     font-size: 0.9rem;

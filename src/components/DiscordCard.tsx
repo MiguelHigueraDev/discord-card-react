@@ -1,5 +1,4 @@
 import "./DiscordCard.css";
-
 import BadgeSection from "./BadgeSection";
 
 const DiscordCard = ({
