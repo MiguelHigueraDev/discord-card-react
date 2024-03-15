@@ -15,7 +15,7 @@ const SpotifySection = ({
 }) => {
   return (
     <section className="discord-card-section">
-      <div className="discord-card-activity-header">
+      <div className="discord-card-activity-header" style={{marginBottom: 2}}>
         {title ? <h3>{title}</h3> : <h3>Listening to Spotify</h3>}
         <img src="spotify.svg" alt="" />
       </div>
