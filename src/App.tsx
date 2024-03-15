@@ -79,35 +79,49 @@ function App() {
         primaryColor="#007777"
         accentColor="#8500d3"
         badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
+        basicInfo={{
+          displayname: "Misfit",
+          username: "misfitdude",
+          pronouns: "he/him",
+        }}
+        status={{
+          status: "Best HTML Programmer",
+          iconUrl: "raccoon.svg",
+        }}
+        aboutMe={{
+          items: [
+            {
+              text: "(25 y/o) Just a nerd who loves coding and technology",
+            },
+            {
+              text: "INTP",
+              marginBottom: 8,
+            },
+            {
+              href: "https://www.youtube.com/watch?v=NN1OtIJu_Bk",
+              text: "https://www.youtube.com/watch?v=NN1OtIJu_Bk",
+            },
+            {
+              text: "🦝❤️🦉",
+            },
+          ]
+        }}
+        memberSince={{
+          discordJoinDate: "20 Jul 2016",
+          serverJoinDate: "1 Sep 2020",
+          serverIconUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
+        }}
+        roles={{
+          roles: [
+            { name: "JavaScript", color: "#f7df1e" },
+            { name: "TypeScript", color: "#007acc" },
+            { name: "PHP", color: "#4f3e66" },
+            { name: "CSS", color: "#4372c4" },
+            { name: "HTML", color: "#ed731c" },
+          ],
+        }}
       >
-        <BasicInfoSection
-          displayname="Misfit"
-          username="misfitdude"
-          pronouns="he/him"
-        />
-        <StatusSection iconUrl="raccoon.svg" status="Best HTML programmer" />
-        <Separator />
-        <AboutMeSection>
-          <p>(25 y/o) Just a nerd who loves coding and technology</p>
-          <p style={{ marginBottom: 10 }}>INTP</p>
-          <DiscordLink href="https://www.youtube.com/watch?v=NN1OtIJu_Bk" />
-          <p>🦝❤️🦉</p>
-        </AboutMeSection>
-        <MemberSinceSection discordJoinDate="20 Jul 2016" />
-        <RoleSection>
-          <Role role="JavaScript" color="#f7df1e" />
-          <Role role="TypeScript" color="#007acc" />
-          <Role role="PHP" color="#4f3e66" />
-          <Role role="CSS" color="#4372c4" />
-          <Role role="HTML" color="#ed731c" />
-        </RoleSection>
-        <NoteSection note={note} handleInput={handleNoteChange} />
-        <MessageSection
-          message={message}
-          handleInput={handleMessageChange}
-          placeholder="Message @Misfit"
-          accentColor="#8500d3"
-        />
+        
       </LanyardDiscordCard>
     </div>
   );

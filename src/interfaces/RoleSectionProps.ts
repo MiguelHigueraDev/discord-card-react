@@ -1,6 +1,6 @@
 import { Role } from "./Role"
 
-export interface RolesSectionProps {
+export interface RoleSectionProps {
     title?: string
     roles: Role[]
 }
