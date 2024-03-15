@@ -220,7 +220,7 @@ const LanyardDiscordCard = ({
       primaryColor={primaryColor}
       accentColor={accentColor}
       badges={badges}
-      status={lanyard ? lanyard.discord_status : "offline"}
+      connectionStatus={lanyard ? lanyard.discord_status : "offline"}
     >
       <>
         {basicInfo && (

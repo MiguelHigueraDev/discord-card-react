@@ -1,53 +1,94 @@
-import "./DiscordCard.css";
-import BadgeSection from "./BadgeSection";
+import React from "react";
 import { Badge } from "../interfaces/Badge";
-import { Status } from "../interfaces/Status";
+import { BasicInfoSectionProps } from "../interfaces/BasicInfoSectionProps";
+import { StatusSectionProps } from "../interfaces/StatusSectionProps";
+import { AboutMeSectionProps } from "../interfaces/AboutMeSectionProps";
+import { MemberSinceSectionProps } from "../interfaces/MemberSinceSectionProps";
+import { RoleSectionProps } from "../interfaces/RoleSectionProps";
+import { NoteSectionProps } from "../interfaces/NoteSectionProps";
+import { MessageSectionProps } from "../interfaces/MessageSectionProps";
+import { SpotifySectionProps } from "../interfaces/SpotifySectionProps";
+import BaseDiscordCard from "./BaseDiscordCard";
+import { ConnectionStatus } from "../interfaces/ConnectionStatus";
+import BasicInfoSection from "./BasicInfoSection";
+import Separator from "./Separator";
+import StatusSection from "./StatusSection";
+import AboutMeSection from "./AboutMeSection";
+import MemberSinceSection from "./MemberSinceSection";
+import RoleSection from "./RoleSection";
+import NoteSection from "./NoteSection";
+import MessageSection from "./MessageSection";
+import SpotifySection from "./SpotifySection";
+import { GameSectionProps } from "../interfaces/GameSectionProps";
+import GameSection from "./GameSection";
 
 const DiscordCard = ({
   imageUrl,
   bannerUrl,
   primaryColor,
   accentColor,
+  connectionStatus = "online",
   badges,
-  status = "online",
+  basicInfo,
+  status,
+  aboutMe,
+  memberSince,
+  roles,
+  note,
+  message,
+  spotify,
+  game,
   children,
 }: {
   imageUrl: string;
   bannerUrl: string;
   primaryColor: string;
   accentColor: string;
+  connectionStatus?: ConnectionStatus;
   badges?: Badge[];
-  status?: Status;
-  children: React.JSX.Element | React.JSX.Element[];
+  basicInfo?: BasicInfoSectionProps;
+  status?: StatusSectionProps;
+  aboutMe?: AboutMeSectionProps;
+  memberSince?: MemberSinceSectionProps;
+  roles?: RoleSectionProps;
+  note?: NoteSectionProps;
+  message?: MessageSectionProps;
+  spotify?: SpotifySectionProps;
+  game?: GameSectionProps;
+  children?: React.JSX.Element | React.JSX.Element[];
 }) => {
   return (
-    <div
-      className="discord-card-border"
-      style={{
-        background: `linear-gradient(to bottom, ${primaryColor}, ${accentColor})`,
-      }}
+    <BaseDiscordCard
+      imageUrl={imageUrl}
+      bannerUrl={bannerUrl}
+      primaryColor={primaryColor}
+      accentColor={accentColor}
+      badges={badges}
+      connectionStatus={connectionStatus}
     >
-      <div className="discord-banner-container">
-        <div className="discord-profile-picture-border">
-          <img
-            src={imageUrl}
-            alt="Discord profile picture"
-            className="discord-profile-picture"
-            style={{
-              background: `linear-gradient(to bottom, ${primaryColor} 60%, transparent 40%)`,
-            }}
-          />
-        </div>
-        <img src={bannerUrl} className="discord-banner-image" alt="" />
-        <div className="discord-card-status-container">
-            <img src={`${status}.png`} className="discord-card-status-icon" alt="" aria-label={`This user's status is ${status}`} />
-        </div>
-        {badges && <BadgeSection badges={badges} />}
-      </div>
-      <div className="discord-card-outer-body">
-        <div className="discord-card-inner-body">{children}</div>
-      </div>
-    </div>
+      <>
+        {basicInfo && (
+          <>
+            <BasicInfoSection {...basicInfo} />
+            <>{status == null && <Separator />}</>
+          </>
+        )}
+        {status && (
+          <>
+            <StatusSection {...status} />
+            <Separator />
+          </>
+        )}
+        {aboutMe && <AboutMeSection {...aboutMe} />}
+        {memberSince && <MemberSinceSection {...memberSince} />}
+        {spotify && <SpotifySection {...spotify} />}
+        {game && <GameSection {...game} />}
+        {roles && <RoleSection {...roles} />}
+        {note && <NoteSection {...note} />}
+        {message && <MessageSection {...message} />}
+      </>
+      <>{children}</>
+    </BaseDiscordCard>
   );
 };
 
