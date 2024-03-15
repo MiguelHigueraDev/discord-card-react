@@ -17,6 +17,7 @@ import { NoteSectionProps } from "../interfaces/NoteSectionProps";
 import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
 import SpotifySection from "./SpotifySection";
+import GameSection from "./GameSection";
 
 const LanyardDiscordCard = ({
   userId,
@@ -58,6 +59,11 @@ const LanyardDiscordCard = ({
     socket: true,
   });
 
+  const currentGame =
+    lanyard && lanyard.activities
+      ? lanyard.activities.find((ac) => ac.type === 0)
+      : null;
+
   return (
     <DiscordCard
       imageUrl={imageUrl}
@@ -85,11 +91,35 @@ const LanyardDiscordCard = ({
         {lanyard && (
           <>
             {showSpotify && lanyard.spotify && (
-              <SpotifySection artist={lanyard.spotify.artist} song={lanyard.spotify.song} album={lanyard.spotify.album} artUrl={lanyard.spotify.album_art_url} trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`} />
+              <SpotifySection
+                artist={lanyard.spotify.artist}
+                song={lanyard.spotify.song}
+                album={lanyard.spotify.album}
+                artUrl={lanyard.spotify.album_art_url}
+                trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
+              />
+            )}
+            {showGames && currentGame && (
+              <GameSection
+                largeImage={currentGame.assets?.large_image}
+                smallImage={currentGame.assets?.small_image}
+                applicationId={currentGame.application_id}
+                name={currentGame.name}
+                state={currentGame.state}
+                details={currentGame.details}
+                // Only render party if it's not null
+                {...(currentGame.party && {
+                  party: {
+                    // @ts-expect-error Party could be null
+                    currentSize: currentGame.party.size ? currentGame.party.size[0] : null,
+                    // @ts-expect-error Party could be null
+                    maxSize: currentGame.party.size ? currentGame.party.size[1] : null,
+                  },
+                })}
+              />
             )}
           </>
         )}
-
         {roles && <RoleSection {...roles} />}
         {note && <NoteSection {...note} />}
         {message && <MessageSection {...message} />}
