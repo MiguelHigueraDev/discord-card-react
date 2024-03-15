@@ -84,10 +84,11 @@ ul {
     justify-content: flex-end;
     flex-wrap: wrap;
     z-index: 12;
-    bottom: -36px;
+    bottom: -38px;
     right: 14px;
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 6px;
+    padding: 3px;
 }
 
 .discord-card-roles-section {
@@ -139,13 +140,13 @@ ul {
 }
 
 .discord-badge {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
 }
 
 .discord-badges-container li {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
 }
 
 /* Information (text) */
