@@ -132,6 +132,7 @@ function App() {
         }}
         showSpotify={true}
         showGames={true}
+        priority="default"
       >
         
       </LanyardDiscordCard>

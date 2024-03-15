@@ -18,6 +18,7 @@ import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
 import SpotifySection from "./SpotifySection";
 import GameSection from "./GameSection";
+import { ActivityPriority } from "../interfaces/ActivityPriority";
 
 const LanyardDiscordCard = ({
   userId,
@@ -35,6 +36,7 @@ const LanyardDiscordCard = ({
   message,
   showSpotify = true,
   showGames = true,
+  priority = "default",
   children,
 }: {
   userId: string;
@@ -52,6 +54,7 @@ const LanyardDiscordCard = ({
   message?: MessageSectionProps;
   showSpotify?: boolean;
   showGames?: boolean;
+  priority?: ActivityPriority;
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
   const { status: lanyard } = useLanyard({
@@ -64,6 +67,128 @@ const LanyardDiscordCard = ({
       ? lanyard.activities.find((ac) => ac.type === 0)
       : null;
 
+  /**
+   * Renders sections based on priority
+   * If priority is "spotify" and showSpotify is true, and Spotify is not null render SpotifySection
+   * If priority is "game" and showGames is true, and currentGame is not null render GameSection
+   * If priority is "default", behavior is the same as "spotify" (This is how Discord behaves)
+   * If priority is "none", render both SpotifySection and GameSection if they are not null
+   */
+  const renderSections = () => {
+    if (priority === "spotify") {
+      if (showSpotify && lanyard && lanyard.spotify) {
+        return (
+          <SpotifySection
+            artist={lanyard.spotify.artist}
+            song={lanyard.spotify.song}
+            album={lanyard.spotify.album}
+            artUrl={lanyard.spotify.album_art_url}
+            trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
+          />
+        );
+      } else {
+        if (showGames && currentGame) {
+          return (
+            <GameSection
+              largeImage={currentGame.assets?.large_image}
+              smallImage={currentGame.assets?.small_image}
+              applicationId={currentGame.application_id}
+              name={currentGame.name}
+              state={currentGame.state}
+              details={currentGame.details}
+              // Only render party if it's not null
+              {...(currentGame.party && {
+                party: {
+                  currentSize: currentGame.party.size
+                    ? // @ts-expect-error: Party could be null
+                      currentGame.party.size[0]
+                    : null,
+                  maxSize: currentGame.party.size
+                    ? // @ts-expect-error: Party could be null
+                      currentGame.party.size[1]
+                    : null,
+                },
+              })}
+            />
+          );
+        }
+      }
+    } else if (priority === "game" || priority === "default") {
+      if (showGames && currentGame) {
+        return (
+          <GameSection
+            largeImage={currentGame.assets?.large_image}
+            smallImage={currentGame.assets?.small_image}
+            applicationId={currentGame.application_id}
+            name={currentGame.name}
+            state={currentGame.state}
+            details={currentGame.details}
+            // Only render party if it's not null
+            {...(currentGame.party && {
+              party: {
+                currentSize: currentGame.party.size
+                  ? // @ts-expect-error: Party could be null
+                    currentGame.party.size[0]
+                  : null,
+                maxSize: currentGame.party.size
+                  ? // @ts-expect-error: Party could be null
+                    currentGame.party.size[1]
+                  : null,
+              },
+            })}
+          />
+        );
+      } else if (showSpotify && lanyard && lanyard.spotify) {
+        return (
+          <SpotifySection
+            artist={lanyard.spotify.artist}
+            song={lanyard.spotify.song}
+            album={lanyard.spotify.album}
+            artUrl={lanyard.spotify.album_art_url}
+            trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
+          />
+        );
+      }
+    } else {
+      // Render both
+      return (
+        <>
+          {currentGame && showGames && (
+            <GameSection
+              largeImage={currentGame.assets?.large_image}
+              smallImage={currentGame.assets?.small_image}
+              applicationId={currentGame.application_id}
+              name={currentGame.name}
+              state={currentGame.state}
+              details={currentGame.details}
+              // Only render party if it's not null
+              {...(currentGame.party && {
+                party: {
+                  currentSize: currentGame.party.size
+                    ? // @ts-expect-error: Party could be null
+                      currentGame.party.size[0]
+                    : null,
+                  maxSize: currentGame.party.size
+                    ? // @ts-expect-error: Party could be null
+                      currentGame.party.size[1]
+                    : null,
+                },
+              })}
+            />
+          )}
+          {showSpotify && lanyard && lanyard.spotify && (
+            <SpotifySection
+              artist={lanyard.spotify.artist}
+              song={lanyard.spotify.song}
+              album={lanyard.spotify.album}
+              artUrl={lanyard.spotify.album_art_url}
+              trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
+            />
+          )}
+        </>
+      );
+    }
+  };
   return (
     <DiscordCard
       imageUrl={imageUrl}
@@ -88,38 +213,7 @@ const LanyardDiscordCard = ({
         )}
         {aboutMe && <AboutMeSection {...aboutMe} />}
         {memberSince && <MemberSinceSection {...memberSince} />}
-        {lanyard && (
-          <>
-            {showSpotify && lanyard.spotify && (
-              <SpotifySection
-                artist={lanyard.spotify.artist}
-                song={lanyard.spotify.song}
-                album={lanyard.spotify.album}
-                artUrl={lanyard.spotify.album_art_url}
-                trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
-              />
-            )}
-            {showGames && currentGame && (
-              <GameSection
-                largeImage={currentGame.assets?.large_image}
-                smallImage={currentGame.assets?.small_image}
-                applicationId={currentGame.application_id}
-                name={currentGame.name}
-                state={currentGame.state}
-                details={currentGame.details}
-                // Only render party if it's not null
-                {...(currentGame.party && {
-                  party: {
-                    // @ts-expect-error Party could be null
-                    currentSize: currentGame.party.size ? currentGame.party.size[0] : null,
-                    // @ts-expect-error Party could be null
-                    maxSize: currentGame.party.size ? currentGame.party.size[1] : null,
-                  },
-                })}
-              />
-            )}
-          </>
-        )}
+        {renderSections()}
         {roles && <RoleSection {...roles} />}
         {note && <NoteSection {...note} />}
         {message && <MessageSection {...message} />}
