@@ -52,15 +52,12 @@ ul {
 
 .discord-card-border {
     width: 328px;
-    /* Make the color customizable */
-    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
     border-radius: 8px;
     z-index: 20;
 }
 
 .discord-card-outer-body {
     width: 320px;
-    /* background-color: #282828; */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
     backdrop-filter: blur(10px);
     border-radius: 0 0 8px 8px;
@@ -117,7 +114,6 @@ ul {
     height: 85px;
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(to bottom, var(--primary-color) 60%, transparent 40%);
     padding: 3px;
 }
 
@@ -136,7 +132,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1); /* Change the color and opacity here */
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .discord-badge {

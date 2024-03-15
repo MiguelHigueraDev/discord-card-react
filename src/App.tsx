@@ -4,7 +4,7 @@ import "./App.css"
 function App() {
   return (
     <div className="main-container">
-      <DiscordCard imageUrl="pfp.webp" bannerUrl="banner.png" />
+      <DiscordCard imageUrl="pfp.webp" bannerUrl="banner.png" primaryColor="#007777" accentColor="#8500d3" />
     </div>
   )
 }

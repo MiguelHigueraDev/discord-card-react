@@ -15,9 +15,13 @@ import BadgeSection from "./BadgeSection";
 const DiscordCard = ({
   imageUrl,
   bannerUrl,
+  primaryColor,
+  accentColor,
 }: {
   imageUrl: string;
   bannerUrl: string;
+  primaryColor: string;
+  accentColor: string;
 }) => {
   const [note, setNote] = useState("");
   const [message, setMessage] = useState("");
@@ -31,10 +35,21 @@ const DiscordCard = ({
   }
 
   return (
-    <div className="discord-card-border">
+    <div
+      className="discord-card-border"
+      style={{
+        background: `linear-gradient(to bottom, ${primaryColor}, ${accentColor})`,
+      }}
+    >
       <div className="discord-banner-container">
         <div className="discord-profile-picture-border">
-          <img src={imageUrl} className="discord-profile-picture" />
+          <img
+            src={imageUrl}
+            className="discord-profile-picture"
+            style={{
+              background: `linear-gradient(to bottom, ${primaryColor} 60%, transparent 40%)`,
+            }}
+          />
         </div>
         <img src={bannerUrl} className="discord-banner-image" />
         <BadgeSection
