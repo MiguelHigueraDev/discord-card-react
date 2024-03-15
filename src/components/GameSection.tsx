@@ -2,7 +2,6 @@ import { Party } from "../interfaces/Party";
 
 const GameSection = ({
   title,
-  applicationId,
   name,
   state,
   details,
@@ -30,13 +29,13 @@ const GameSection = ({
             {smallImage ? (
               <div>
                 <img
-                  src={`https://cdn.discordapp.com/app-assets/${applicationId}/${smallImage}.png`}
+                  src={smallImage}
                   alt=""
                 />
               </div>
             ) : (
               <img
-                src={`https://cdn.discordapp.com/app-assets/${applicationId}/${largeImage}.png`}
+                src={largeImage}
                 alt=""
               />
             )}
@@ -46,7 +45,7 @@ const GameSection = ({
             {smallImage && (
               <div>
                 <img
-                  src={`https://cdn.discordapp.com/app-assets/${applicationId}/${smallImage}.png`}
+                  src={smallImage}
                   alt=""
                 />
               </div>

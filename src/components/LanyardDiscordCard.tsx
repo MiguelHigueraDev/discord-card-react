@@ -1,4 +1,4 @@
-import DiscordCard from "./DiscordCard";
+import BaseDiscordCard from "./BaseDiscordCard";
 import { useLanyard } from "react-use-lanyard";
 import { Badge } from "../interfaces/Badge";
 import { BasicInfoSectionProps } from "../interfaces/BasicInfoSectionProps";
@@ -90,8 +90,16 @@ const LanyardDiscordCard = ({
         if (showGames && currentGame) {
           return (
             <GameSection
-              largeImage={currentGame.assets?.large_image}
-              smallImage={currentGame.assets?.small_image}
+              largeImage={
+                currentGame.assets?.large_image
+                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
+                  : undefined
+              }
+              smallImage={
+                currentGame.assets?.small_image
+                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.png`
+                  : undefined
+              }
               applicationId={currentGame.application_id}
               name={currentGame.name}
               state={currentGame.state}
@@ -190,7 +198,7 @@ const LanyardDiscordCard = ({
     }
   };
   return (
-    <DiscordCard
+    <BaseDiscordCard
       imageUrl={imageUrl}
       bannerUrl={bannerUrl}
       primaryColor={primaryColor}
@@ -220,7 +228,7 @@ const LanyardDiscordCard = ({
       </>
 
       <>{children}</>
-    </DiscordCard>
+    </BaseDiscordCard>
   );
 };
 
