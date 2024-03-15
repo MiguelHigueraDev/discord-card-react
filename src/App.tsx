@@ -12,6 +12,7 @@ import AboutMeSection from "./components/AboutMeSection";
 import BasicInfoSection from "./components/BasicInfoSection";
 import { useState } from "react";
 import LanyardDiscordCard from "./components/LanyardDiscordCard";
+import SpotifySection from "./components/SpotifySection";
 
 function App() {
   const [note, setNote] = useState("");
@@ -49,6 +50,7 @@ function App() {
           <p>🦝❤️🦉</p>
         </AboutMeSection>
         <MemberSinceSection discordJoinDate="20 Jul 2016" />
+        <SpotifySection song="Last Caress" artist="Misfits" album="Collection 2" artUrl="https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81" />
         <RoleSection>
           <Role role="JavaScript" color="#f7df1e" />
           <Role role="TypeScript" color="#007acc" />

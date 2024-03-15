@@ -1,8 +1,5 @@
 import DiscordCard from "./DiscordCard";
-import BasicInfoSection from "./BasicInfoSection";
 import { useLanyard } from "react-use-lanyard";
-import StatusSection from "./StatusSection";
-import Separator from "./Separator";
 import { Badge } from "../interfaces/Badge";
 
 const LanyardDiscordCard = ({
@@ -23,7 +20,7 @@ const LanyardDiscordCard = ({
   pronouns?: string;
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
-  const { loading, status } = useLanyard({
+  const { status } = useLanyard({
     userId,
     socket: true,
   });

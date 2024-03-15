@@ -304,3 +304,30 @@ textarea {
 .message-section textarea:focus {
     outline: none;
 }
+
+/* Spotify and games (activities) */
+.discord-card-activity-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discord-card-activity-header img {
+    width: 20px;
+    height: 20px;
+}
+
+.discord-card-activity-body {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.discord-card-activity-body > div img {
+    width: 65px;
+    height: 65px;
+}
+
+.discord-card-activity-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
