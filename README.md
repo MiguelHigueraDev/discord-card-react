@@ -214,7 +214,7 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
     handleInput: handleNoteChange,
   }}
   message={{
-    // Pass parent component's state and input handler to this to retrieve the message note
+    // Pass parent component's state and input handler to this to retrieve the message
     message: message,
     handleInput: handleMessageChange,
     placeholder: "Message @User",
