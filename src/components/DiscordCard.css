@@ -332,7 +332,7 @@ textarea {
     object-fit: cover;
 }
 
-.discord-card-activity p {
+.discord-card-activity-body p {
     font-size: 0.8rem;
 }
 

@@ -44,9 +44,9 @@ const GameSection = ({
           {name && <p className="discord-card-activity-title">{name}</p>}
           {details && (
             <p>
-              {details.length <= 20
+              {details.length <= 30
                 ? details
-                : `${details.substring(0, 20)}...`}
+                : `${details.substring(0, 30)}...`}
             </p>
           )}
           {state && (
@@ -54,16 +54,16 @@ const GameSection = ({
               {party ? (
                 <div>
                   <p>
-                    {state.length <= 20
+                    {state.length <= 30
                       ? `${state} (${party.currentSize}/${party.maxSize})`
-                      : `${state.substring(0, 20)}... (${party.currentSize}/${
+                      : `${state.substring(0, 30)}... (${party.currentSize}/${
                           party.maxSize
                         })`}
                   </p>
                 </div>
               ) : (
                 <p>
-                  {state.length <= 20 ? state : `${state.substring(0, 20)}...`}
+                  {state.length <= 30 ? state : `${state.substring(0, 30)}...`}
                 </p>
               )}
             </>
