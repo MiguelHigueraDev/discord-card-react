@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import LanyardDiscordCard from "./components/LanyardDiscordCard";
 
+// This is an implementation example using Lanyard.
 function App() {
   const [note, setNote] = useState("");
   const [message, setMessage] = useState("");
@@ -17,7 +18,7 @@ function App() {
 
   return (
       <LanyardDiscordCard
-        userId={"205519765312241665"}
+        userId={"your-discord-id"}
         imageUrl="pfp.webp"
         bannerUrl="banner.png"
         primaryColor="#007777"
@@ -36,15 +37,11 @@ function App() {
         aboutMe={{
           items: [
             {
-              text: "(25 y/o) Just a nerd who loves coding and technology",
-            },
-            {
-              text: "INTP",
-              marginBottom: 8,
+              text: "Example description",
             },
             {
               href: "https://www.youtube.com/watch?v=NN1OtIJu_Bk",
-              text: "https://www.youtube.com/watch?v=NN1OtIJu_Bk",
+              text: "a link",
             },
             {
               text: "🦝❤️🦉",

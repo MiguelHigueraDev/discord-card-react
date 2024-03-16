@@ -21,11 +21,26 @@ Install the package with your package manager of choice. Example:
 
 `npm install discord-card-react`
 
-Add one of the cards by copying one of the templates below.
+Import the card you want to use and the styles:
+
+```
+import { DiscordCard } from "discord-card-react";
+
+// or
+
+import { LanyardDiscordCard } from "discord-card-react";
+
+// Don't forget to add the styles!
+import "discord-card-react/styles";
+```
+
+**DON'T FORGET TO IMPORT THE STYLES OR THE CARD WILL LOOK UGLY!!**
+
+After importing, copy one of the templates below to add the card(s).
 
 ## Static Card (\<DiscordCard\>)
 
-Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status.
+Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status. If you want to add a dynamic card that updates with your status, check below.
 
 ```js
 <DiscordCard
@@ -121,17 +136,17 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
 ></DiscordCard>
 ```
 
-### How the Spotify Section looks like
+### Spotify preview
 
 ![Game Section Example](/github/spotify-example.png)
 
-### How the Game Section looks like
+### Game preview
 
 ![Game Section Example](/github/game-example.png)
 
 ## Lanyard Card (\<LanyardDiscordCard\>)
 
-Pass your Discord ID to automatically update its status using [Lanyard](https://github.com/Phineas/lanyard). This also updates the Spotify and Activity (game) sections automatically using WebSocket.
+Pass your Discord ID as a prop to automatically update the card's status using [Lanyard](https://github.com/Phineas/lanyard). This also updates the Spotify and Activity (game) sections automatically using WebSocket.
 
 Make sure to set up Lanyard by following [the instructions](https://github.com/Phineas/lanyard) and joining their server, or by self-hosting your own instance.
 
@@ -217,6 +232,61 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
 ></LanyardDiscordCard>
 ```
 
+## State and input handler example
+
+This is an example on how to implement basic state and input handling for the message and note fields, so you can retrieve its value.
+
+```js
+const [note, setNote] = useState("");
+const [message, setMessage] = useState("");
+
+function handleNoteChange(event) {
+  setNote(event.target.value);
+}
+
+function handleMessageChange(event) {
+  setMessage(event.target.value);
+}
+
+<DiscordCard>
+// Your card here...
+note={{
+  // The state and input handler
+  note: note,
+  handleInput: handleNoteChange,
+}}
+message={{
+  // The state and input handler
+  message: message,
+  handleInput: handleMessageChange,
+}}
+// Rest of the card...
+</DiscordCard>
+```
+
+## Translations (i18n)
+
+You can translate all the sections that have titles by passing a `title` prop. (**About Me, Member Since, Playing a Game, Listening to Spotify, Roles, Note**). This will override the default title.
+
+For example, translating the Member Since section to Spanish:
+
+```js
+memberSince={{
+  // Only discordJoinDate is required
+  discordJoinDate: "20 Jul 2016",
+  title: "Miembro desde",
+  serverJoinDate: "1 Sep 2020",
+  serverIconUrl: "https://asdasd.com/icon.png",
+  serverName: "Servidor X"
+}}
+```
+![i18n example](/github/member-since-i18n.png)
+
+
 ## Credits
 
 Uses [react-use-lanyard](https://www.npmjs.com/package/react-use-lanyard).
+
+## Final Words
+
+Thanks for checking out my first `npm` package, suggestions and/or bug reports are welcome!
