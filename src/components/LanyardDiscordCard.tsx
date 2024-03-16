@@ -22,6 +22,7 @@ import { ActivityPriority } from "../interfaces/ActivityPriority";
 
 const LanyardDiscordCard = ({
   userId,
+  apiUrl,
   imageUrl,
   bannerUrl,
   primaryColor,
@@ -40,6 +41,7 @@ const LanyardDiscordCard = ({
   children,
 }: {
   userId: string;
+  apiUrl?: string;
   imageUrl: string;
   bannerUrl: string;
   primaryColor: string;
@@ -60,6 +62,7 @@ const LanyardDiscordCard = ({
   const { status: lanyard } = useLanyard({
     userId,
     socket: true,
+    apiUrl
   });
 
   const currentGame =
