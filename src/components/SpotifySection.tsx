@@ -33,13 +33,13 @@ const SpotifySection = ({
         )}
         <div>
           <p className="discord-card-activity-title">
-            {song.length <= 30 ? song : `${song.substring(0, 30)}...`}
+            {song.length <= 80 ? song : `${song.substring(0, 80)}...`}
           </p>
           <p className="discord-card-activity-text">
-            {artist.length <= 30 ? artist : `${artist.substring(0, 30)}...`}
+            {artist.length <= 80 ? artist : `${artist.substring(0, 80)}...`}
           </p>
           <p className="discord-card-activity-text">
-            {album.length <= 30 ? album : `${album.substring(0, 30)}...`}
+            {album.length <= 80 ? album : `${album.substring(0, 80)}...`}
           </p>
         </div>
       </div>

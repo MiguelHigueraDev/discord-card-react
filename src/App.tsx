@@ -206,7 +206,7 @@ function App() {
         }}
         showSpotify={true}
         showGames={true}
-        priority="spotify"
+        priority="none"
       ></LanyardDiscordCard>
     </div>
   );
