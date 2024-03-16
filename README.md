@@ -24,10 +24,12 @@ Install the package with your package manager of choice. Example:
 Import the card you want to use and the styles:
 
 ```
+// Static card, doesn't sync with your real Discord status
 import { DiscordCard } from "discord-card-react";
 
 // or
 
+// Dynamic card, uses Lanyard to sync with your Discord status
 import { LanyardDiscordCard } from "discord-card-react";
 
 // Don't forget to add the styles!
