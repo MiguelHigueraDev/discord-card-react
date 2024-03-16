@@ -138,7 +138,7 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
 ```js
 <LanyardDiscordCard
   // Your Discord user ID (used for Lanyard)
-  userId={"205519765312241665"}
+  userId={"your-discord-id"}
   // Optional: Domain that points at your self-hosted Lanyard instance
   // apiUrl={"your.lanyard.domain"}
   // Your Discord profile picture and banner
