@@ -3,6 +3,6 @@ export interface SpotifySectionProps {
     song: string
     artist: string
     album: string
-    albumImageUrl?: string
+    artUrl?: string
     trackUrl?: string
 }

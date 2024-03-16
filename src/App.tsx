@@ -138,9 +138,19 @@ function App() {
           song: "Last Caress",
           artist: "Misfits",
           album: "Collection 2",
+          artUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
+          trackUrl: "https://spotify.com/track/182317238712"
         }}
         game={{
-          name: "Hearthstone",
+          name: "Fortnite",
+          details: "Battle Royale - In Lobby",
+          state: "Playing Duo",
+          largeImage: "fortnitelogo.png",
+          smallImage: "battlepass.png",
+          party: {
+            currentSize: 1,
+            maxSize: 2,
+          }
         }}
       ></DiscordCard>
 
