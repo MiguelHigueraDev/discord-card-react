@@ -1,4 +1,5 @@
 import { Party } from "../interfaces/Party";
+import styles from "../styles/GameSection.module.css";
 
 /**
  * Renders a section for displaying game activity information.
@@ -31,16 +32,16 @@ const GameSection = ({
   party?: Party;
 }) => {
   return (
-    <section className="discord-card-section">
-      <div className="discord-card-activity-header">
+    <section className={styles["discord-card-section"]}>
+      <div className={styles["discord-card-activity-header"]}>
         {title ? <h3>{title}</h3> : <h3>Playing a game</h3>}
       </div>
-      <div className="discord-card-activity-body">
+      <div className={styles["discord-card-activity-body"]}>
         {largeImage ? (
-          <div className="discord-card-activity-flex-container">
-            <div className="discord-card-activity-relative-container">
+          <div className={styles["discord-card-activity-flex-container"]}>
+            <div className={styles["discord-card-activity-relative-container"]}>
               <img src={largeImage} alt="" />
-              {smallImage && <img src={smallImage} alt="" className="discord-card-activity-absolute-img" />}
+              {smallImage && <img src={smallImage} alt="" className={styles["discord-card-activity-absolute-img"]} />}
             </div>
           </div>
         ) : (
@@ -53,7 +54,7 @@ const GameSection = ({
           </>
         )}
         <div>
-          {name && <p className="discord-card-activity-title">{name}</p>}
+          {name && <p className={styles["discord-card-activity-title"]}>{name}</p>}
           {details && (
             <p>
               {details.length <= 30

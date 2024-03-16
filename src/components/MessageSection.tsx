@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
+import styles from "../styles/MessageSection.module.css";
 /**
  * Generates a Discord message section with a textarea for input.
  *
@@ -24,7 +25,7 @@ const MessageSection = ({
   useAutosizeTextArea(messageRef.current, message);
 
   return (
-    <section className="message-section">
+    <section className={styles["message-section"]}>
       <textarea
         ref={messageRef}
         placeholder={placeholder ? placeholder : "Message this user"}

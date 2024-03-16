@@ -1,0 +1,21 @@
+.discord-card-role {
+    background-color: rgba(75, 75, 75, 0.55);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 0.5px solid rgba(136, 135, 135, 0.414);
+    user-select: none;
+  }
+  
+  .discord-card-role p {
+    font-size: 0.72rem;
+  }
+  
+  .discord-card-role-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  

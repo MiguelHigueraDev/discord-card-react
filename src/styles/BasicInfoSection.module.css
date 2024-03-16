@@ -1,0 +1,17 @@
+.discord-card-basic-info {
+  margin-bottom: 8px;
+}
+
+.discord-card-displayname {
+  font-size: 1.25rem;
+  margin-bottom: 1px;
+}
+
+.discord-card-username {
+  font-size: 0.95rem;
+  margin-bottom: 1px;
+}
+
+.discord-card-pronouns {
+  font-size: 0.9rem;
+}

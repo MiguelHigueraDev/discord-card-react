@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutMeItem } from "../interfaces/AboutMeItem";
+import styles from "../styles/AboutMeSection.module.css";
 
 /**
  * Generates the About Me section with a title and optional items.
@@ -19,7 +20,7 @@ const AboutMeSection = ({
   items?: AboutMeItem[];
 }) => {
   return (
-    <section className="discord-card-section">
+    <section className={styles["discord-card-section"]}>
       {title ? <h3>{title}</h3> : <h3>About Me</h3>}
       {items &&
         items.map((item, index) =>
@@ -27,7 +28,7 @@ const AboutMeSection = ({
           item.href ? (
             <a
               key={index}
-              className="discord-link"
+              className={styles["discord-link"]}
               style={{ marginBottom: item.marginBottom }}
               href={item.href}
               target="_blank"

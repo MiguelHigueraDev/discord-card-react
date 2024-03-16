@@ -15,11 +15,11 @@ const DiscordLink = ({
   return (
     <>
       {text ? (
-        <a className="discord-link" href={href} target="_blank">
+        <a href={href} target="_blank">
           {text}
         </a>
       ) : (
-        <a className="discord-link" href={href} target="_blank">
+        <a href={href} target="_blank">
           {href}
         </a>
       )}

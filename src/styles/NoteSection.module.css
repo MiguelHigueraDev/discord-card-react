@@ -1,0 +1,11 @@
+.discord-card-note textarea {
+  font-size: 0.8rem;
+  padding: 4px;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+.discord-card-note textarea:focus {
+  outline: none;
+}

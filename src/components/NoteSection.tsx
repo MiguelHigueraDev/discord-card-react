@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
-
+import styles from "../styles/NoteSection.module.css";
 /**
  * Renders a Discord note section with a title, note content, and input field for adding notes.
  *
@@ -26,7 +26,7 @@ const NoteSection = ({
   useAutosizeTextArea(noteRef.current, note)
 
   return (
-    <section className="discord-card-section discord-card-note">
+    <section className={`${styles["discord-card-note"]} ${styles["discord-card-section"]}` }>
       {title ? <h3>{title}</h3> : <h3>Note</h3>}
       <textarea
         placeholder={placeholder ? placeholder : "Add a note"}

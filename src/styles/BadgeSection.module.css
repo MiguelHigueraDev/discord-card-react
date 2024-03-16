@@ -1,0 +1,31 @@
+.discord-badges-container {
+  position: absolute;
+  max-width: 196px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  z-index: 12;
+  bottom: -38px;
+  right: 14px;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  padding: 3px;
+  user-select: none;
+}
+
+.discord-badge {
+  width: 22px;
+  height: 22px;
+}
+
+.discord-badges-container li {
+  width: 22px;
+  height: 22px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

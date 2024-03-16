@@ -1,5 +1,6 @@
 import React from "react";
 import { Role } from "../interfaces/Role";
+import styles from "../styles/RoleSection.module.css";
 
 /**
  * Render a section for displaying roles with an optional alternative title and list of roles.
@@ -21,18 +22,18 @@ const RoleSection = ({
   const childrenCount = React.Children.count(children);
 
   return (
-    <section className="discord-card-section">
+    <section className={styles["discord-card-section"]}>
       {title ? (
         <h3>{title}</h3>
       ) : (
         <>{childrenCount == 1 ? <h3>Role</h3> : <h3>Roles</h3>}</>
       )}
-      <ul className="discord-card-roles-section">
+      <ul className={styles["discord-card-roles-section"]}>
         {roles &&
           roles.map((role, index) => (
-            <li key={index} className="discord-card-role">
+            <li key={index} className={styles["discord-card-role"]}>
               <div
-                className="discord-card-role-icon"
+                className={styles["discord-card-role-icon"]}
                 style={{ backgroundColor: role.color }}
               ></div>
               <p>{role.name}</p>

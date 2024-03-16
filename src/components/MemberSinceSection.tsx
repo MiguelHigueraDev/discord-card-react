@@ -1,3 +1,4 @@
+import styles from "../styles/MemberSinceSection.module.css";
 /**
  * Renders a section displaying the member's join dates on Discord and the server.
  *
@@ -22,13 +23,13 @@ const MemberSinceSection = ({
   serverName?: string;
 }) => {
   return (
-    <section className="discord-card-section">
+    <section className={styles["discord-card-section"]}>
       {title ? <h3>{title}</h3> : <h3>Member Since</h3>}
-      <div className="discord-member-since-container">
+      <div className={styles["discord-member-since-container"]}>
         {serverJoinDate ? (
           <>
             <svg
-              className="member-since-icon"
+              className={styles["member-since-icon"]}
               aria-label="Discord"
               aria-hidden="false"
               role="img"
@@ -44,10 +45,10 @@ const MemberSinceSection = ({
               ></path>
             </svg>
             <p>{discordJoinDate}</p>
-            <div className="discord-member-since-dot"></div>
+            <div className={styles["discord-member-since-dot"]}></div>
             {serverIconUrl && (
               <img
-                className="member-since-icon"
+                className={styles["member-since-icon"]}
                 alt=""
                 aria-label={serverName}
                 src={serverIconUrl}

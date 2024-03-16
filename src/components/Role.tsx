@@ -1,3 +1,4 @@
+import styles from "../styles/Role.module.css";
 /**
  * Renders a role component with the specified role and color.
  *
@@ -7,9 +8,9 @@
  */
 const Role = ({ role, color }: { role: string; color: string }) => {
   return (
-    <li className="discord-card-role">
+    <li className={styles["discord-card-role"]}>
       <div
-        className="discord-card-role-icon"
+        className={styles["discord-card-role-icon"]}
         style={{ backgroundColor: color }}
       ></div>
       <p>{role}</p>
