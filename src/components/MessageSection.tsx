@@ -1,5 +1,14 @@
 import { useRef } from "react";
 import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
+/**
+ * Generates a Discord message section with a textarea for input.
+ *
+ * @param {string} message - The message to display in the textarea
+ * @param {string} placeholder - The placeholder text for the textarea
+ * @param {string} accentColor - The color to use for the textarea border
+ * @param {function} handleInput - The function to handle input changes in the textarea
+ * @return {JSX.Element} The JSX element representing the message section
+ */
 const MessageSection = ({
   message = "",
   placeholder,

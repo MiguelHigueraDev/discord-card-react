@@ -1,5 +1,17 @@
 import { Party } from "../interfaces/Party";
 
+/**
+ * Renders a section for displaying game activity information.
+ *
+ * @param {string} title - The title of the game activity
+ * @param {string} name - The name of the game
+ * @param {string} state - The state of the game activity
+ * @param {string} details - Additional details about the game activity
+ * @param {string} largeImage - URL for the large image related to the game activity
+ * @param {string} smallImage - URL for the small image related to the game activity
+ * @param {Party} party - Object containing information about the party related to the game activity
+ * @return {JSX.Element} The rendered game section component
+ */
 const GameSection = ({
   title,
   name,

@@ -1,6 +1,14 @@
 import React from "react";
 import { Role } from "../interfaces/Role";
 
+/**
+ * Render a section for displaying roles with an optional alternative title and list of roles.
+ *
+ * @param {string} title - Optional title for the section
+ * @param {React.JSX.Element | React.JSX.Element[]} children - Optional children elements
+ * @param {Role[]} roles - List of roles to display
+ * @return {React.JSX.Element} The JSX element representing the role section
+ */
 const RoleSection = ({
   title,
   children,

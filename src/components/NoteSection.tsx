@@ -2,7 +2,7 @@ import { useRef } from "react";
 import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
 
 /**
- * Renders a note section with a title, note content, and input field for adding notes.
+ * Renders a Discord note section with a title, note content, and input field for adding notes.
  *
  * @param {string} title - The title of the note section
  * @param {string} note - The current note content

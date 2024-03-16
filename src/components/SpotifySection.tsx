@@ -1,3 +1,14 @@
+/**
+ * Renders a section displaying Spotify song information.
+ *
+ * @param {string} title - The title of the section
+ * @param {string} song - The name of the song
+ * @param {string} artist - The name of the artist
+ * @param {string} album - The name of the album
+ * @param {string} artUrl - The URL of the album art
+ * @param {string} trackUrl - The URL of the track on Spotify
+ * @return {JSX.Element} The rendered Spotify section
+ */
 const SpotifySection = ({
   title,
   song,
