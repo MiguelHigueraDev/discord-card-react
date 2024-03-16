@@ -48,6 +48,7 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
   badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
   status={{
     status: "Best HTML Programmer",
+    // This is a custom image (the emoji in the status)
     iconUrl: "raccoon.svg",
   }}
   aboutMe={{
@@ -157,6 +158,7 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
   badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
   status={{
     status: "Hello!",
+    // This is a custom image (the emoji in the status)
     iconUrl: "statusIcon.svg",
   }}
   aboutMe={{
@@ -215,3 +217,6 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
 ></LanyardDiscordCard>
 ```
 
+## Credits
+
+Uses [react-use-lanyard](https://www.npmjs.com/package/react-use-lanyard).
