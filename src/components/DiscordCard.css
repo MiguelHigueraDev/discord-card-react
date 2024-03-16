@@ -340,6 +340,26 @@ textarea {
     font-weight: 700;
 }
 
+.discord-card-activity-flex-container {
+    display: flex;
+    gap: 3px;
+}
+
+.discord-card-activity-relative-container {
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+.discord-card-activity-absolute-img {
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 100% !important;
+}
+
 .discord-card-spotify-button {
     display: block;
     width: 100%;
@@ -355,3 +375,4 @@ textarea {
     background-color: #484848;
     color: white;
 }
+

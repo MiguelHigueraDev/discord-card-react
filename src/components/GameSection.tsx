@@ -25,29 +25,17 @@ const GameSection = ({
       </div>
       <div className="discord-card-activity-body">
         {largeImage ? (
-          <div>
-            {smallImage ? (
-              <div>
-                <img
-                  src={smallImage}
-                  alt=""
-                />
-              </div>
-            ) : (
-              <img
-                src={largeImage}
-                alt=""
-              />
-            )}
+          <div className="discord-card-activity-flex-container">
+            <div className="discord-card-activity-relative-container">
+              <img src={largeImage} alt="" />
+              {smallImage && <img src={smallImage} alt="" className="discord-card-activity-absolute-img" />}
+            </div>
           </div>
         ) : (
           <>
             {smallImage && (
               <div>
-                <img
-                  src={smallImage}
-                  alt=""
-                />
+                <img src={smallImage} alt="" />
               </div>
             )}
           </>
@@ -68,7 +56,9 @@ const GameSection = ({
                   <p>
                     {state.length <= 20
                       ? `${state} (${party.currentSize}/${party.maxSize})`
-                      : `${state.substring(0, 20)}... (${party.currentSize}/${party.maxSize})`}
+                      : `${state.substring(0, 20)}... (${party.currentSize}/${
+                          party.maxSize
+                        })`}
                   </p>
                 </div>
               ) : (
