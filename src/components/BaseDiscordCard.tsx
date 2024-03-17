@@ -44,7 +44,7 @@ const BaseDiscordCard = ({
             className="w-[328px] h-[116px] pt-[4px] pr-[4px] pb-[0px] pl-[4px] rounded-t-lg"
             alt=""
           />
-          <div className={styles["discord-card-status-container"]}>
+          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#222222e9] top-[125px] right-[226px] z-30 flex items-center justify-center select-none">
             <img
               src={`${
                 connectionStatus === "offline"
@@ -55,7 +55,7 @@ const BaseDiscordCard = ({
                   ? "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAACoUExURQAAAPBHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/BHR/JHR/JHR/NHR/RHR/BHR/JHR/FHR+5HR8pDRII6PW44PNJERE41OSsxNiwxNk81OdNERJw9QC0xNi8xNp0+QP///64uacQAAAAmdFJOUwAAIGKn1/L9HyOC1vr51Qdj2dgGEZP4kqOhkWEigdQeYKXy8P38brNUXgAAAAFiS0dENzC4uEcAAAAHdElNRQfoAxAAFCFDvdkLAAAAxElEQVQoz4WT6Q6CMAyAizCQU1DA+9aCoOKBvv+juUWM0Wz0+7M139JsXQsg0Dgd3WCmZZnM0Lsihg8isB3XwwY/cOzvAb7phRH+0NcHjedLnPj4RzqM357bEUoYx0LzzAlKmfD8XIe+XKdToe0IFbAZ1w4qmWvQcdV6sQTdU2t/BQZm+UFKnuEaWF6URyllkQewOZ2ri5TqetvC7l4/FNTPPaWJ5MTViIcRZSGKSnwJ9aFEO7Q3E9GKVCMTY0ANUdsIvgC0fm1phA7QmwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNC0wMy0xNlQwMDoyMDoyMyswMDowMAz9dd0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjQtMDMtMTZUMDA6MjA6MjMrMDA6MDB9oM1hAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDI0LTAzLTE2VDAwOjIwOjMzKzAwOjAw5h/sIAAAAABJRU5ErkJggg=="
                   : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAA/UExURQAAAEO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gUO1gf///3Uepd8AAAATdFJOUwAAIGKn1/L9I4LW+gdj2RGT+aNu7qdNAAAAAWJLR0QUkt/JNQAAAAd0SU1FB+gDEAAUI62zuCcAAACdSURBVCjPhZNZDsMgDAUd9iVs8f3vWqOmqloF3vyANcgCYxNNDkFpY533zhqtZkwfZhBiynyTUwzfA7I5S+UfajlvL0vrg/8Yvb292IsfuNrUkrnzI13yiy7jWY8ydai8oAbRkZfEg1Ra66RI57XOmgxvMGR32pLbaUd+pz3SIDm4GngYKAsoKvgS9KGgHfbNBFoRNTIYAzREuxF8Af/sNElcLcDyAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTAzLTE2VDAwOjIwOjI1KzAwOjAwby1A5wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wMy0xNlQwMDoyMDoyNSswMDowMB5w+FsAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjQtMDMtMTZUMDA6MjA6MzQrMDA6MDAjuNKuAAAAAElFTkSuQmCC"
               }`}
-              className={styles["discord-card-status-icon"]}
+              className="top-[125px] right-[226px] w-[14px] h-[14px] flex"
               alt=""
               aria-label={`This user's status is ${connectionStatus}`}
             />
