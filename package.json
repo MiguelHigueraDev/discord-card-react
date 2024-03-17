@@ -8,13 +8,20 @@
   "main": "dist/index.umd.mjs",
   "module": "dist/index.es.mjs",
   "types": "dist/index.d.ts",
-  "keywords": ["react", "discord", "profile", "card", "component", "lanyard"],
+  "keywords": [
+    "react",
+    "discord",
+    "profile",
+    "card",
+    "component",
+    "lanyard"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/MiguelHigueraDev/discord-card-react.git"
   },
   "exports": {
-    ".": {      
+    ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.es.mjs",
       "require": "./dist/index.umd.mjs"
@@ -45,9 +52,12 @@
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
     "vite-plugin-dts": "^3.7.3"

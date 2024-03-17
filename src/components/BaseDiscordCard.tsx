@@ -21,19 +21,19 @@ const BaseDiscordCard = ({
   children: React.JSX.Element | React.JSX.Element[];
 }) => {
   return (
-    <div className={styles["discord-card-container"]}>
+    <div className="flex">
       <div
-        className={styles["discord-card-border"]}
+        className="leading-6 font-normal text-white bg-[#242424] rounded-lg z-20 w-[328px]"
         style={{
           background: `linear-gradient(to bottom, ${primaryColor}, ${accentColor})`,
         }}
       >
-        <div className={styles["discord-banner-container"]}>
-          <div className={styles["discord-profile-picture-border"]}>
+        <div className="p-0 m-0 w-[328px] relative select-none">
+          <div className="absolute z-10">
             <img
               src={imageUrl}
               alt="Discord profile picture"
-              className={styles["discord-profile-picture"]}
+              className="top-[65px] left-[20px] relative rounded-full p-1 w-[85px] h-[85px] border-black-2"
               style={{
                 background: `linear-gradient(to bottom, ${primaryColor} 60%, transparent 40%)`,
               }}
@@ -41,7 +41,7 @@ const BaseDiscordCard = ({
           </div>
           <img
             src={bannerUrl}
-            className={styles["discord-banner-image"]}
+            className="w-[328px] h-[116px] pt-[4px] pr-[4px] pb-[0px] pl-[4px] rounded-t-lg"
             alt=""
           />
           <div className={styles["discord-card-status-container"]}>
