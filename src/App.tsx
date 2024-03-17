@@ -18,9 +18,9 @@ function App() {
 
   return (
       <LanyardDiscordCard
-        userId={"your-discord-id"}
-        imageUrl="pfp.webp"
-        bannerUrl="banner.png"
+        userId="205519765312241665"
+        imageUrl="../example-assets/pfp.webp"
+        bannerUrl="../example-assets/banner.png"
         primaryColor="#007777"
         accentColor="#8500d3"
         basicInfo={{
@@ -29,7 +29,7 @@ function App() {
           pronouns: "he/him",
         }}
         // All these are optional
-        badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
+        badges={[{ name: "Active Developer", iconUrl: "../example-assets/developer-badge.png" }]}
         status={{
           status: "Best HTML Programmer",
           iconUrl: "raccoon.svg",

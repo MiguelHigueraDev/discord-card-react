@@ -1,12 +1,12 @@
 {
   "name": "discord-card-react",
   "description": "React Discord profile card component",
-  "type": "commonjs",
+  "type": "module",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.8",
   "license": "MIT",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index.umd.mjs",
+  "module": "dist/index.es.mjs",
   "types": "dist/index.d.ts",
   "keywords": ["react", "discord", "profile", "card", "component", "lanyard"],
   "repository": {
@@ -17,7 +17,7 @@
     ".": {      
       "types": "./dist/index.d.ts",
       "import": "./dist/index.es.mjs",
-      "require": "./dist/index.umd.js"
+      "require": "./dist/index.umd.mjs"
     },
     "./styles": "./dist/style.css"
   },

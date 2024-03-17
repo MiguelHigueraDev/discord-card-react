@@ -6,7 +6,7 @@
   text-align: center !important;
   margin-top: 6px !important;
   border-radius: 6px;
-  color: white;
+  color: white !important;
 }
 
 .discord-card-spotify-button:hover {

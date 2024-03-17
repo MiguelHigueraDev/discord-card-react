@@ -1,7 +1,7 @@
 .discord-badges-container {
   position: absolute;
   max-width: 196px;
-  display: flex;
+  display: flex !important;
   align-items: flex-end;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -22,6 +22,10 @@
 .discord-badges-container li {
   width: 22px;
   height: 22px;
+}
+
+.discord-badges-container li img {
+  display: flex !important;
 }
 
 ul {

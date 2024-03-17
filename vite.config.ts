@@ -13,7 +13,7 @@ export default defineConfig({
       name: "react-jp-ui",
       //A function that generates the output file
       //name for different formats during the build
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => `index.${format}.mjs`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
