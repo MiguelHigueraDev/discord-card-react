@@ -62,10 +62,10 @@ const SpotifySection = ({
           <div>
             {trackUrl ? (
               <a href={trackUrl} target="_blank">
-                <img src={artUrl} className="w-[65px] h-[65px] select-none" alt={album} />
+                <img src={artUrl} className="w-[65px] h-[65px] select-none rounded-md" alt={album} />
               </a>
             ) : (
-              <img src={artUrl} className="w-[65px] h-[65px] select-none" alt={album} />
+              <img src={artUrl} className="w-[65px] h-[65px] select-none rounded-md" alt={album} />
             )}
           </div>
         )}

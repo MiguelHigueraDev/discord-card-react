@@ -45,7 +45,7 @@ const GameSection = ({
         {largeImage ? (
           <div className="flex gap-1">
             <div className="relative justify-center items-center">
-              <img src={largeImage} alt="" className="w-[65px] h-[65px] select-none object-cover" />
+              <img src={largeImage} alt="" className="w-[65px] h-[65px] select-none object-cover rounded-md" />
               {smallImage && (
                 <img
                   src={smallImage}
