@@ -111,7 +111,7 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
     handleInput: handleNoteChange,
   }}
   message={{
-    // Pass parent component's state and input handler to this to retrieve the message note
+    // Pass parent component's state and input handler to this to retrieve the message
     message: message,
     handleInput: handleMessageChange,
     placeholder: "Message @User",
@@ -157,9 +157,9 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
 ```js
 <LanyardDiscordCard
   // Your Discord user ID (used for Lanyard)
-  userId={"your-discord-id"}
+  userId="your-discord-id"
   // Optional: Domain that points at your self-hosted Lanyard instance
-  // apiUrl={"your.lanyard.domain"}
+  // apiUrl="your.lanyard.domain"
   // Your Discord profile picture and banner
   imageUrl="profilepicture.webp"
   bannerUrl="banner.png"
