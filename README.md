@@ -250,7 +250,7 @@ function handleMessageChange(event) {
   setMessage(event.target.value);
 }
 
-<DiscordCard>
+<DiscordCard
 // Your card here...
 note={{
   // The state and input handler
@@ -263,7 +263,7 @@ message={{
   handleInput: handleMessageChange,
 }}
 // Rest of the card...
-</DiscordCard>
+></DiscordCard>
 ```
 
 ## Translations (i18n)
