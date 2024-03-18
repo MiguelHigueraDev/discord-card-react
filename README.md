@@ -34,17 +34,15 @@ import { DiscordCard } from "discord-card-react";
 // Dynamic card, uses Lanyard to sync with your Discord status
 import { LanyardDiscordCard } from "discord-card-react";
 
-// Don't forget to add the styles!
+// DON'T FORGET TO ADD THE STYLES OR THE CARD WILL LOOK UGLY!
 import "discord-card-react/styles";
 ```
-
-**DON'T FORGET TO IMPORT THE STYLES OR THE CARD WILL LOOK UGLY!!**
 
 After importing, copy one of the templates below to add the card(s).
 
 ## Static Card (\<DiscordCard\>)
 
-Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status. If you want to add a dynamic card that updates with your status, check below.
+Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status. If you want to add a dynamic card that updates with your status, check the next template below.
 
 ```js
 <DiscordCard
@@ -152,7 +150,7 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
 
 Pass your Discord ID as a prop to automatically update the card's status using [Lanyard](https://github.com/Phineas/lanyard). This also updates the Spotify and Activity (game) sections automatically using WebSocket.
 
-Make sure to set up Lanyard by following [the instructions](https://github.com/Phineas/lanyard) and joining their server, or by self-hosting your own instance.
+Make sure to set up Lanyard by following [the instructions](https://github.com/Phineas/lanyard) (joining the Lanyard Discord server), or by self-hosting your own instance by following the instructions provided.
 
 ```js
 <LanyardDiscordCard
