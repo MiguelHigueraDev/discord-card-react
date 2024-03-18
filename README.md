@@ -224,6 +224,9 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
     placeholder: "Message @User",
     accentColor: "#8500d3",
   }}
+  // You can change the Spotify and Activity (game) section with these optional props
+  gameTitle="Playing a game"
+  spotifyTitle="Listening on Spotify"
   // Change these to false to disable them
   showSpotify={true}
   showGames={true}
