@@ -83,7 +83,7 @@ const GameSection = ({
           )}
           {state && (
             <>
-              {party ? (
+              {party && party.currentSize && party.maxSize ? (
                 <div>
                   <p className="text-sm font-normal">
                     {state.length <= 30
