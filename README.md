@@ -2,7 +2,9 @@
 
 A React Component that renders a Discord profile card
 
-![Card Preview](/github/card-preview.png)
+<p align="center">
+  <img width="333" height="826" src="github/card-preview.png">
+</p>
 
 ## Features:
 
