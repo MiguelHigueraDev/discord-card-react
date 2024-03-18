@@ -15,11 +15,19 @@ const DiscordLink = ({
   return (
     <>
       {text ? (
-        <a href={href} className="text-blue-500 hover:text-blue-400" target="_blank">
+        <a
+          href={href}
+          className="text-blue-500 hover:text-blue-400"
+          target="_blank"
+        >
           {text}
         </a>
       ) : (
-        <a href={href} className="text-blue-500 hover:text-blue-400" target="_blank">
+        <a
+          href={href}
+          className="text-blue-500 hover:text-blue-400"
+          target="_blank"
+        >
           {href}
         </a>
       )}

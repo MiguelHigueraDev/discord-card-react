@@ -1,6 +1,6 @@
-import { Role } from "./Role"
+import { Role } from "./Role";
 
 export interface RoleSectionProps {
-    title?: string
-    roles: Role[]
+  title?: string;
+  roles: Role[];
 }

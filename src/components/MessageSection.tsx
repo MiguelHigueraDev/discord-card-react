@@ -34,7 +34,7 @@ const MessageSection = ({
         style={{ border: `0.5px solid ${accentColor ? accentColor : "#ccc"}` }}
       />
     </section>
-  )
+  );
 };
 
 export default MessageSection;

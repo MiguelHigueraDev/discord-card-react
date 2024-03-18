@@ -45,7 +45,11 @@ const GameSection = ({
         {largeImage ? (
           <div className="flex gap-1">
             <div className="relative justify-center items-center">
-              <img src={largeImage} alt="" className="w-[65px] h-[65px] select-none object-cover rounded-md" />
+              <img
+                src={largeImage}
+                alt=""
+                className="w-[65px] h-[65px] select-none object-cover rounded-md"
+              />
               {smallImage && (
                 <img
                   src={smallImage}
@@ -59,15 +63,17 @@ const GameSection = ({
           <>
             {smallImage && (
               <div>
-                <img src={smallImage} alt="" className="w-[65px] h-[65px] select-none object-cover" />
+                <img
+                  src={smallImage}
+                  alt=""
+                  className="w-[65px] h-[65px] select-none object-cover"
+                />
               </div>
             )}
           </>
         )}
         <div>
-          {name && (
-            <p className="text-sm font-bold">{name}</p>
-          )}
+          {name && <p className="text-sm font-bold">{name}</p>}
           {details && (
             <p className="text-sm font-normal">
               {details.length <= 30

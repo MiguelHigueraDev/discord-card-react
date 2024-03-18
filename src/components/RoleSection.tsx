@@ -25,14 +25,23 @@ const RoleSection = ({
   return (
     <BaseSection>
       {title ? (
-        <SectionTitle marginBottom={8} title={title}/>
+        <SectionTitle marginBottom={8} title={title} />
       ) : (
-        <>{childrenCount == 1 ? <SectionTitle marginBottom={8} title="Role"/> : <SectionTitle marginBottom={8} title="Roles"/>}</>
+        <>
+          {childrenCount == 1 ? (
+            <SectionTitle marginBottom={8} title="Role" />
+          ) : (
+            <SectionTitle marginBottom={8} title="Roles" />
+          )}
+        </>
       )}
       <ul className="flex flex-wrap gap-[6px] mb-4">
         {roles &&
           roles.map((role, index) => (
-            <li key={index} className="bg-[#4b4b4b8c] py-[1px] px-[8px] rounded-[4px] flex items-center gap-[6px] select-none border-[0.5px] border-[#8887876a]">
+            <li
+              key={index}
+              className="bg-[#4b4b4b8c] py-[1px] px-[8px] rounded-[4px] flex items-center gap-[6px] select-none border-[0.5px] border-[#8887876a]"
+            >
               <div
                 className="w-[10px] h-[10px] rounded-full"
                 style={{ backgroundColor: role.color }}

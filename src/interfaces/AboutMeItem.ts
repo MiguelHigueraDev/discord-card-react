@@ -1,5 +1,5 @@
 export interface AboutMeItem {
-    text: string;
-    marginBottom?: number;
-    href?: string;
+  text: string;
+  marginBottom?: number;
+  href?: string;
 }

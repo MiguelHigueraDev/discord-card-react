@@ -1,1 +1,1 @@
-export type ActivityPriority = 'spotify' | 'game' | 'default' | 'none'
+export type ActivityPriority = "spotify" | "game" | "default" | "none";

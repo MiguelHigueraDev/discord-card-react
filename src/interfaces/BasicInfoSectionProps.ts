@@ -1,5 +1,5 @@
 export interface BasicInfoSectionProps {
-    displayname: string;
-    username: string;
-    pronouns?: string;
+  displayname: string;
+  username: string;
+  pronouns?: string;
 }

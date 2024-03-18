@@ -22,13 +22,13 @@ const NoteSection = ({
   placeholder?: string;
   handleInput: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }) => {
-  const noteRef = useRef<HTMLTextAreaElement>(null)
+  const noteRef = useRef<HTMLTextAreaElement>(null);
 
-  useAutosizeTextArea(noteRef.current, note)
+  useAutosizeTextArea(noteRef.current, note);
 
   return (
     <BaseSection>
-      {title ? <SectionTitle title={title}/> : <SectionTitle title="Note"/>}
+      {title ? <SectionTitle title={title} /> : <SectionTitle title="Note" />}
       <textarea
         placeholder={placeholder ? placeholder : "Add a note"}
         value={note}

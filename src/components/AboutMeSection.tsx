@@ -21,14 +21,18 @@ const AboutMeSection = ({
 }) => {
   return (
     <section className="mb-1 text-[14px]">
-      {title ? <SectionTitle title={title} /> : <SectionTitle title="About Me" />}
+      {title ? (
+        <SectionTitle title={title} />
+      ) : (
+        <SectionTitle title="About Me" />
+      )}
       {items &&
         items.map((item, index) =>
           // Convert it into a link if href attribute is provided
           item.href ? (
             <a
               key={index}
-              className="block text-blue-500 hover:text-blue-400" 
+              className="block text-blue-500 hover:text-blue-400"
               style={{ marginBottom: item.marginBottom }}
               href={item.href}
               target="_blank"

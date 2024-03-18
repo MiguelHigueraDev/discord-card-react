@@ -29,7 +29,11 @@ const SpotifySection = ({
   return (
     <BaseSection>
       <div className="flex justify-between" style={{ marginBottom: 6 }}>
-        {title ? <SectionTitle title={title} /> : <SectionTitle title="Listening to Spotify" />}
+        {title ? (
+          <SectionTitle title={title} />
+        ) : (
+          <SectionTitle title="Listening to Spotify" />
+        )}
         <svg
           width="20px"
           height="20px"
@@ -62,10 +66,18 @@ const SpotifySection = ({
           <div>
             {trackUrl ? (
               <a href={trackUrl} target="_blank">
-                <img src={artUrl} className="w-[65px] h-[65px] select-none rounded-md" alt={album} />
+                <img
+                  src={artUrl}
+                  className="w-[65px] h-[65px] select-none rounded-md"
+                  alt={album}
+                />
               </a>
             ) : (
-              <img src={artUrl} className="w-[65px] h-[65px] select-none rounded-md" alt={album} />
+              <img
+                src={artUrl}
+                className="w-[65px] h-[65px] select-none rounded-md"
+                alt={album}
+              />
             )}
           </div>
         )}

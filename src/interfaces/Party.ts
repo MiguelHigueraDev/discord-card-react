@@ -1,4 +1,4 @@
 export interface Party {
-    currentSize: number;
-    maxSize: number;
+  currentSize: number;
+  maxSize: number;
 }

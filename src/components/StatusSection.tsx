@@ -17,7 +17,9 @@ const StatusSection = ({
 }) => {
   return (
     <section className="flex items-center justify-start gap-2">
-      {iconUrl && <img src={iconUrl} className="w-5 h-5 text-[0.8rem]" alt="" />}
+      {iconUrl && (
+        <img src={iconUrl} className="w-5 h-5 text-[0.8rem]" alt="" />
+      )}
       {emoji && <p className="w-5 h-5 text-[0.8rem]">{emoji}</p>}
       <p className="text-[0.95rem] text-start">{status}</p>
     </section>

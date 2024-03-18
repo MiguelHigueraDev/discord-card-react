@@ -66,7 +66,7 @@ const LanyardDiscordCard = ({
   const { status: lanyard } = useLanyard({
     userId,
     socket: true,
-    apiUrl
+    apiUrl,
   });
 
   const currentGame =

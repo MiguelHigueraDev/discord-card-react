@@ -15,9 +15,7 @@ const BasicInfoSection = ({
 }) => {
   return (
     <section className="mb-2">
-      {displayname && (
-        <h1 className="text-xl font-bold">{displayname}</h1>
-      )}
+      {displayname && <h1 className="text-xl font-bold">{displayname}</h1>}
       {username && <h2 className="font-semibold text-md">{username}</h2>}
       {username && <p className="font-normal text-md">{pronouns}</p>}
     </section>
