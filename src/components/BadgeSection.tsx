@@ -1,5 +1,4 @@
 import { Badge } from "../interfaces/Badge";
-import styles from "../styles/BadgeSection.module.css";
 
 /**
  * Renders a list of badges in a <ul> container.
@@ -9,10 +8,10 @@ import styles from "../styles/BadgeSection.module.css";
  */
 const BadgeSection = ({ badges }: { badges: Badge[] }) => {
   return (
-    <ul className={styles["discord-badges-container"]}>
+    <ul className="absolute max-w-[196px] flex items-end justify-end flex-wrap z-20 bottom-[-38px] right-[14px] bg-[#00000059] rounded-md p-[3px] select-none">
       {badges.map((badge) => (
         <li key={badge.name}>
-          <img src={badge.iconUrl} className={styles["discord-badge"]} alt={badge.name} />
+          <img src={badge.iconUrl} className="w-[22px] h-[22px]" alt={badge.name} />
         </li>
       ))}
     </ul>

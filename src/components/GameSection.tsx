@@ -1,5 +1,6 @@
 import { Party } from "../interfaces/Party";
-import styles from "../styles/GameSection.module.css";
+import BaseSection from "./BaseSection";
+import SectionTitle from "./SectionTitle";
 
 /**
  * Renders a section for displaying game activity information.
@@ -32,31 +33,43 @@ const GameSection = ({
   party?: Party;
 }) => {
   return (
-    <section className={styles["discord-card-section"]}>
-      <div className={styles["discord-card-activity-header"]}>
-        {title ? <h3>{title}</h3> : <h3>Playing a game</h3>}
+    <BaseSection>
+      <div className="flex justify-between">
+        {title ? (
+          <SectionTitle title={title}></SectionTitle>
+        ) : (
+          <SectionTitle title="Playing a game"></SectionTitle>
+        )}
       </div>
-      <div className={styles["discord-card-activity-body"]}>
+      <div className="flex items-center gap-3">
         {largeImage ? (
-          <div className={styles["discord-card-activity-flex-container"]}>
-            <div className={styles["discord-card-activity-relative-container"]}>
-              <img src={largeImage} alt="" />
-              {smallImage && <img src={smallImage} alt="" className={styles["discord-card-activity-absolute-img"]} />}
+          <div className="flex gap-1">
+            <div className="relative justify-center items-center">
+              <img src={largeImage} alt="" className="w-[65px] h-[65px] select-none object-cover" />
+              {smallImage && (
+                <img
+                  src={smallImage}
+                  alt=""
+                  className="absolute bottom-[-3px] right-[-6px] w-[20px] h-[20px] rounded-full select-none object-cover"
+                />
+              )}
             </div>
           </div>
         ) : (
           <>
             {smallImage && (
               <div>
-                <img src={smallImage} alt="" />
+                <img src={smallImage} alt="" className="w-[65px] h-[65px] select-none object-cover" />
               </div>
             )}
           </>
         )}
         <div>
-          {name && <p className={styles["discord-card-activity-title"]}>{name}</p>}
+          {name && (
+            <p className="text-sm font-bold">{name}</p>
+          )}
           {details && (
-            <p>
+            <p className="text-sm font-normal">
               {details.length <= 30
                 ? details
                 : `${details.substring(0, 30)}...`}
@@ -66,7 +79,7 @@ const GameSection = ({
             <>
               {party ? (
                 <div>
-                  <p>
+                  <p className="text-sm font-normal">
                     {state.length <= 30
                       ? `${state} (${party.currentSize}/${party.maxSize})`
                       : `${state.substring(0, 30)}... (${party.currentSize}/${
@@ -75,7 +88,7 @@ const GameSection = ({
                   </p>
                 </div>
               ) : (
-                <p>
+                <p className="text-sm font-normal">
                   {state.length <= 30 ? state : `${state.substring(0, 30)}...`}
                 </p>
               )}
@@ -83,7 +96,7 @@ const GameSection = ({
           )}
         </div>
       </div>
-    </section>
+    </BaseSection>
   );
 };
 

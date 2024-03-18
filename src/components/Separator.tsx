@@ -1,4 +1,3 @@
-import styles from "../styles/Separator.module.css"
 /**
  * Function that returns a JSX element representing a separator (Discord style).
  *
@@ -6,7 +5,7 @@ import styles from "../styles/Separator.module.css"
  */
 const Separator = () => {
   return (
-    <div className={styles["discord-card-separator"]}></div>
+    <div className="w-full h-[1px] bg-[#5a5757] my-[12px]"></div>
   )
 }
 

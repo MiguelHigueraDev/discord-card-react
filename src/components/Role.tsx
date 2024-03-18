@@ -13,7 +13,7 @@ const Role = ({ role, color }: { role: string; color: string }) => {
         className={styles["discord-card-role-icon"]}
         style={{ backgroundColor: color }}
       ></div>
-      <p>{role}</p>
+      <p className="text-[0.72rem]">{role}</p>
     </li>
   );
 };

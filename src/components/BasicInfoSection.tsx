@@ -1,4 +1,3 @@
-import styles from "../styles/BasicInfoSection.module.css";
 /**
  * Renders a basic info section with display name, username, and pronouns.
  *
@@ -15,12 +14,12 @@ const BasicInfoSection = ({
   pronouns?: string;
 }) => {
   return (
-    <section className={styles["discord-card-basic-info"]}>
+    <section className="mb-2">
       {displayname && (
-        <h1 className={styles["discord-card-displayname"]}>{displayname}</h1>
+        <h1 className="text-xl font-bold">{displayname}</h1>
       )}
-      {username && <h2 className={styles["discord-card-username"]}>{username}</h2>}
-      {username && <p className={styles["discord-card-pronouns"]}>{pronouns}</p>}
+      {username && <h2 className="font-semibold text-md">{username}</h2>}
+      {username && <p className="font-normal text-md">{pronouns}</p>}
     </section>
   );
 };

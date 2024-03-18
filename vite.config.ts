@@ -2,8 +2,14 @@ import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
+import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [tailwindcss()],
+    },
+  },
   build: {
     //Specifies that the output of the build will be a library.
     lib: {

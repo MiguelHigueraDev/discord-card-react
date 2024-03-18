@@ -1,4 +1,5 @@
-import styles from "../styles/SpotifySection.module.css";
+import BaseSection from "./BaseSection";
+import SectionTitle from "./SectionTitle";
 /**
  * Renders a section displaying Spotify song information.
  *
@@ -26,9 +27,9 @@ const SpotifySection = ({
   trackUrl?: string;
 }) => {
   return (
-    <section className={styles["discord-card-section"]}>
-      <div className={styles["discord-card-activity-header"]} style={{ marginBottom: 2 }}>
-        {title ? <h3>{title}</h3> : <h3>Listening to Spotify</h3>}
+    <BaseSection>
+      <div className="flex justify-between" style={{ marginBottom: 6 }}>
+        {title ? <SectionTitle title={title} /> : <SectionTitle title="Listening to Spotify" />}
         <svg
           width="20px"
           height="20px"
@@ -56,26 +57,26 @@ const SpotifySection = ({
           </g>
         </svg>
       </div>
-      <div className={styles["discord-card-activity-body"]}>
+      <div className="flex items-center gap-3">
         {artUrl && (
           <div>
             {trackUrl ? (
               <a href={trackUrl} target="_blank">
-                <img src={artUrl} alt={album} />
+                <img src={artUrl} className="w-[65px] h-[65px] select-none" alt={album} />
               </a>
             ) : (
-              <img src={artUrl} alt={album} />
+              <img src={artUrl} className="w-[65px] h-[65px] select-none" alt={album} />
             )}
           </div>
         )}
         <div>
-          <p className={styles["discord-card-activity-title"]}>
+          <p className="text-sm font-bold">
             {song.length <= 80 ? song : `${song.substring(0, 80)}...`}
           </p>
-          <p className={styles["discord-card-activity-text"]}>
+          <p className="text-sm font-normal">
             {artist.length <= 80 ? artist : `${artist.substring(0, 80)}...`}
           </p>
-          <p className={styles["discord-card-activity-text"]}>
+          <p className="text-sm font-normal">
             {album.length <= 80 ? album : `${album.substring(0, 80)}...`}
           </p>
         </div>
@@ -84,13 +85,13 @@ const SpotifySection = ({
         <a
           target="_blank"
           href={trackUrl}
-          className={styles["discord-card-spotify-button"]}
+          className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white hover:bg-[#484848]"
           aria-label={`Play ${song} by ${artist} on Spotify`}
         >
           Play on Spotify
         </a>
       )}
-    </section>
+    </BaseSection>
   );
 };
 
