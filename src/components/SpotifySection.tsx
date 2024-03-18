@@ -71,13 +71,13 @@ const SpotifySection = ({
         )}
         <div>
           <p className="text-sm font-bold">
-            {song.length <= 80 ? song : `${song.substring(0, 80)}...`}
+            {song.length <= 27 ? song : `${song.substring(0, 27)}...`}
           </p>
           <p className="text-sm font-normal">
-            {artist.length <= 80 ? artist : `${artist.substring(0, 80)}...`}
+            {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
           </p>
           <p className="text-sm font-normal">
-            {album.length <= 80 ? album : `${album.substring(0, 80)}...`}
+            {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
           </p>
         </div>
       </div>
