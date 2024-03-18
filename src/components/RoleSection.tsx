@@ -29,7 +29,7 @@ const RoleSection = ({
       ) : (
         <>{childrenCount == 1 ? <SectionTitle marginBottom={8} title="Role"/> : <SectionTitle marginBottom={8} title="Roles"/>}</>
       )}
-      <ul className="flex flex-wrap gap-[6px] mb-2">
+      <ul className="flex flex-wrap gap-[6px] mb-4">
         {roles &&
           roles.map((role, index) => (
             <li key={index} className="bg-[#4b4b4b8c] py-[1px] px-[8px] rounded-[4px] flex items-center gap-[6px] select-none border-[0.5px] border-[#8887876a]">

@@ -28,7 +28,7 @@ const AboutMeSection = ({
           item.href ? (
             <a
               key={index}
-              className="text-blue-500 hover:text-blue-400" 
+              className="block text-blue-500 hover:text-blue-400" 
               style={{ marginBottom: item.marginBottom }}
               href={item.href}
               target="_blank"

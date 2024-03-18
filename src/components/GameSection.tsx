@@ -36,9 +36,9 @@ const GameSection = ({
     <BaseSection>
       <div className="flex justify-between">
         {title ? (
-          <SectionTitle title={title}></SectionTitle>
+          <SectionTitle title={title} marginBottom={4}></SectionTitle>
         ) : (
-          <SectionTitle title="Playing a game"></SectionTitle>
+          <SectionTitle title="Playing a game" marginBottom={4}></SectionTitle>
         )}
       </div>
       <div className="flex items-center gap-3">
