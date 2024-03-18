@@ -2,7 +2,9 @@
 
 A React Component that renders a Discord profile card
 
-![Card Preview](/github/card-preview.png)
+<p align="center">
+  <img width="333" height="826" src="github/card-preview.png">
+</p>
 
 ## Features:
 
@@ -250,7 +252,7 @@ function handleMessageChange(event) {
   setMessage(event.target.value);
 }
 
-<DiscordCard>
+<DiscordCard
 // Your card here...
 note={{
   // The state and input handler
@@ -263,7 +265,7 @@ message={{
   handleInput: handleMessageChange,
 }}
 // Rest of the card...
-</DiscordCard>
+></DiscordCard>
 ```
 
 ## Translations (i18n)
