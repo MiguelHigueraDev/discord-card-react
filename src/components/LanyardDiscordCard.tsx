@@ -35,6 +35,8 @@ const LanyardDiscordCard = ({
   roles,
   note,
   message,
+  spotifyTitle = "Listening to Spotify",
+  gameTitle = "Playing a game",
   showSpotify = true,
   showGames = true,
   priority = "default",
@@ -54,6 +56,8 @@ const LanyardDiscordCard = ({
   roles?: RoleSectionProps;
   note?: NoteSectionProps;
   message?: MessageSectionProps;
+  spotifyTitle?: string;
+  gameTitle?: string;
   showSpotify?: boolean;
   showGames?: boolean;
   priority?: ActivityPriority;
@@ -83,6 +87,7 @@ const LanyardDiscordCard = ({
       if (showSpotify && lanyard && lanyard.spotify) {
         return (
           <SpotifySection
+            title={spotifyTitle}
             artist={lanyard.spotify.artist}
             song={lanyard.spotify.song}
             album={lanyard.spotify.album}
@@ -94,6 +99,7 @@ const LanyardDiscordCard = ({
         if (showGames && currentGame) {
           return (
             <GameSection
+              title={gameTitle}
               largeImage={
                 currentGame.assets?.large_image
                   ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
@@ -129,6 +135,7 @@ const LanyardDiscordCard = ({
       if (showGames && currentGame) {
         return (
           <GameSection
+            title={gameTitle}
             largeImage={
               currentGame.assets?.large_image
                 ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
@@ -161,6 +168,7 @@ const LanyardDiscordCard = ({
       } else if (showSpotify && lanyard && lanyard.spotify) {
         return (
           <SpotifySection
+            title={spotifyTitle}
             artist={lanyard.spotify.artist}
             song={lanyard.spotify.song}
             album={lanyard.spotify.album}
@@ -175,6 +183,7 @@ const LanyardDiscordCard = ({
         <>
           {currentGame && showGames && (
             <GameSection
+              title={gameTitle}
               largeImage={
                 currentGame.assets?.large_image
                   ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
@@ -206,6 +215,7 @@ const LanyardDiscordCard = ({
           )}
           {showSpotify && lanyard && lanyard.spotify && (
             <SpotifySection
+              title={spotifyTitle}
               artist={lanyard.spotify.artist}
               song={lanyard.spotify.song}
               album={lanyard.spotify.album}
