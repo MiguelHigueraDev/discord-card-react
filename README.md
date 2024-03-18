@@ -1,6 +1,6 @@
 # discord-card-react
 
-A React Component that renders a Discord profile card
+A React Component that renders a Discord profile card. Can sync with your Discord status in real time.
 
 <p align="center">
   <img width="333" height="826" src="github/card-preview.png">
