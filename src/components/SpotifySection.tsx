@@ -63,7 +63,7 @@ const SpotifySection = ({
       </div>
       <div className="flex items-center gap-3">
         {artUrl && (
-          <div>
+          <div className="min-w-[65px]">
             {trackUrl ? (
               <a href={trackUrl} target="_blank">
                 <img
