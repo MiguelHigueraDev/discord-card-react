@@ -78,7 +78,7 @@ const LanyardDiscordCard = ({
    * Renders sections based on priority
    * If priority is "spotify" and showSpotify is true, and Spotify is not null render SpotifySection
    * If priority is "game" and showGames is true, and currentGame is not null render GameSection
-   * If priority is "default", behavior is the same as "spotify" (This is how Discord behaves)
+   * If priority is "default", behavior is the same as "game" (This is how Discord behaves)
    * If priority is "none", render both SpotifySection and GameSection if they are not null
    * WARNING: MESSY CODE
    */
