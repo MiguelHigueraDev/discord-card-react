@@ -10,7 +10,7 @@ A React Component that renders a Discord profile card. Can sync with your Discor
 
 - 😀 Easy to use
 - 📄 Supports all the features that the real Discord card supports (color gradient, badges, Spotify, and more)
-- ⚙️ Highly modular (only add the sections you want)
+- ⚙️ Highly modular and customizable
 - 🏷️ Integrates with [Lanyard](https://github.com/Phineas/lanyard) to sync your _real_ Discord status with this component
 - ♿ Accessible
 - 🌐 I18n friendly (can translate it to any language)
