@@ -148,7 +148,7 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
 
 ## Lanyard Card (\<LanyardDiscordCard\>)
 
-Pass your Discord ID as a prop to automatically update the card's status using [Lanyard](https://github.com/Phineas/lanyard). This also updates the Spotify and Activity (game) sections automatically using WebSocket.
+Pass your Discord ID as a prop to automatically update the card's status and Spotify/Game sections using [Lanyard](https://github.com/Phineas/lanyard) in WebSocket mode.
 
 Make sure to set up Lanyard by following [the instructions](https://github.com/Phineas/lanyard) (joining the Lanyard Discord server), or by self-hosting your own instance by following the instructions provided.
 
