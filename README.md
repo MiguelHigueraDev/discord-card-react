@@ -291,7 +291,3 @@ memberSince={{
 ## Credits
 
 Uses [react-use-lanyard](https://www.npmjs.com/package/react-use-lanyard).
-
-## Final Words
-
-Thanks for checking out my first `npm` package, suggestions and/or bug reports are welcome!
