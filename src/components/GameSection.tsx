@@ -26,7 +26,7 @@ const GameSection = ({
   party,
   elapsedText = 'elapsed',
   timeAlignment = 'left',
-  startTime = 0,
+  startTime,
 }: {
   title?: string;
   applicationId?: string;
@@ -54,7 +54,7 @@ const GameSection = ({
   }, [startTime])
 
   const formatTime = () => {
-    const distance = currentDateTime.getTime() - startTime
+    const distance = currentDateTime.getTime() - startTime!
     const seconds = Math.floor((distance / secondAsMilliseconds) % 60).toString().padStart(2, '0')
     const minutes = Math.floor((distance / minuteAsMilliseconds) % 60).toString().padStart(2, '0')
     if (distance < hourAsMilliseconds) return `${minutes}:${seconds}`
