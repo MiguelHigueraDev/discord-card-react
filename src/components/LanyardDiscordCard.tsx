@@ -211,6 +211,10 @@ const LanyardDiscordCard = ({
                     : null,
                 },
               })}
+              // Only render elapsed time if not null
+              {...(currentGame.timestamps?.start && {
+                startTime: currentGame.timestamps.start,
+              })}
             />
           )}
           {showSpotify && lanyard && lanyard.spotify && (
