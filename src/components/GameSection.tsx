@@ -3,8 +3,6 @@ import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
 
-export type TIME_ALIGNMENT = 'left' | 'right'
-
 /**
  * Renders a section for displaying game activity information.
  *
@@ -39,7 +37,7 @@ const GameSection = ({
   smallImage?: string;
   party?: Party;
   elapsedText?: string;
-  timeAlignment?: TIME_ALIGNMENT;
+  timeAlignment?: 'left' | 'right';
   startTime?: number;
 }) => {
   // Adapted from: https://github.com/kyranet/kyra.dev/blob/main/components/user/card-activity.vue
