@@ -234,7 +234,7 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
   // If set to "game", the behavior is the same as default
   // If set to "spotify", the Spotify card will be given priority over the Game card
   priority="none"
-  // If true, time elapsed in activity will be displayed
+  // If enabled, time elapsed in activity will be displayed (Default: true)
   displayElapsedTime="true"
   // (Optional) Customize the "elapsed" string and alignment (left, right) of the time for i18n
   timeElapsedText = "elapsed"
