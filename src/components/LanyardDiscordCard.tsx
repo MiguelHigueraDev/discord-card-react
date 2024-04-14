@@ -40,6 +40,9 @@ const LanyardDiscordCard = ({
   showSpotify = true,
   showGames = true,
   priority = "default",
+  displayElapsedTime = true,
+  timeElapsedText = "elapsed",
+  timeAlignment = "left",
   children,
 }: {
   userId: string;
@@ -61,6 +64,9 @@ const LanyardDiscordCard = ({
   showSpotify?: boolean;
   showGames?: boolean;
   priority?: ActivityPriority;
+  displayElapsedTime?: boolean;
+  timeElapsedText?: string;
+  timeAlignment?: "left" | "right";
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
   const { status: lanyard } = useLanyard({
@@ -211,8 +217,10 @@ const LanyardDiscordCard = ({
                     : null,
                 },
               })}
-              // Only render elapsed time if not null
-              {...(currentGame.timestamps?.start && {
+              // Only render elapsed time if not null and displayElapsedTime is true
+              elapsedText={timeElapsedText}
+              timeAlignment={timeAlignment}
+              {...(currentGame.timestamps?.start && displayElapsedTime && {
                 startTime: currentGame.timestamps.start,
               })}
             />
