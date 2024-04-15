@@ -24,7 +24,7 @@ const SeekBar = ({
   const percentage = ((currentDateTime.getTime() - startTimeMs) / (endTimeMs - startTimeMs)) * 100;
 
   return (
-    <div className="text-[0.75rem] flex flex-col gap-0 mt-3">
+    <div className="text-[0.75rem] mt-3">
         <div className="bar h-1 bg-neutral-700 rounded-xl">
             <div className="progress h-1 bg-primary rounded-xl bg-white" style={{ width: `${percentage}%` }}></div>
         </div>
