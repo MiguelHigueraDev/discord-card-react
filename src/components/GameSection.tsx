@@ -27,6 +27,7 @@ const GameSection = ({
   elapsedText = 'elapsed',
   timeAlignment = 'left',
   startTime,
+  buttonText,
 }: {
   title?: string;
   applicationId?: string;
@@ -39,6 +40,7 @@ const GameSection = ({
   elapsedText?: string;
   timeAlignment?: 'left' | 'right';
   startTime?: number;
+  buttonText?: string;
 }) => {
   // Adapted from: https://github.com/kyranet/kyra.dev/blob/main/components/user/card-activity.vue
   const secondAsMilliseconds = 1000
@@ -136,6 +138,13 @@ const GameSection = ({
           )}
         </div>
       </div>
+      {buttonText && (
+            <button 
+            className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white opacity-50 cursor-not-allowed"
+            type="button">
+              {buttonText}
+            </button>
+       )}
     </BaseSection>
   );
 };
