@@ -1,5 +1,6 @@
 import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
+import SeekBar from "./SeekBar";
 /**
  * Renders a section displaying Spotify song information.
  *
@@ -9,6 +10,8 @@ import SectionTitle from "./SectionTitle";
  * @param {string} album - The name of the album
  * @param {string} artUrl - The URL of the album art
  * @param {string} trackUrl - The URL of the track on Spotify
+ * @param {number} startTimeMs - The start time of the song in milliseconds
+ * @param {number} endTimeMs - The end time of the song in milliseconds
  * @return {JSX.Element} The rendered Spotify section
  */
 const SpotifySection = ({
@@ -18,6 +21,8 @@ const SpotifySection = ({
   album,
   artUrl,
   trackUrl,
+  startTimeMs,
+  endTimeMs,
 }: {
   title?: string;
   song: string;
@@ -25,6 +30,8 @@ const SpotifySection = ({
   album: string;
   artUrl?: string;
   trackUrl?: string;
+  startTimeMs?: number;
+  endTimeMs?: number;
 }) => {
   return (
     <BaseSection>
@@ -93,6 +100,11 @@ const SpotifySection = ({
           </p>
         </div>
       </div>
+      
+      { startTimeMs && endTimeMs && (
+        <SeekBar startTimeMs={startTimeMs} endTimeMs={endTimeMs} />
+      )}
+
       {trackUrl && (
         <a
           target="_blank"

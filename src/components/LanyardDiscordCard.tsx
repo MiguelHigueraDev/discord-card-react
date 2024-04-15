@@ -90,6 +90,8 @@ const LanyardDiscordCard = ({
           album={lanyardData.spotify.album}
           artUrl={lanyardData.spotify.album_art_url}
           trackUrl={`https://open.spotify.com/track/${lanyardData.spotify.track_id}`}
+          startTimeMs={lanyardData.spotify.timestamps.start}
+          endTimeMs={lanyardData.spotify.timestamps.end}
         />
       );
     }
