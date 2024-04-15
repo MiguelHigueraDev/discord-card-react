@@ -73,7 +73,7 @@ const GameSection = ({
       </div>
       <div className="flex items-center gap-3">
         {largeImage ? (
-          <div className="flex gap-1 min-w-[65px]">
+          <div className="flex gap-1 min-w-[65px] self-start">
             <div className="relative justify-center items-center">
               <img
                 src={largeImage}
@@ -92,7 +92,7 @@ const GameSection = ({
         ) : (
           <>
             {smallImage && (
-              <div className="min-w-[65px]">
+              <div className="min-w-[65px] self-start">
                 <img
                   src={smallImage}
                   alt=""
