@@ -1,3 +1,4 @@
+import { formatTime } from "../helpers/helperFunctions";
 import { Party } from "../interfaces/Party";
 import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
@@ -42,28 +43,16 @@ const GameSection = ({
   startTime?: number;
   buttonText?: string;
 }) => {
-  // Adapted from: https://github.com/kyranet/kyra.dev/blob/main/components/user/card-activity.vue
-  const secondAsMilliseconds = 1000
-  const minuteAsMilliseconds = secondAsMilliseconds * 60
-  const hourAsMilliseconds = minuteAsMilliseconds * 60
-
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   // Update to current time every second
   useEffect(() => {
-    const interval = setInterval(() => setCurrentDateTime(new Date()), secondAsMilliseconds)
+    const interval = setInterval(() => setCurrentDateTime(new Date()), 1000)
     return () => clearInterval(interval)
   }, [startTime])
 
-  const formatTime = () => {
-    const distance = currentDateTime.getTime() - startTime!
-    const seconds = Math.floor((distance / secondAsMilliseconds) % 60).toString().padStart(2, '0')
-    const minutes = Math.floor((distance / minuteAsMilliseconds) % 60).toString().padStart(2, '0')
-    if (distance < hourAsMilliseconds) return `${minutes}:${seconds}`
+  const elapsedTime = formatTime(startTime!, currentDateTime.getTime());
 
-    const hours = Math.floor((distance / hourAsMilliseconds)).toString().padStart(2, '0')
-    return `${hours}:${minutes}:${seconds}`
-  }
   return (
     <BaseSection>
       <div className="flex justify-between">
@@ -134,7 +123,7 @@ const GameSection = ({
             </>
           )}
           {startTime && (
-            <p>{timeAlignment === 'left' ? `${formatTime()} ${elapsedText}` : `${elapsedText} ${formatTime()}`}</p>
+            <p>{timeAlignment === 'left' ? `${elapsedTime} ${elapsedText}` : `${elapsedText} ${elapsedTime}`}</p>
           )}
         </div>
       </div>

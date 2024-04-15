@@ -5,4 +5,6 @@ export interface SpotifySectionProps {
   album: string;
   artUrl?: string;
   trackUrl?: string;
+  startTimeMs?: number;
+  endTimeMs?: number;
 }
