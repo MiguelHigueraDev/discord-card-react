@@ -108,12 +108,12 @@ const LanyardDiscordCard = ({
               title={gameTitle}
               largeImage={
                 currentGame.assets?.large_image
-                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
+                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.webp?size=80`
                   : undefined
               }
               smallImage={
                 currentGame.assets?.small_image
-                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.png`
+                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.webp?size=80`
                   : undefined
               }
               applicationId={currentGame.application_id}
@@ -144,12 +144,12 @@ const LanyardDiscordCard = ({
             title={gameTitle}
             largeImage={
               currentGame.assets?.large_image
-                ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
+                ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.webp?size=80`
                 : undefined
             }
             smallImage={
               currentGame.assets?.small_image
-                ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.png`
+                ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.webp?size=80`
                 : undefined
             }
             applicationId={currentGame.application_id}
@@ -192,12 +192,12 @@ const LanyardDiscordCard = ({
               title={gameTitle}
               largeImage={
                 currentGame.assets?.large_image
-                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.png`
+                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.webp?size=80`
                   : undefined
               }
               smallImage={
                 currentGame.assets?.small_image
-                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.png`
+                  ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.webp?size=80`
                   : undefined
               }
               applicationId={currentGame.application_id}
