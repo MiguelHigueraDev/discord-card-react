@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import LanyardDiscordCard from "./components/LanyardDiscordCard";
+import DiscordCard from "./components/DiscordCard";
 
 // This is an implementation example using Lanyard.
 function App() {
@@ -16,12 +16,12 @@ function App() {
   }
 
   return (
-    <LanyardDiscordCard
-      userId="205519765312241665"
+    <DiscordCard
       imageUrl="../example-assets/pfp.webp"
       bannerUrl="../example-assets/banner.png"
       primaryColor="#007777"
       accentColor="#8500d3"
+      connectionStatus="online"
       basicInfo={{
         displayname: "Misfit",
         username: "misfitdude",
@@ -77,10 +77,26 @@ function App() {
         placeholder: "Message @Misfit",
         accentColor: "#8500d3",
       }}
-      showSpotify={true}
-      showGames={true}
-      priority="none"
-    ></LanyardDiscordCard>
+      game={{
+        name: "Minecraft",
+        state: "Playing",
+        details: "Survival",
+        largeImage: "../example-assets/minecraft.png",
+        smallImage: "../example-assets/pickaxe.webp",
+        party: {
+          maxSize: 4,
+          currentSize: 2,
+        },
+        buttonText: "Join",
+      }}
+      spotify={{
+        song: "Last Caress",
+        artist: "Misfits",
+        album: "Static Age",
+        artUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
+        trackUrl: "https://open.spotify.com/track/0S8LgLoseDB6W2HWd1ym6P",
+      }}
+    ></DiscordCard>
   );
 }
 
