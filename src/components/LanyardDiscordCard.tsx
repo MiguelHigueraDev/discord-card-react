@@ -69,27 +69,27 @@ const LanyardDiscordCard = ({
   timeAlignment?: "left" | "right";
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
-  const { status: lanyard } = useLanyard({
+  const { status: lanyardData } = useLanyard({
     userId,
     socket: true,
     apiUrl,
   });
 
   const currentGame =
-    lanyard && lanyard.activities
-      ? lanyard.activities.find((ac) => ac.type === 0)
+    lanyardData && lanyardData.activities
+      ? lanyardData.activities.find((ac) => ac.type === 0)
       : null;
 
   const renderSpotifySection = () => {
-    if (showSpotify && lanyard && lanyard.spotify) {
+    if (showSpotify && lanyardData && lanyardData.spotify) {
       return (
         <SpotifySection
           title={spotifyTitle}
-          artist={lanyard.spotify.artist}
-          song={lanyard.spotify.song}
-          album={lanyard.spotify.album}
-          artUrl={lanyard.spotify.album_art_url}
-          trackUrl={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
+          artist={lanyardData.spotify.artist}
+          song={lanyardData.spotify.song}
+          album={lanyardData.spotify.album}
+          artUrl={lanyardData.spotify.album_art_url}
+          trackUrl={`https://open.spotify.com/track/${lanyardData.spotify.track_id}`}
         />
       );
     }
@@ -151,19 +151,15 @@ const LanyardDiscordCard = ({
    */
   const renderSections = () => {
     if (priority === "spotify") {
-      if (showSpotify && lanyard && lanyard.spotify) {
+      if (showSpotify && lanyardData && lanyardData.spotify) {
         return renderSpotifySection();
-      } else {
-        if (showGames && currentGame) {
-          return renderActivitySection();
-        }
       }
+      return renderActivitySection();
     } else if (priority === "game" || priority === "default") {
       if (showGames && currentGame) {
         return renderActivitySection();
-      } else if (showSpotify && lanyard && lanyard.spotify) {
-        return renderSpotifySection();
       }
+      return renderSpotifySection();
     } else {
       return (
         <>
@@ -181,7 +177,7 @@ const LanyardDiscordCard = ({
       primaryColor={primaryColor}
       accentColor={accentColor}
       badges={badges}
-      connectionStatus={lanyard ? lanyard.discord_status : "offline"}
+      connectionStatus={lanyardData ? lanyardData.discord_status : "offline"}
     >
       <>
         <BasicInfoSection {...basicInfo} />
