@@ -8,4 +8,5 @@ export interface GameSectionProps {
   largeImage?: string;
   smallImage?: string;
   party?: Party;
+  buttonText?: string;
 }
