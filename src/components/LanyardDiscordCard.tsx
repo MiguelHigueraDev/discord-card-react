@@ -223,6 +223,10 @@ const LanyardDiscordCard = ({
               {...(currentGame.timestamps?.start && displayElapsedTime && {
                 startTime: currentGame.timestamps.start,
               })}
+              // If present, pass the first button's text to the component
+              {...(currentGame.buttons && {
+                buttonText: currentGame.buttons[0]
+              })}
             />
           )}
           {showSpotify && lanyard && lanyard.spotify && (
