@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
  * @param {string} smallImage - URL for the small image related to the game activity
  * @param {Party} party - Object containing information about the party related to the game activity
  * @param {number} startTime - The start time of the game activity
+ * @param {string} primaryColor - The color of the button (inherited from card)
  * @return {JSX.Element} The rendered game section component
  */
 const GameSection = ({
@@ -29,6 +30,7 @@ const GameSection = ({
   timeAlignment = 'left',
   startTime,
   buttonText,
+  primaryColor
 }: {
   title?: string;
   applicationId?: string;
@@ -42,6 +44,7 @@ const GameSection = ({
   timeAlignment?: 'left' | 'right';
   startTime?: number;
   buttonText?: string;
+  primaryColor?: string;
 }) => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
@@ -130,6 +133,7 @@ const GameSection = ({
       {buttonText && (
             <button 
             className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white opacity-50 cursor-not-allowed"
+            style={{ backgroundColor: primaryColor }}
             type="button">
               {buttonText}
             </button>

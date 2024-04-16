@@ -85,6 +85,7 @@ const LanyardDiscordCard = ({
       return (
         <SpotifySection
           title={spotifyTitle}
+          primaryColor={primaryColor}
           artist={lanyardData.spotify.artist}
           song={lanyardData.spotify.song}
           album={lanyardData.spotify.album}
@@ -101,6 +102,7 @@ const LanyardDiscordCard = ({
       return (
         <GameSection
           title={gameTitle}
+          primaryColor={primaryColor}
           largeImage={
             currentGame.assets?.large_image
               ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.webp?size=80`

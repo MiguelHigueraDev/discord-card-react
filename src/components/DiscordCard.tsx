@@ -79,8 +79,8 @@ const DiscordCard = ({
         )}
         {aboutMe && <AboutMeSection {...aboutMe} />}
         {memberSince && <MemberSinceSection {...memberSince} />}
-        {spotify && <SpotifySection {...spotify} accentColor= {accentColor}/>}
-        {game && <GameSection {...game} />}
+        {spotify && <SpotifySection {...spotify} primaryColor={primaryColor}/>}
+        {game && <GameSection {...game} primaryColor={primaryColor} />}
         {roles && <RoleSection {...roles} />}
         {note && <NoteSection {...note} />}
         {message && <MessageSection {...message} />}
