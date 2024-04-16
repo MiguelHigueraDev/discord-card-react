@@ -80,6 +80,22 @@ const LanyardDiscordCard = ({
       ? lanyardData.activities.find((ac) => ac.type === 0)
       : null;
 
+  // This handles external assets in case they are present
+  const largeImageId = currentGame?.assets?.large_image;
+  const smallImageId = currentGame?.assets?.small_image;
+  let largeImageExternalUrl = null;
+  let smallImageExternalUrl = null;
+
+  if (largeImageId?.startsWith("mp:external")) {
+    const largeImageUrlParts = largeImageId.split("/");
+    largeImageExternalUrl = largeImageUrlParts.slice(3).join("/");
+  }
+
+  if (smallImageId?.startsWith("mp:external")) {
+    const smallImageUrlParts = smallImageId.split("/");
+    smallImageExternalUrl = smallImageUrlParts.slice(3).join("/");
+  }
+
   const renderSpotifySection = () => {
     if (showSpotify && lanyardData && lanyardData.spotify) {
       return (
@@ -104,14 +120,14 @@ const LanyardDiscordCard = ({
           title={gameTitle}
           primaryColor={primaryColor}
           largeImage={
-            currentGame.assets?.large_image
-              ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.webp?size=80`
-              : undefined
+            largeImageExternalUrl
+              ? `http://${largeImageExternalUrl}`
+              : `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${largeImageId}.webp?size=80`
           }
           smallImage={
-            currentGame.assets?.small_image
-              ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.small_image}.webp?size=80`
-              : undefined
+            smallImageExternalUrl
+              ? `http://${smallImageExternalUrl}`
+              : `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${smallImageId}.webp?size=80`
           }
           applicationId={currentGame.application_id}
           name={currentGame.name}
