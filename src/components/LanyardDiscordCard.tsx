@@ -122,12 +122,16 @@ const LanyardDiscordCard = ({
           largeImage={
             largeImageExternalUrl
               ? `http://${largeImageExternalUrl}`
-              : `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${largeImageId}.webp?size=80`
+              : currentGame.assets?.large_image
+              ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${largeImageId}.webp?size=80`
+              : undefined
           }
           smallImage={
             smallImageExternalUrl
               ? `http://${smallImageExternalUrl}`
-              : `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${smallImageId}.webp?size=80`
+              : currentGame.assets?.small_image
+              ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${smallImageId}.webp?size=80`
+              : undefined
           }
           applicationId={currentGame.application_id}
           name={currentGame.name}
