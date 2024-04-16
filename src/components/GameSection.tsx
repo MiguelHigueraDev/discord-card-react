@@ -58,7 +58,7 @@ const GameSection = ({
 
   return (
     <BaseSection>
-      <SectionTitle title={title || "Playing a game"} />
+      <SectionTitle title={title || "Playing a game"} marginBottom={6} />
       <div className="flex items-center gap-3">
         {largeImage ? (
           <div className="flex gap-1 min-w-[65px] self-start">
