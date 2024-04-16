@@ -5,7 +5,7 @@ const BaseSection = ({
 }: {
   children: React.ReactNode | React.ReactNode[];
 }) => {
-  return <section className="mb-2">{children}</section>;
+  return <section>{children}</section>;
 };
 
 export default BaseSection;

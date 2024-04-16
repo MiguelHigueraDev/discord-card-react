@@ -35,7 +35,7 @@ const RoleSection = ({
           )}
         </>
       )}
-      <ul className="flex flex-wrap gap-[6px] mb-4">
+      <ul className="flex flex-wrap gap-[6px] mb-1">
         {roles &&
           roles.map((role, index) => (
             <li
