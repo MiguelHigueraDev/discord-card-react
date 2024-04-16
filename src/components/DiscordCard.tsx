@@ -77,13 +77,15 @@ const DiscordCard = ({
             <Separator />
           </>
         )}
-        {aboutMe && <AboutMeSection {...aboutMe} />}
-        {memberSince && <MemberSinceSection {...memberSince} />}
-        {spotify && <SpotifySection {...spotify} primaryColor={primaryColor}/>}
-        {game && <GameSection {...game} primaryColor={primaryColor} />}
-        {roles && <RoleSection {...roles} />}
-        {note && <NoteSection {...note} />}
-        {message && <MessageSection {...message} />}
+        <div className="space-y-2">
+          {aboutMe && <AboutMeSection {...aboutMe} />}
+          {memberSince && <MemberSinceSection {...memberSince} />}
+          {spotify && <SpotifySection {...spotify} primaryColor={primaryColor}/>}
+          {game && <GameSection {...game} primaryColor={primaryColor} />}
+          {roles && <RoleSection {...roles} />}
+          {note && <NoteSection {...note} />}
+          {message && <MessageSection {...message} />}
+        </div>
       </>
       <>{children}</>
     </BaseDiscordCard>

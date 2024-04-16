@@ -183,7 +183,7 @@ const LanyardDiscordCard = ({
       badges={badges}
       connectionStatus={lanyardData ? lanyardData.discord_status : "offline"}
     >
-      <>
+      <div className="space-y-2">
         <BasicInfoSection {...basicInfo} />
         <>{status == null && <Separator />}</>
         {status && (
@@ -198,7 +198,7 @@ const LanyardDiscordCard = ({
         {roles && <RoleSection {...roles} />}
         {note && <NoteSection {...note} />}
         {message && <MessageSection {...message} />}
-      </>
+      </div>
 
       <>{children}</>
     </BaseDiscordCard>

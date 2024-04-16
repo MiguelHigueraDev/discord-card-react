@@ -21,11 +21,7 @@ const AboutMeSection = ({
 }) => {
   return (
     <section className="mb-1 text-[14px]">
-      {title ? (
-        <SectionTitle title={title} />
-      ) : (
-        <SectionTitle title="About Me" />
-      )}
+      <SectionTitle title={title || "About Me"} />
       {items &&
         items.map((item, index) =>
           // Convert it into a link if href attribute is provided

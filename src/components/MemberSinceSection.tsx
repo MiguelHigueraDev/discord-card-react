@@ -25,11 +25,7 @@ const MemberSinceSection = ({
 }) => {
   return (
     <BaseSection>
-      {title ? (
-        <SectionTitle title={title} marginBottom={5}></SectionTitle>
-      ) : (
-        <SectionTitle title="Member Since" marginBottom={5}></SectionTitle>
-      )}
+      <SectionTitle title={title || "Member since"} marginBottom={3} />
       <div className="flex items-center justify-start gap-2">
         {serverJoinDate ? (
           <>

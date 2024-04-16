@@ -32,7 +32,7 @@ const NoteSection = ({
       <textarea
         placeholder={placeholder ? placeholder : "Add a note"}
         value={note}
-        className="text-[0.8rem] p-1 w-full bg-transparent border-0 resize-none outline-none"
+        className="text-[0.8rem] p-1 w-full bg-transparent border-0 resize-none outline-none text-sm"
         onInput={handleInput}
         maxLength={255}
         ref={noteRef}
