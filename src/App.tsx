@@ -36,7 +36,7 @@ function App() {
       ]}
       status={{
         status: "Best HTML Programmer",
-        iconUrl: "raccoon.svg",
+        iconUrl: "../example-assets/html.webp",
       }}
       aboutMe={{
         items: [
