@@ -102,6 +102,7 @@ const LanyardDiscordCard = ({
       return (
         <GameSection
           title={gameTitle}
+          primaryColor={primaryColor}
           largeImage={
             currentGame.assets?.large_image
               ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${currentGame.assets.large_image}.webp?size=80`

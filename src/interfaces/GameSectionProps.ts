@@ -9,4 +9,5 @@ export interface GameSectionProps {
   smallImage?: string;
   party?: Party;
   buttonText?: string;
+  primaryColor?: string;
 }
