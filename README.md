@@ -1,6 +1,6 @@
 # discord-card-react
 
-A React Component that renders a Discord profile card. Can sync with your Discord status in real time.
+A React Component that renders a Discord profile card. Can sync with your Discord status in real time. [LIVE DEMO](https://discord.miguelhiguera.dev/)
 
 <p align="center">
   <img width="356" height="869" src="github/card-preview-v2.png">
@@ -46,6 +46,9 @@ import { LanyardDiscordCard } from "discord-card-react";
 // DON'T FORGET TO ADD THE STYLES OR THE CARD WILL LOOK UGLY!
 import "discord-card-react/styles";
 ```
+
+> [!IMPORTANT]
+> Remember to import the styles using import "discord-card-react/styles";
 
 After importing, copy one of the templates below to add the card(s).
 
