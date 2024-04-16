@@ -58,13 +58,7 @@ const GameSection = ({
 
   return (
     <BaseSection>
-      <div className="flex justify-between">
-        {title ? (
-          <SectionTitle title={title} marginBottom={4}></SectionTitle>
-        ) : (
-          <SectionTitle title="Playing a game" marginBottom={4}></SectionTitle>
-        )}
-      </div>
+      <SectionTitle title={title || "Playing a game"} />
       <div className="flex items-center gap-3">
         {largeImage ? (
           <div className="flex gap-1 min-w-[65px] self-start">
