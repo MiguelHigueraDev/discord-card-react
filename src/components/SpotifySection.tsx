@@ -41,11 +41,7 @@ const SpotifySection = ({
   return (
     <BaseSection>
       <div className="flex justify-between" style={{ marginBottom: 6 }}>
-        {title ? (
-          <SectionTitle title={title} />
-        ) : (
-          <SectionTitle title="Listening to Spotify" />
-        )}
+      <SectionTitle title={title || "Listening to Spotify"} />
         <svg
           width="20px"
           height="20px"

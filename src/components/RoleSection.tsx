@@ -24,17 +24,7 @@ const RoleSection = ({
 
   return (
     <BaseSection>
-      {title ? (
-        <SectionTitle marginBottom={8} title={title} />
-      ) : (
-        <>
-          {childrenCount == 1 ? (
-            <SectionTitle marginBottom={8} title="Role" />
-          ) : (
-            <SectionTitle marginBottom={8} title="Roles" />
-          )}
-        </>
-      )}
+      <SectionTitle title={title || (childrenCount == 1) ? 'Role' : 'Roles'} marginBottom={8} />
       <ul className="flex flex-wrap gap-[6px] mb-4">
         {roles &&
           roles.map((role, index) => (
