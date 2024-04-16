@@ -6,10 +6,11 @@ export const formatTime = (startTimeMs: number, endTimeMs: number) => {
 
   const distance = endTimeMs - startTimeMs;
   const seconds = Math.floor((distance / secondAsMilliseconds) % 60).toString().padStart(2, "0");
-  const minutes = Math.floor((distance / minuteAsMilliseconds) % 60).toString().padStart(2, "0");
+  let minutes = Math.floor((distance / minuteAsMilliseconds) % 60).toString()
   if (distance < hourAsMilliseconds) return `${minutes}:${seconds}`;
 
-  const hours = Math.floor(distance / hourAsMilliseconds).toString().padStart(2, "0");
+  minutes = minutes.padStart(2, "0");
+  const hours = Math.floor(distance / hourAsMilliseconds).toString()
   return `${hours}:${minutes}:${seconds}`;
 }
 
