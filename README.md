@@ -1,6 +1,8 @@
 # discord-card-react
 
-A React Component that renders a Discord profile card. Can sync with your Discord status in real time. [LIVE DEMO](https://discord.miguelhiguera.dev/)
+A React Component that renders a Discord profile card. Can sync with your Discord status in real time.
+
+<a href="https://discord.miguelhiguera.dev"/>Live Demo</a>
 
 <p align="center">
   <img width="356" height="869" src="github/card-preview-v2.png">
@@ -306,7 +308,9 @@ memberSince={{
 ![i18n example](/github/member-since-i18n.png)
 
 ## How to contribute
-All contributions are greatly appreciated! Follow these instructions if you are a newcomer:
+All contributions are greatly appreciated! Please keep PRs short, focusing only in one feature/fix you want to implement, so they can be easily reviewed.
+
+Follow these instructions if you are a newcomer:
 
 1. Fork the repository and clone it
 2. Make a new branch using the command `git switch -c BranchName`
