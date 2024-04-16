@@ -6,6 +6,15 @@ A React Component that renders a Discord profile card. Can sync with your Discor
   <img width="333" height="826" src="github/card-preview.png">
 </p>
 
+## Table of Contents:
+1. [Features](#features)
+2. [How to use](#how-to-use)
+3. [State and input handler example](#state-and-input-handler-example)
+4. [Translations (i18n)](#translations-i18n)
+5. [How to contribute](#how-to-contribute)
+6. [Credits](#credits)
+
+
 ## Features:
 
 - 😀 Easy to use
@@ -40,7 +49,7 @@ import "discord-card-react/styles";
 
 After importing, copy one of the templates below to add the card(s).
 
-## Static Card (\<DiscordCard\>)
+### Static Card (\<DiscordCard\>)
 
 Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status. If you want to add a dynamic card that updates with your status, check the next template below.
 
@@ -138,15 +147,15 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
 ></DiscordCard>
 ```
 
-### Spotify preview
+#### Spotify preview
 
 ![Game Section Example](/github/spotify-example.png)
 
-### Game preview
+#### Game preview
 
 ![Game Section Example](/github/game-example.png)
 
-## Lanyard Card (\<LanyardDiscordCard\>)
+### Lanyard Card (\<LanyardDiscordCard\>)
 
 Pass your Discord ID as a prop to automatically update the card's status and Spotify/Game sections using [Lanyard](https://github.com/Phineas/lanyard) in WebSocket mode.
 
@@ -293,6 +302,14 @@ memberSince={{
 ```
 ![i18n example](/github/member-since-i18n.png)
 
+## How to contribute
+All contributions are greatly appreciated! Follow these instructions if you are a newcomer:
+
+1. Fork the repository and clone it
+2. Make a new branch using the command `git switch -c BranchName`
+3. Install dependencies by using your package manager of choice (for example: `npm install`)
+4. Start the development server to see your changes live using `npm run dev`
+5. Once you have finished implementing your feature/fixing something commit your changes and [open a PR!](https://github.com/MiguelHigueraDev/discord-card-react/pulls)
 
 ## Credits
 
