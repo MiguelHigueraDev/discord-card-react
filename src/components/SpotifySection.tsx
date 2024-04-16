@@ -13,12 +13,10 @@ import SpotifyLogo from "./SpotifyLogo";
  * @param {string} trackUrl - The URL of the track on Spotify
  * @param {number} startTimeMs - The start time of the song in milliseconds
  * @param {number} endTimeMs - The end time of the song in milliseconds
+ * @param {string} primaryColor - The color of the button (inherited from card)
  * @return {JSX.Element} The rendered Spotify section
  */
 
-interface ColorVariants {
-  [key: string]: string;
-}
 const SpotifySection = ({
   title,
   song,
@@ -28,7 +26,7 @@ const SpotifySection = ({
   trackUrl,
   startTimeMs,
   endTimeMs,
-  accentColor
+  primaryColor
 }: {
   title?: string;
   song: string;
@@ -38,12 +36,8 @@ const SpotifySection = ({
   trackUrl?: string;
   startTimeMs?: number;
   endTimeMs?: number;
-  accentColor?:string;
+  primaryColor?: string;
 }) => {
-
-  const colors :ColorVariants = {
-    "#8500d3": 'bg-[#8500d3] hover:bg-[#484848]'
-  } ;
   return (
     <BaseSection>
       <div className="flex justify-between" style={{ marginBottom: 6 }}>
@@ -117,31 +111,21 @@ const SpotifySection = ({
       )}
 
       {trackUrl && (
-        <section className="flex relative">
-        <a
-          target="_blank"
-          href={trackUrl}
-          className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white hover:bg-[#484848]"
-          className={` block ${colors[accentColor]} w-[80%] text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white hover:bg-[#484848] mr-2`}
-          aria-label={`Play ${song} by ${artist} on Spotify`}
-          
-        >
-          <div className="flex justify-center items-center gap-2">
-          <SpotifyLogo></SpotifyLogo>
-          Play on Spotify
-          </div>
-        </a>
-                <a
-          target="_blank"
-          href={trackUrl}
-          className={` block ${colors[accentColor]} w-[15%] text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white`}
-          aria-label={`Play ${song} by ${artist} on Spotify`}
-        >
-          <div className="flex justify-center items-center gap-2">
-          <SpotifyLogo></SpotifyLogo>
-          </div>
-        </a>
-    </section>
+            <div>
+            <a
+              target="_blank"
+              href={trackUrl}
+              className={`block lighten w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter]`}
+              style={{ backgroundColor: primaryColor }}
+              aria-label={`Play ${song} by ${artist} on Spotify`}
+              
+            >
+              <div className="flex justify-center items-center gap-2">
+              <SpotifyLogo color={"#fff"} size={16} />
+              Play on Spotify
+              </div>
+            </a>
+        </div>
       )}
     </BaseSection>
   );

@@ -85,6 +85,7 @@ const LanyardDiscordCard = ({
       return (
         <SpotifySection
           title={spotifyTitle}
+          primaryColor={primaryColor}
           artist={lanyardData.spotify.artist}
           song={lanyardData.spotify.song}
           album={lanyardData.spotify.album}
