@@ -30,7 +30,7 @@ const MessageSection = ({
         placeholder={placeholder ? placeholder : "Message this user"}
         value={message}
         onChange={handleInput}
-        className="mt-2 w-full h-[48px] rounded-lg bg-[#4b4b4b00] p-3 scrollbar-none resize-none [scrollbar-width:none] focus:outline-none text-sm"
+        className="mt-2 w-full h-[44px] rounded-lg bg-[#4b4b4b00] p-3 scrollbar-none resize-none [scrollbar-width:none] focus:outline-none text-sm"
         style={{ border: `0.5px solid ${accentColor ? accentColor : "#ccc"}` }}
       />
     </section>
