@@ -1,4 +1,3 @@
-import styles from "../styles/Role.module.css";
 /**
  * Renders a role component with the specified role and color.
  *
@@ -8,12 +7,12 @@ import styles from "../styles/Role.module.css";
  */
 const Role = ({ role, color }: { role: string; color: string }) => {
   return (
-    <li className={styles["discord-card-role"]}>
+    <li className="bg-[#4b4b4b8c] py-[1px] px-[8px] rounded-[4px] flex items-center gap-[6px] select-none border-[0.5px] border-[#8887876a]">
       <div
-        className={styles["discord-card-role-icon"]}
+        className="w-[10px] h-[10px] rounded-full"
         style={{ backgroundColor: color }}
       ></div>
-      <p className="text-[0.72rem]">{role}</p>
+      <div className="text-[0.8rem]">{role}</div>
     </li>
   );
 };
