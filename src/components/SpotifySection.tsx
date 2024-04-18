@@ -14,6 +14,7 @@ import SpotifyLogo from "./SpotifyLogo";
  * @param {number} startTimeMs - The start time of the song in milliseconds
  * @param {number} endTimeMs - The end time of the song in milliseconds
  * @param {string} primaryColor - The color of the button (inherited from card)
+ * @param {string} playOnSpotifyText - The text to display on the button (default: Play on Spotify)
  * @return {JSX.Element} The rendered Spotify section
  */
 
@@ -26,7 +27,8 @@ const SpotifySection = ({
   trackUrl,
   startTimeMs,
   endTimeMs,
-  primaryColor
+  primaryColor,
+  playOnSpotifyText,
 }: {
   title?: string;
   song: string;
@@ -37,6 +39,7 @@ const SpotifySection = ({
   startTimeMs?: number;
   endTimeMs?: number;
   primaryColor?: string;
+  playOnSpotifyText?: string;
 }) => {
   return (
     <BaseSection>
@@ -89,11 +92,10 @@ const SpotifySection = ({
               className={`block lighten w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter]`}
               style={{ backgroundColor: primaryColor }}
               aria-label={`Play ${song} by ${artist} on Spotify`}
-              
             >
               <div className="flex justify-center items-center gap-2">
               <SpotifyLogo color={"#fff"} size={16} />
-              Play on Spotify
+                {playOnSpotifyText || "Play on Spotify"}
               </div>
             </a>
         </div>

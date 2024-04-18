@@ -8,4 +8,5 @@ export interface SpotifySectionProps {
   startTimeMs?: number;
   endTimeMs?: number;
   primaryColor?: string;
+  playOnSpotifyText?: string;
 }

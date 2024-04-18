@@ -41,6 +41,7 @@ const LanyardDiscordCard = ({
   showGames = true,
   priority = "default",
   displayElapsedTime = true,
+  playOnSpotifyText = "Play on Spotify",
   timeElapsedText = "elapsed",
   timeAlignment = "left",
   children,
@@ -65,6 +66,7 @@ const LanyardDiscordCard = ({
   showGames?: boolean;
   priority?: ActivityPriority;
   displayElapsedTime?: boolean;
+  playOnSpotifyText?: string;
   timeElapsedText?: string;
   timeAlignment?: "left" | "right";
   children?: React.JSX.Element | React.JSX.Element[];
@@ -109,6 +111,7 @@ const LanyardDiscordCard = ({
           trackUrl={`https://open.spotify.com/track/${lanyardData.spotify.track_id}`}
           startTimeMs={lanyardData.spotify.timestamps.start}
           endTimeMs={lanyardData.spotify.timestamps.end}
+          playOnSpotifyText={playOnSpotifyText}
         />
       );
     }
