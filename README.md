@@ -56,7 +56,7 @@ After importing, copy one of the templates below to add the card(s).
 
 ### Static Card (\<DiscordCard\>)
 
-Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status. If you want to add a dynamic card that updates with your status, check the next template below.
+Pass props to it to customize. Like the name says, it's static and doesn't update dynamically based on your real Discord status. **If you want to add a dynamic card that updates with your status, check the next template below.**
 
 ```js
 <DiscordCard
@@ -164,7 +164,7 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
 
 Pass your Discord ID as a prop to automatically update the card's status and Spotify/Game sections using [Lanyard](https://github.com/Phineas/lanyard) in WebSocket mode.
 
-Make sure to set up Lanyard by following [the instructions](https://github.com/Phineas/lanyard) (joining the Lanyard Discord server), or by self-hosting your own instance by following the instructions provided.
+Make sure to set up Lanyard by following [the instructions](https://github.com/Phineas/lanyard) (extremely easy).
 
 ```js
 <LanyardDiscordCard
@@ -314,9 +314,9 @@ Follow these instructions if you are a newcomer:
 
 1. Fork the repository and clone it
 2. Make a new branch using the command `git switch -c BranchName`
-3. Install dependencies by using your package manager of choice (for example: `npm install`)
+3. Install dependencies using your package manager of choice (for example: `npm install`)
 4. Start the development server to see your changes live using `npm run dev`
-5. Once you have finished implementing your feature/fixing something commit your changes and [open a PR!](https://github.com/MiguelHigueraDev/discord-card-react/pulls)
+6. Once you have finished your work, commit your changes and [open a PR!](https://github.com/MiguelHigueraDev/discord-card-react/pulls)
 
 ## Credits
 
