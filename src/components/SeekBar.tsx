@@ -29,8 +29,8 @@ const SeekBar = ({
             <div className="progress h-1 bg-primary rounded-xl bg-white" style={{ width: `${percentage}%` }}></div>
         </div>
         <div className="flex justify-between items-start">
-            <p className="my-0 py-0">{currentPosition}</p>
-            <p className="my-0 py-0">{songDuration}</p>
+            <div className="my-0 py-0">{currentPosition}</div>
+            <div className="my-0 py-0">{songDuration}</div>
         </div>
     </div>
   );
