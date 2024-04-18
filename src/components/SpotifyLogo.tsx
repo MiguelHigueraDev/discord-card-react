@@ -1,4 +1,4 @@
-export const SpotifyLogo = ({color = "#00DA5A", size = 20}:{color: string, size: number}) => {
+export const SpotifyLogo = ({color = "#00DA5A", size = 20}:{color?: string, size?: number}) => {
     return (
       <svg
       width={size + "px"}
