@@ -1,0 +1,3 @@
+.lighten:hover {
+    filter: brightness(1.1);
+}

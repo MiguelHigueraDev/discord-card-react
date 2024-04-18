@@ -2,6 +2,7 @@ import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
 import SeekBar from "./SeekBar";
 import SpotifyLogo from "./SpotifyLogo";
+import styles from "../styles/SpotifySection.module.css";
 /**
  * Renders a section displaying Spotify song information.
  *
@@ -89,7 +90,7 @@ const SpotifySection = ({
             <a
               target="_blank"
               href={trackUrl}
-              className={`block lighten w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter]`}
+              className={`block w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter] ${styles["lighten"]}`}
               style={{ backgroundColor: primaryColor }}
               aria-label={`Play ${song} by ${artist} on Spotify`}
             >
