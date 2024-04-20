@@ -33,9 +33,18 @@ const BaseDiscordCard = ({
             <img
               src={imageUrl}
               alt="Discord profile picture"
-              className="top-[65px] left-[20px] relative rounded-full p-1 w-[85px] h-[85px] border-black-2"
+              className="top-[65px] left-[20px] relative rounded-full p-1 w-[85px] h-[85px] border-black-2 z-30"
+            />
+            <div
+              className="top-[-20px] left-[20px] relative rounded-full p-1 w-[85px] h-[85px] border-black-2 z-[10]"
               style={{
                 background: `linear-gradient(to bottom, ${primaryColor} 60%, transparent 40%)`,
+              }}
+            ></div>
+            <div
+              className="top-[-105px] left-[20px] relative rounded-full p-1 w-[85px] h-[85px] border-black-2 z-[10]"
+              style={{
+                background: `linear-gradient(to bottom, #00000099 60%, transparent 40%)`,
               }}
             />
           </div>
@@ -44,7 +53,7 @@ const BaseDiscordCard = ({
             className="w-[328px] h-[116px] pt-[4px] pr-[4px] pb-[0px] pl-[4px] rounded-t-lg"
             alt=""
           />
-          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#222222e9] top-[125px] right-[226px] z-30 flex items-center justify-center select-none">
+          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#222222ef] top-[125px] right-[226px] z-30 flex items-center justify-center select-none">
             <img
               src={`${
                 connectionStatus === "offline"
