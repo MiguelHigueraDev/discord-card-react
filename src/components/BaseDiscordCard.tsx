@@ -53,7 +53,7 @@ const BaseDiscordCard = ({
             className="w-[328px] h-[116px] pt-[4px] pr-[4px] pb-[0px] pl-[4px] rounded-t-lg"
             alt=""
           />
-          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#222222e9] top-[125px] right-[226px] z-30 flex items-center justify-center select-none">
+          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#222222ef] top-[125px] right-[226px] z-30 flex items-center justify-center select-none">
             <img
               src={`${
                 connectionStatus === "offline"
