@@ -101,7 +101,7 @@ const LanyardDiscordCard = ({
   }
 
   const renderSpotifySection = () => {
-    if (spotify.show !== false && lanyardData && lanyardData.spotify) {
+    if (spotify.show && lanyardData && lanyardData.spotify) {
       return (
         <SpotifySection
           title={spotify.title}
@@ -121,7 +121,7 @@ const LanyardDiscordCard = ({
     }
   };
   const renderActivitySection = () => {
-    if (activity.show !== false && currentActivity) {
+    if (activity.show && currentActivity) {
       return (
         <ActivitySection
           title={activity.title}
