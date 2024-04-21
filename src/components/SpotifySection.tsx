@@ -32,8 +32,8 @@ const SpotifySection = ({
   endTimeMs,
   primaryColor,
   playOnSpotifyText,
-  byString = "by",
-  onString = "on",
+  byText = "by",
+  onText = "on",
 }: {
   title?: string;
   song: string;
@@ -45,8 +45,8 @@ const SpotifySection = ({
   endTimeMs?: number;
   primaryColor?: string;
   playOnSpotifyText?: string;
-  byString?: string;
-  onString?: string;
+  byText?: string;
+  onText?: string;
 }) => {
   return (
     <BaseSection>
@@ -79,10 +79,10 @@ const SpotifySection = ({
             {song.length <= 27 ? song : `${song.substring(0, 27)}...`}
           </div>
           <div className="text-sm font-normal">
-            {byString} {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
+            {byText} {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
           </div>
           <div className="text-sm font-normal">
-            {onString} {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
+            {onText} {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
           </div>
         </div>
       </div>
