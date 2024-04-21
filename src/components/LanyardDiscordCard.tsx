@@ -17,8 +17,10 @@ import { NoteSectionProps } from "../interfaces/NoteSectionProps";
 import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
 import SpotifySection from "./SpotifySection";
-import GameSection from "./GameSection";
+import ActivitySection from "./ActivitySection";
 import { ActivityPriority } from "../interfaces/ActivityPriority";
+import { LanyardActivitySectionProps } from "../interfaces/lanyard/LanyardActivitySectionProps";
+import { LanyardSpotifySectionProps } from "../interfaces/lanyard/LanyardSpotifySectionProps";
 
 const LanyardDiscordCard = ({
   userId,
@@ -32,18 +34,24 @@ const LanyardDiscordCard = ({
   status,
   aboutMe,
   memberSince,
+  activity = {
+    title: "Playing a game",
+    show: true,
+    showElapsedTime: true,
+    timeElapsedText: "elapsed",
+    timeAlignment: "left",
+  },
+  spotify = {
+    show: true,
+    title: "Listening to Spotify",
+    buttonText: "Play on Spotify",
+    byText: "by",
+    onText: "on",
+  },
   roles,
   note,
   message,
-  spotifyTitle = "Listening to Spotify",
-  gameTitle = "Playing a game",
-  showSpotify = true,
-  showGames = true,
   priority = "default",
-  displayElapsedTime = true,
-  playOnSpotifyText = "Play on Spotify",
-  timeElapsedText = "elapsed",
-  timeAlignment = "left",
   children,
 }: {
   userId: string;
@@ -57,18 +65,12 @@ const LanyardDiscordCard = ({
   status?: StatusSectionProps;
   aboutMe?: AboutMeSectionProps;
   memberSince?: MemberSinceSectionProps;
+  activity?: LanyardActivitySectionProps;
+  spotify?: LanyardSpotifySectionProps;
   roles?: RoleSectionProps;
   note?: NoteSectionProps;
   message?: MessageSectionProps;
-  spotifyTitle?: string;
-  gameTitle?: string;
-  showSpotify?: boolean;
-  showGames?: boolean;
   priority?: ActivityPriority;
-  displayElapsedTime?: boolean;
-  playOnSpotifyText?: string;
-  timeElapsedText?: string;
-  timeAlignment?: "left" | "right";
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
   const { status: lanyardData } = useLanyard({
@@ -77,14 +79,14 @@ const LanyardDiscordCard = ({
     apiUrl,
   });
 
-  const currentGame =
+  const currentActivity =
     lanyardData && lanyardData.activities
       ? lanyardData.activities.find((ac) => ac.type === 0)
       : null;
 
   // This handles external assets in case they are present
-  const largeImageId = currentGame?.assets?.large_image;
-  const smallImageId = currentGame?.assets?.small_image;
+  const largeImageId = currentActivity?.assets?.large_image;
+  const smallImageId = currentActivity?.assets?.small_image;
   let largeImageExternalUrl = null;
   let smallImageExternalUrl = null;
 
@@ -99,10 +101,10 @@ const LanyardDiscordCard = ({
   }
 
   const renderSpotifySection = () => {
-    if (showSpotify && lanyardData && lanyardData.spotify) {
+    if (spotify.show && lanyardData && lanyardData.spotify) {
       return (
         <SpotifySection
-          title={spotifyTitle}
+          title={spotify.title}
           primaryColor={primaryColor}
           artist={lanyardData.spotify.artist}
           song={lanyardData.spotify.song}
@@ -111,79 +113,74 @@ const LanyardDiscordCard = ({
           trackUrl={`https://open.spotify.com/track/${lanyardData.spotify.track_id}`}
           startTimeMs={lanyardData.spotify.timestamps.start}
           endTimeMs={lanyardData.spotify.timestamps.end}
-          playOnSpotifyText={playOnSpotifyText}
+          playOnSpotifyText={spotify.buttonText}
+          byText={spotify.byText}
+          onText={spotify.onText}
         />
       );
     }
   };
   const renderActivitySection = () => {
-    if (showGames && currentGame) {
+    if (activity.show && currentActivity) {
       return (
-        <GameSection
-          title={gameTitle}
+        <ActivitySection
+          title={activity.title}
           primaryColor={primaryColor}
           largeImage={
             largeImageExternalUrl
               ? `http://${largeImageExternalUrl}`
-              : currentGame.assets?.large_image
-              ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${largeImageId}.webp?size=80`
+              : currentActivity.assets?.large_image
+              ? `https://cdn.discordapp.com/app-assets/${currentActivity.application_id}/${largeImageId}.webp?size=80`
               : undefined
           }
           smallImage={
             smallImageExternalUrl
               ? `http://${smallImageExternalUrl}`
-              : currentGame.assets?.small_image
-              ? `https://cdn.discordapp.com/app-assets/${currentGame.application_id}/${smallImageId}.webp?size=80`
+              : currentActivity.assets?.small_image
+              ? `https://cdn.discordapp.com/app-assets/${currentActivity.application_id}/${smallImageId}.webp?size=80`
               : undefined
           }
-          applicationId={currentGame.application_id}
-          name={currentGame.name}
-          state={currentGame.state}
-          details={currentGame.details}
+          applicationId={currentActivity.application_id}
+          name={currentActivity.name}
+          state={currentActivity.state}
+          details={currentActivity.details}
           // Only render party if it's not null
-          {...(currentGame.party && {
+          {...(currentActivity.party && {
             party: {
-              currentSize: currentGame.party.size
+              currentSize: currentActivity.party.size
                 ? // @ts-expect-error: Party could be null
-                  currentGame.party.size[0]
+                  currentActivity.party.size[0]
                 : null,
-              maxSize: currentGame.party.size
+              maxSize: currentActivity.party.size
                 ? // @ts-expect-error: Party could be null
-                  currentGame.party.size[1]
+                  currentActivity.party.size[1]
                 : null,
             },
           })}
           // Only render elapsed time if not null and displayElapsedTime is true
-          elapsedText={timeElapsedText}
-          timeAlignment={timeAlignment}
-          {...(currentGame.timestamps?.start &&
-            displayElapsedTime && {
-              startTime: currentGame.timestamps.start,
+          elapsedText={activity.timeElapsedText}
+          timeAlignment={activity.timeAlignment}
+          {...(currentActivity.timestamps?.start &&
+            activity.showElapsedTime && {
+              startTime: currentActivity.timestamps.start,
             })}
           // If present, pass the first button's text to the component
-          {...(currentGame.buttons && {
-            buttonText: currentGame.buttons[0],
+          {...(currentActivity.buttons && {
+            buttonText: currentActivity.buttons[0],
           })}
         />
       );
     }
   };
 
-  /**
-   * Renders sections based on priority
-   * If priority is "spotify" and showSpotify is true, and Spotify is not null render SpotifySection
-   * If priority is "game" and showGames is true, and currentGame is not null render GameSection
-   * If priority is "default", behavior is the same as "game" (This is how Discord behaves)
-   * If priority is "none", render both SpotifySection and GameSection if they are not null
-   */
   const renderSections = () => {
     if (priority === "spotify") {
-      if (showSpotify && lanyardData && lanyardData.spotify) {
+      if (spotify.show && lanyardData && lanyardData.spotify) {
         return renderSpotifySection();
       }
       return renderActivitySection();
-    } else if (priority === "game" || priority === "default") {
-      if (showGames && currentGame) {
+    } else if (priority === "activity" || priority === "default") {
+      if (activity.show && currentActivity) {
         return renderActivitySection();
       }
       return renderSpotifySection();

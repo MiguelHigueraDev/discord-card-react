@@ -5,7 +5,7 @@ A React Component that renders a Discord profile card. Can sync with your Discor
 <a href="https://discord.miguelhiguera.dev"/>Live Demo</a>
 
 <p align="center">
-  <img width="329" height="791" src="github/card-preview-v2.png">
+  <img width="330" height="789" src="github/card-preview-v2.png">
 </p>
 
 ## Table of Contents:
@@ -129,25 +129,26 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
     placeholder: "Message @User",
     accentColor: "#8500d3",
   }}
-  // See how it looks below
+  activity={{
+    name: "Minecraft",
+    state: "Playing",
+    details: "Survival",
+    largeImage: "../example-assets/minecraft.png",
+    smallImage: "../example-assets/pickaxe.webp",
+    party: {
+      maxSize: 4,
+      currentSize: 2,
+    },
+    buttonText: "Join",
+  }}
   spotify={{
     song: "Last Caress",
     artist: "Misfits",
-    album: "Collection 2",
-    albumImageUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
-    trackUrl: "https://spotify.com/track/182317238712"
-  }}
-  // See how it looks below
-  game={{
-    name: "Fortnite",
-    details: "Battle Royale - In Lobby",
-    state: "Playing Duo",
-    largeImage: "fortnitebg.png",
-    smallImage: "battlepass.png",
-    party: {
-      currentSize: 1,
-      maxSize: 2,
-    }
+    album: "Static Age",
+    artUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
+    trackUrl: "https://open.spotify.com/track/0S8LgLoseDB6W2HWd1ym6P",
+    byText: "by",
+    onText: "on",
   }}
 ></DiscordCard>
 ```
@@ -172,10 +173,8 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
   userId="your-discord-id"
   // Optional: Domain that points at your self-hosted Lanyard instance
   // apiUrl="your.lanyard.domain"
-  // Your Discord profile picture and banner
   imageUrl="profilepicture.webp"
   bannerUrl="banner.png"
-  // Colors for the background gradient
   primaryColor="#007777"
   accentColor="#8500d3"
   basicInfo={{
@@ -236,24 +235,25 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
     placeholder: "Message @User",
     accentColor: "#8500d3",
   }}
-  // You can change the Spotify and Activity (game) section with these optional props
-  gameTitle="Playing a game"
-  spotifyTitle="Listening on Spotify"
-  // Change these to false to disable them
-  showSpotify={true}
-  showGames={true}
-  // If priority is set to "none", both Spotify and Game cards will be displayed
-  // If set to "default", the Game card will be given priority over the Spotify card 
-  // (this is default Discord behavior)
-  // If set to "game", the behavior is the same as default
+  // If priority is set to "none", both Spotify and Activity cards will be displayed
+  // If set to "default", the Activity card will be given priority over the Spotify card (Discord behavior)
+  // If set to "activity", the behavior is the same as default
   // If set to "spotify", the Spotify card will be given priority over the Game card
   priority="none"
-  // If enabled, time elapsed in activity will be displayed (Default: true)
-  displayElapsedTime="true"
-  // (Optional) Customize the "elapsed" string and alignment (left, right) of the time for i18n
-  timeElapsedText = "elapsed"
-  // Time will be displayed to the left (example: 12:23 elapsed)
-  timeAlignment = "left"
+  spotify={{
+    show: true,
+    title: "Listening to Spotify",
+    buttonText: "Play on Spotify",
+    byText: "by",
+    onText: "on",
+  }}
+  activity={{
+    title: "Playing a game",
+    show: true,
+    showElapsedTime: true,
+    timeElapsedText: "elapsed",
+    timeAlignment: "left",
+  }}
 ></LanyardDiscordCard>
 ```
 
@@ -286,18 +286,19 @@ message={{
   handleInput: handleMessageChange,
 }}
 // Rest of the card...
-></DiscordCard>
+/>
 ```
 
 ## Translations (i18n)
 
 You can translate all the sections that have titles by passing a `title` prop. (**About Me, Member Since, Playing a Game, Listening to Spotify, Roles, Note**). This will override the default title.
 
+The Spotify and Game sections provide additional options (check the examples in [How to use!](#how-to-use))
+
 For example, translating the Member Since section to Spanish:
 
 ```js
 memberSince={{
-  // Only discordJoinDate is required
   discordJoinDate: "20 Jul 2016",
   title: "Miembro desde",
   serverJoinDate: "1 Sep 2020",

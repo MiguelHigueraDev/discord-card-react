@@ -16,6 +16,8 @@ import styles from "../styles/SpotifySection.module.css";
  * @param {number} endTimeMs - The end time of the song in milliseconds
  * @param {string} primaryColor - The color of the button (inherited from card)
  * @param {string} playOnSpotifyText - The text to display on the button (default: Play on Spotify)
+ * @param {string} byString - The string to display before the artist's name (default: by)
+ * @param {string} onString - The string to display before the album's name (default: on)
  * @return {JSX.Element} The rendered Spotify section
  */
 
@@ -30,6 +32,8 @@ const SpotifySection = ({
   endTimeMs,
   primaryColor,
   playOnSpotifyText,
+  byText = "by",
+  onText = "on",
 }: {
   title?: string;
   song: string;
@@ -41,6 +45,8 @@ const SpotifySection = ({
   endTimeMs?: number;
   primaryColor?: string;
   playOnSpotifyText?: string;
+  byText?: string;
+  onText?: string;
 }) => {
   return (
     <BaseSection>
@@ -73,10 +79,10 @@ const SpotifySection = ({
             {song.length <= 27 ? song : `${song.substring(0, 27)}...`}
           </div>
           <div className="text-sm font-normal">
-            {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
+            {byText} {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
           </div>
           <div className="text-sm font-normal">
-            {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
+            {onText} {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
           </div>
         </div>
       </div>

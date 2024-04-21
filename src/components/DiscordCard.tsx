@@ -19,8 +19,8 @@ import RoleSection from "./RoleSection";
 import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
 import SpotifySection from "./SpotifySection";
-import { GameSectionProps } from "../interfaces/GameSectionProps";
-import GameSection from "./GameSection";
+import { ActivitySectionProps } from "../interfaces/ActivitySectionProps";
+import ActivitySection from "./ActivitySection";
 
 const DiscordCard = ({
   imageUrl,
@@ -37,7 +37,7 @@ const DiscordCard = ({
   note,
   message,
   spotify,
-  game,
+  activity,
   children,
 }: {
   imageUrl: string;
@@ -54,7 +54,7 @@ const DiscordCard = ({
   note?: NoteSectionProps;
   message?: MessageSectionProps;
   spotify?: SpotifySectionProps;
-  game?: GameSectionProps;
+  activity?: ActivitySectionProps;
   children?: React.JSX.Element | React.JSX.Element[];
 }) => {
   return (
@@ -81,7 +81,7 @@ const DiscordCard = ({
           {aboutMe && <AboutMeSection {...aboutMe} />}
           {memberSince && <MemberSinceSection {...memberSince} />}
           {spotify && <SpotifySection {...spotify} primaryColor={primaryColor}/>}
-          {game && <GameSection {...game} primaryColor={primaryColor} />}
+          {activity && <ActivitySection {...activity} primaryColor={primaryColor} />}
           {roles && <RoleSection {...roles} />}
           {note && <NoteSection {...note} />}
           {message && <MessageSection {...message} />}

@@ -1,6 +1,6 @@
 import { Party } from "./Party";
 
-export interface GameSectionProps {
+export interface ActivitySectionProps {
   title?: string;
   name: string;
   state?: string;
