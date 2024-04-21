@@ -77,7 +77,7 @@ function App() {
         placeholder: "Message @Misfit",
         accentColor: "#8500d3",
       }}
-      game={{
+      activity={{
         name: "Minecraft",
         state: "Playing",
         details: "Survival",
@@ -95,6 +95,8 @@ function App() {
         album: "Static Age",
         artUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
         trackUrl: "https://open.spotify.com/track/0S8LgLoseDB6W2HWd1ym6P",
+        byText: "by",
+        onText: "on",
       }}
     ></DiscordCard>
   );
