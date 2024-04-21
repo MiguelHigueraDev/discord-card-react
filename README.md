@@ -5,7 +5,7 @@ A React Component that renders a Discord profile card. Can sync with your Discor
 <a href="https://discord.miguelhiguera.dev"/>Live Demo</a>
 
 <p align="center">
-  <img width="330" height="789" src="github/card-preview-v2.png">
+  <img width="328" height="790" src="github/card-preview-v2.png">
 </p>
 
 ## Table of Contents:
