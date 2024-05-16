@@ -3,7 +3,7 @@
   "description": "React Discord profile card component",
   "type": "module",
   "private": false,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "dist/index.umd.mjs",
   "module": "dist/index.es.mjs",
