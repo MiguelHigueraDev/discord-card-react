@@ -12,7 +12,7 @@ const Role = ({ role, color }: { role: string; color: string }) => {
         className="w-[12px] h-[12px] rounded-full"
         style={{ backgroundColor: color }}
       ></div>
-      <div className="text-[0.75rem] p-0 m-0">{role}</div>
+      <div className="text-[0.72rem] p-0 m-0">{role}</div>
     </li>
   );
 };
