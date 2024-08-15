@@ -9,13 +9,13 @@ A React Component that renders a Discord profile card. Can sync with your Discor
 </p>
 
 ## Table of Contents:
+
 1. [Features](#features)
 2. [How to use](#how-to-use)
 3. [State and input handler example](#state-and-input-handler-example)
 4. [Translations (i18n)](#translations-i18n)
 5. [How to contribute](#how-to-contribute)
 6. [Credits](#credits)
-
 
 ## Features:
 
@@ -73,8 +73,7 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
     username: "username",
     // Pronouns are optional
     pronouns: "he/him",
-    }}
-
+  }}
   // All these are optional
   badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
   status={{
@@ -106,7 +105,8 @@ Pass props to it to customize. Like the name says, it's static and doesn't updat
     title: "You can add alternative titles to all sections that have titles",
     serverJoinDate: "1 Sep 2020",
     serverIconUrl: "https://asdasd.com/icon.png",
-    serverName: "This is used as the alt attribute for the image, for accessibility"
+    serverName:
+      "This is used as the alt attribute for the image, for accessibility",
   }}
   roles={{
     roles: [
@@ -183,7 +183,6 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
     // Pronouns are optional
     pronouns: "he/him",
   }}
-
   // All these are optional
   badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
   status={{
@@ -212,7 +211,8 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
     title: "You can add alternative titles to all sections that have titles",
     serverJoinDate: "1 Sep 2020",
     serverIconUrl: "https://asdasd.com/icon.png",
-    serverName: "This is used as the alt attribute for the image, for accessibility"
+    serverName:
+      "This is used as the alt attribute for the image, for accessibility",
   }}
   roles={{
     roles: [
@@ -240,6 +240,8 @@ Make sure to set up Lanyard by following [the instructions](https://github.com/P
   // If set to "activity", the behavior is the same as default
   // If set to "spotify", the Spotify card will be given priority over the Game card
   priority="none"
+  // Maximum number of activities displayed at the same time (default: 1)
+  maxActivities="1"
   spotify={{
     show: true,
     title: "Listening to Spotify",
@@ -274,19 +276,19 @@ function handleMessageChange(event) {
 }
 
 <DiscordCard
-// Your card here...
-note={{
-  // The state and input handler
-  note: note,
-  handleInput: handleNoteChange,
-}}
-message={{
-  // The state and input handler
-  message: message,
-  handleInput: handleMessageChange,
-}}
-// Rest of the card...
-/>
+  // Your card here...
+  note={{
+    // The state and input handler
+    note: note,
+    handleInput: handleNoteChange,
+  }}
+  message={{
+    // The state and input handler
+    message: message,
+    handleInput: handleMessageChange,
+  }}
+  // Rest of the card...
+/>;
 ```
 
 ## Translations (i18n)
@@ -306,9 +308,11 @@ memberSince={{
   serverName: "Servidor X"
 }}
 ```
+
 ![i18n example](/github/member-since-i18n.png)
 
 ## How to contribute
+
 All contributions are greatly appreciated! Please keep PRs short, focusing only in one feature/fix you want to implement, so they can be easily reviewed.
 
 Follow these instructions if you are a newcomer:
@@ -317,7 +321,7 @@ Follow these instructions if you are a newcomer:
 2. Make a new branch using the command `git switch -c BranchName`
 3. Install dependencies using your package manager of choice (for example: `npm install`)
 4. Start the development server to see your changes live using `npm run dev`
-6. Once you have finished your work, commit your changes and [open a PR!](https://github.com/MiguelHigueraDev/discord-card-react/pulls)
+5. Once you have finished your work, commit your changes and [open a PR!](https://github.com/MiguelHigueraDev/discord-card-react/pulls)
 
 ## Credits
 
