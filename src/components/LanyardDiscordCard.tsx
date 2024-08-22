@@ -89,10 +89,6 @@ const LanyardDiscordCard = ({
           .slice(0, maxActivities)
       : null;
 
-  /*
-   * This handles external assets in case they are present
-   */
-
   const renderSpotifySection = () => {
     if (spotify.show && lanyardData && lanyardData.spotify) {
       return (
@@ -114,6 +110,9 @@ const LanyardDiscordCard = ({
     }
   };
 
+  /*
+   * This handles external assets in case they are present to display the correct image
+   */
   const getImageUrls = (activity: Activity) => {
     const largeImageId = activity.assets?.large_image;
     const smallImageId = activity.assets?.small_image;
