@@ -14,8 +14,11 @@ import { useEffect, useState } from "react";
  * @param {string} largeImage - URL for the large image related to the activity
  * @param {string} smallImage - URL for the small image related to the activity
  * @param {Party} party - Object containing information about the party related to the activity
+ * @param {string} elapsedText - The text to display before the elapsed time (default: elapsed)
+ * @param {"left" | "right"} timeAlignment - The alignment of the elapsed time (default: left)
  * @param {number} startTime - The start time of the activity
  * @param {string} primaryColor - The color of the button (inherited from card)
+ * @param {string} buttonText - The text to display on the button (default: null)
  * @return {JSX.Element} The rendered section component
  */
 const ActivitySection = ({
@@ -26,11 +29,11 @@ const ActivitySection = ({
   largeImage,
   smallImage,
   party,
-  elapsedText = 'elapsed',
-  timeAlignment = 'left',
+  elapsedText = "elapsed",
+  timeAlignment = "left",
   startTime,
   buttonText,
-  primaryColor
+  primaryColor,
 }: {
   title?: string;
   applicationId?: string;
@@ -41,7 +44,7 @@ const ActivitySection = ({
   smallImage?: string;
   party?: Party;
   elapsedText?: string;
-  timeAlignment?: 'left' | 'right';
+  timeAlignment?: "left" | "right";
   startTime?: number;
   buttonText?: string;
   primaryColor?: string;
@@ -50,9 +53,9 @@ const ActivitySection = ({
 
   // Update to current time every second
   useEffect(() => {
-    const interval = setInterval(() => setCurrentDateTime(new Date()), 1000)
-    return () => clearInterval(interval)
-  }, [startTime])
+    const interval = setInterval(() => setCurrentDateTime(new Date()), 1000);
+    return () => clearInterval(interval);
+  }, [startTime]);
 
   const elapsedTime = formatTime(startTime!, currentDateTime.getTime());
 
@@ -120,18 +123,23 @@ const ActivitySection = ({
             </>
           )}
           {startTime && (
-            <p>{timeAlignment === 'left' ? `${elapsedTime} ${elapsedText}` : `${elapsedText} ${elapsedTime}`}</p>
+            <p>
+              {timeAlignment === "left"
+                ? `${elapsedTime} ${elapsedText}`
+                : `${elapsedText} ${elapsedTime}`}
+            </p>
           )}
         </div>
       </div>
       {buttonText && (
-            <button 
-            className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white opacity-50 cursor-not-allowed"
-            style={{ backgroundColor: primaryColor }}
-            type="button">
-              {buttonText}
-            </button>
-       )}
+        <button
+          className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white opacity-50 cursor-not-allowed"
+          style={{ backgroundColor: primaryColor }}
+          type="button"
+        >
+          {buttonText}
+        </button>
+      )}
     </BaseSection>
   );
 };

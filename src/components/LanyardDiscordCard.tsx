@@ -82,6 +82,7 @@ const LanyardDiscordCard = ({
     apiUrl,
   });
 
+  // Activities with type 0 are games
   const activities =
     lanyardData && lanyardData.activities
       ? lanyardData.activities

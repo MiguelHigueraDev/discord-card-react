@@ -51,7 +51,7 @@ const SpotifySection = ({
   return (
     <BaseSection>
       <div className="flex justify-between" style={{ marginBottom: 6 }}>
-      <SectionTitle title={title || "Listening to Spotify"} />
+        <SectionTitle title={title || "Listening to Spotify"} />
         <SpotifyLogo />
       </div>
       <div className="flex items-center gap-3">
@@ -79,32 +79,34 @@ const SpotifySection = ({
             {song.length <= 27 ? song : `${song.substring(0, 27)}...`}
           </div>
           <div className="text-sm font-normal">
-            {byText} {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
+            {byText}{" "}
+            {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
           </div>
           <div className="text-sm font-normal">
-            {onText} {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
+            {onText}{" "}
+            {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
           </div>
         </div>
       </div>
-      
-      { startTimeMs && endTimeMs && (
+
+      {startTimeMs && endTimeMs && (
         <SeekBar startTimeMs={startTimeMs} endTimeMs={endTimeMs} />
       )}
 
       {trackUrl && (
-            <div>
-            <a
-              target="_blank"
-              href={trackUrl}
-              className={`block w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter] ${styles["lighten"]}`}
-              style={{ backgroundColor: primaryColor }}
-              aria-label={`Play ${song} by ${artist} on Spotify`}
-            >
-              <div className="flex justify-center items-center gap-2">
+        <div>
+          <a
+            target="_blank"
+            href={trackUrl}
+            className={`block w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter] ${styles["lighten"]}`}
+            style={{ backgroundColor: primaryColor }}
+            aria-label={`Play ${song} by ${artist} on Spotify`}
+          >
+            <div className="flex justify-center items-center gap-2">
               <SpotifyLogo color={"#fff"} size={16} />
-                {playOnSpotifyText || "Play on Spotify"}
-              </div>
-            </a>
+              {playOnSpotifyText || "Play on Spotify"}
+            </div>
+          </a>
         </div>
       )}
     </BaseSection>
