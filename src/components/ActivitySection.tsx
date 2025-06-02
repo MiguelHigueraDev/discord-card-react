@@ -1,5 +1,5 @@
 import { formatTime } from "../helpers/helperFunctions";
-import { Party } from "../interfaces/Party";
+import { Party } from "../types";
 import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";

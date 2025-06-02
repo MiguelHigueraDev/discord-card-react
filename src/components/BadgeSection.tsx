@@ -1,4 +1,4 @@
-import { Badge } from "../interfaces/Badge";
+import { Badge } from "../types";
 
 /**
  * Renders a list of badges in a <ul> container.

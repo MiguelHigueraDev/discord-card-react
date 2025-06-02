@@ -1,15 +1,5 @@
 import React from "react";
-import { Badge } from "../interfaces/Badge";
-import { BasicInfoSectionProps } from "../interfaces/BasicInfoSectionProps";
-import { StatusSectionProps } from "../interfaces/StatusSectionProps";
-import { AboutMeSectionProps } from "../interfaces/AboutMeSectionProps";
-import { MemberSinceSectionProps } from "../interfaces/MemberSinceSectionProps";
-import { RoleSectionProps } from "../interfaces/RoleSectionProps";
-import { NoteSectionProps } from "../interfaces/NoteSectionProps";
-import { MessageSectionProps } from "../interfaces/MessageSectionProps";
-import { SpotifySectionProps } from "../interfaces/SpotifySectionProps";
 import BaseDiscordCard from "./BaseDiscordCard";
-import { ConnectionStatus } from "../interfaces/ConnectionStatus";
 import BasicInfoSection from "./BasicInfoSection";
 import Separator from "./Separator";
 import StatusSection from "./StatusSection";
@@ -19,8 +9,20 @@ import RoleSection from "./RoleSection";
 import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
 import SpotifySection from "./SpotifySection";
-import { ActivitySectionProps } from "../interfaces/ActivitySectionProps";
 import ActivitySection from "./ActivitySection";
+import {
+  BasicInfoSectionProps,
+  ConnectionStatus,
+  Badge,
+  StatusSectionProps,
+  AboutMeSectionProps,
+  MemberSinceSectionProps,
+  RoleSectionProps,
+  NoteSectionProps,
+  MessageSectionProps,
+  SpotifySectionProps,
+  ActivitySectionProps,
+} from "../types";
 
 const DiscordCard = ({
   imageUrl,
@@ -80,8 +82,12 @@ const DiscordCard = ({
         <div className="space-y-2">
           {aboutMe && <AboutMeSection {...aboutMe} />}
           {memberSince && <MemberSinceSection {...memberSince} />}
-          {spotify && <SpotifySection {...spotify} primaryColor={primaryColor}/>}
-          {activity && <ActivitySection {...activity} primaryColor={primaryColor} />}
+          {spotify && (
+            <SpotifySection {...spotify} primaryColor={primaryColor} />
+          )}
+          {activity && (
+            <ActivitySection {...activity} primaryColor={primaryColor} />
+          )}
           {roles && <RoleSection {...roles} />}
           {note && <NoteSection {...note} />}
           {message && <MessageSection {...message} />}

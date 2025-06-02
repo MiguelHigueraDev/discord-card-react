@@ -1,7 +1,6 @@
 import styles from "../styles/BaseDiscordCard.module.css";
 import BadgeSection from "./BadgeSection";
-import { Badge } from "../interfaces/Badge";
-import { ConnectionStatus } from "../interfaces/ConnectionStatus";
+import { Badge, ConnectionStatus } from "../types";
 
 const BaseDiscordCard = ({
   imageUrl,

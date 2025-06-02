@@ -1,27 +1,29 @@
 import BaseDiscordCard from "./BaseDiscordCard";
 import { Activity, useLanyard } from "react-use-lanyard";
-import { Badge } from "../interfaces/Badge";
-import { BasicInfoSectionProps } from "../interfaces/BasicInfoSectionProps";
-import { AboutMeSectionProps } from "../interfaces/AboutMeSectionProps";
-import { StatusSectionProps } from "../interfaces/StatusSectionProps";
-import { MemberSinceSectionProps } from "../interfaces/MemberSinceSectionProps";
-import { RoleSectionProps } from "../interfaces/RoleSectionProps";
 import BasicInfoSection from "./BasicInfoSection";
 import StatusSection from "./StatusSection";
 import AboutMeSection from "./AboutMeSection";
 import Separator from "./Separator";
 import MemberSinceSection from "./MemberSinceSection";
 import RoleSection from "./RoleSection";
-import { MessageSectionProps } from "../interfaces/MessageSectionProps";
-import { NoteSectionProps } from "../interfaces/NoteSectionProps";
 import NoteSection from "./NoteSection";
 import MessageSection from "./MessageSection";
 import SpotifySection from "./SpotifySection";
 import ActivitySection from "./ActivitySection";
-import { ActivityPriority } from "../interfaces/ActivityPriority";
-import { LanyardActivitySectionProps } from "../interfaces/lanyard/LanyardActivitySectionProps";
-import { LanyardSpotifySectionProps } from "../interfaces/lanyard/LanyardSpotifySectionProps";
 import { ReactNode } from "react";
+import {
+  BasicInfoSectionProps,
+  Badge,
+  StatusSectionProps,
+  AboutMeSectionProps,
+  MemberSinceSectionProps,
+  RoleSectionProps,
+  NoteSectionProps,
+  MessageSectionProps,
+  LanyardActivitySectionProps,
+  LanyardSpotifySectionProps,
+  ActivityPriority,
+} from "../types";
 
 const LanyardDiscordCard = ({
   userId,

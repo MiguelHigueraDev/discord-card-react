@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutMeItem } from "../interfaces/AboutMeItem";
+import { AboutMeItem } from "../types";
 import SectionTitle from "./SectionTitle";
 
 /**
