@@ -37,6 +37,10 @@ const NoteSection = ({
         maxLength={255}
         ref={noteRef}
         rows={1}
+        style={{
+          padding: "0.2rem",
+          marginTop: "0.5rem",
+        }}
       ></textarea>
     </section>
   );

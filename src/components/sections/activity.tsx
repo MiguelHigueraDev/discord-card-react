@@ -1,6 +1,5 @@
 import { formatTime } from "../../helpers/helper-functions";
 import { Party } from "../../types";
-import BaseSection from "./base";
 import SectionTitle from "../section-title";
 import { useEffect, useState } from "react";
 import styles from "../../styles/ActivitySection.module.css";
@@ -61,9 +60,11 @@ const ActivitySection = ({
   const elapsedTime = formatTime(startTime!, currentDateTime.getTime());
 
   return (
-    <BaseSection>
-      <SectionTitle title={title || "Playing a game"} marginBottom={6} />
-      <div className={styles.activityContainer}>
+    <section>
+      <div className={styles.header}>
+        <SectionTitle title={title || "Playing a game"} />
+      </div>
+      <div className={styles.content}>
         {largeImage ? (
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
@@ -91,53 +92,54 @@ const ActivitySection = ({
           </>
         )}
         <div className={styles.textContainer}>
-          {name && <p className={styles.activityName}>{name}</p>}
+          {name && <div className={styles.activityName}>{name}</div>}
           {details && (
-            <p>
+            <div className={styles.activityDetails}>
               {details.length <= 30
                 ? details
                 : `${details.substring(0, 30)}...`}
-            </p>
+            </div>
           )}
           {state && (
             <>
               {party && party.currentSize && party.maxSize ? (
-                <div>
-                  <p>
-                    {state.length <= 30
-                      ? `${state} (${party.currentSize}/${party.maxSize})`
-                      : `${state.substring(0, 30)}... (${party.currentSize}/${
-                          party.maxSize
-                        })`}
-                  </p>
+                <div className={styles.activityState}>
+                  {state.length <= 30
+                    ? `${state} (${party.currentSize}/${party.maxSize})`
+                    : `${state.substring(0, 30)}... (${party.currentSize}/${
+                        party.maxSize
+                      })`}
                 </div>
               ) : (
-                <p>
+                <div className={styles.activityState}>
                   {state.length <= 30 ? state : `${state.substring(0, 30)}...`}
-                </p>
+                </div>
               )}
-              {}
             </>
           )}
           {startTime && (
-            <p>
+            <div className={styles.activityTime}>
               {timeAlignment === "left"
                 ? `${elapsedTime} ${elapsedText}`
                 : `${elapsedText} ${elapsedTime}`}
-            </p>
+            </div>
           )}
         </div>
       </div>
       {buttonText && (
-        <button
-          className={styles.button}
-          style={{ backgroundColor: primaryColor }}
-          type="button"
-        >
-          {buttonText}
-        </button>
+        <div className={styles.buttonWrapper}>
+          <button
+            className={`${styles.button}`}
+            style={{ backgroundColor: primaryColor, cursor: "not-allowed" }}
+            type="button"
+          >
+            <div style={{ height: 32 }} className={styles.buttonContent}>
+              {buttonText}
+            </div>
+          </button>
+        </div>
       )}
-    </BaseSection>
+    </section>
   );
 };
 

@@ -32,7 +32,10 @@ const MessageSection = ({
         value={message}
         onChange={handleInput}
         className={styles.textarea}
-        style={{ border: `0.5px solid ${accentColor ? accentColor : "#ccc"}` }}
+        style={{
+          border: `0.5px solid ${accentColor ? accentColor : "#ccc"}`,
+          padding: "0.75rem",
+        }}
       />
     </section>
   );
