@@ -40,6 +40,7 @@ const NoteSection = ({
         style={{
           padding: "0.2rem",
           marginTop: "0.5rem",
+          resize: "none",
         }}
       ></textarea>
     </section>

@@ -35,6 +35,7 @@ const MessageSection = ({
         style={{
           border: `0.5px solid ${accentColor ? accentColor : "#ccc"}`,
           padding: "0.75rem",
+          resize: "none",
         }}
       />
     </section>
