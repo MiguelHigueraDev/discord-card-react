@@ -3,6 +3,7 @@
  */
 import { useEffect, useState } from "react";
 import { formatTime } from "../helpers/helperFunctions";
+import styles from "../styles/SeekBar.module.css";
 
 const SeekBar = ({
   startTimeMs,
@@ -11,7 +12,6 @@ const SeekBar = ({
   startTimeMs: number;
   endTimeMs: number;
 }) => {
-
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
@@ -21,17 +21,22 @@ const SeekBar = ({
 
   const currentPosition = formatTime(startTimeMs, currentDateTime.getTime());
   const songDuration = formatTime(startTimeMs, endTimeMs);
-  const percentage = ((currentDateTime.getTime() - startTimeMs) / (endTimeMs - startTimeMs)) * 100;
+  const percentage =
+    ((currentDateTime.getTime() - startTimeMs) / (endTimeMs - startTimeMs)) *
+    100;
 
   return (
-    <div className="text-[0.75rem] mt-3">
-        <div className="bar h-1 bg-neutral-700 rounded-xl">
-            <div className="progress h-1 bg-primary rounded-xl bg-white" style={{ width: `${percentage}%` }}></div>
-        </div>
-        <div className="flex justify-between items-start">
-            <div className="my-0 py-0">{currentPosition}</div>
-            <div className="my-0 py-0">{songDuration}</div>
-        </div>
+    <div className={styles.container}>
+      <div className={styles.bar}>
+        <div
+          className={styles.progress}
+          style={{ width: `${percentage}%` }}
+        ></div>
+      </div>
+      <div className={styles.timeContainer}>
+        <div className={styles.timeText}>{currentPosition}</div>
+        <div className={styles.timeText}>{songDuration}</div>
+      </div>
     </div>
   );
 };

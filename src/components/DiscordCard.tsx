@@ -23,6 +23,7 @@ import {
   SpotifySectionProps,
   ActivitySectionProps,
 } from "../types";
+import styles from "../styles/BaseDiscordCard.module.css";
 
 const DiscordCard = ({
   imageUrl,
@@ -79,7 +80,7 @@ const DiscordCard = ({
             <Separator />
           </>
         )}
-        <div className="space-y-2">
+        <div className={styles.spaceY2}>
           {aboutMe && <AboutMeSection {...aboutMe} />}
           {memberSince && <MemberSinceSection {...memberSince} />}
           {spotify && (

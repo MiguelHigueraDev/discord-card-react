@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.discordIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.text {
+  font-size: 15px;
+}
+
+.separator {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background-color: #4b4b4b;
+}
+
+.serverIcon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}

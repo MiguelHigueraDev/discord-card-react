@@ -1,3 +1,5 @@
+import styles from "../styles/DiscordLink.module.css";
+
 /**
  * Renders a Discord link.
  *
@@ -14,11 +16,7 @@ const DiscordLink = ({
 }): JSX.Element => {
   return (
     <>
-      <a
-        href={href}
-        className="text-blue-500 hover:text-blue-400"
-        target="_blank"
-      >
+      <a href={href} className={styles.link} target="_blank">
         {text ? text : href}
       </a>
     </>

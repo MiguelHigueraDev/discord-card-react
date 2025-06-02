@@ -1,8 +1,8 @@
 import React from "react";
 import { Role as RoleItem } from "../types";
-import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
 import Role from "./Role";
+import styles from "../styles/RoleSection.module.css";
 
 /**
  * Render a section for displaying roles with an optional alternative title and list of roles.
@@ -24,19 +24,19 @@ const RoleSection = ({
   const childrenCount = React.Children.count(children);
 
   return (
-    <BaseSection>
+    <section>
       <SectionTitle
         title={title || childrenCount == 1 ? "Role" : "Roles"}
         marginBottom={8}
       />
-      <ul className="flex flex-wrap gap-[6px] mb-3">
+      <ul className={styles.rolesList}>
         {roles &&
           roles.map((role, index) => (
             <Role key={index} role={role.name} color={role.color} />
           ))}
         {children}
       </ul>
-    </BaseSection>
+    </section>
   );
 };
 

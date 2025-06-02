@@ -1,3 +1,5 @@
+import styles from "../styles/BasicInfoSection.module.css";
+
 /**
  * Renders a basic info section with display name, username, and pronouns.
  *
@@ -14,10 +16,10 @@ const BasicInfoSection = ({
   pronouns?: string;
 }) => {
   return (
-    <section className="mb-2">
-      {displayname && <h1 className="text-xl font-bold">{displayname}</h1>}
-      {username && <h2 className="font-semibold text-md">{username}</h2>}
-      {username && <p className="font-normal text-md">{pronouns}</p>}
+    <section className={styles.section}>
+      {displayname && <h1 className={styles.displayName}>{displayname}</h1>}
+      {username && <h2 className={styles.username}>{username}</h2>}
+      {username && <p className={styles.pronouns}>{pronouns}</p>}
     </section>
   );
 };

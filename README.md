@@ -52,6 +52,12 @@ import "discord-card-react/styles";
 > [!IMPORTANT]
 > Remember to import the styles using import "discord-card-react/styles";
 
+**Note**: The component now includes scoped Tailwind preflight styles to ensure consistent styling across different environments. These are automatically applied and won't affect your global styles.
+
+### Styling and CSS Reset
+
+The Discord card component includes built-in CSS reset/preflight styles that are automatically scoped to the component. This ensures consistent styling without affecting your application's global styles.
+
 After importing, copy one of the templates below to add the card(s).
 
 ### Static Card (\<DiscordCard\>)

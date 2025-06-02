@@ -1,3 +1,5 @@
+import styles from "../styles/SectionTitle.module.css";
+
 const SectionTitle = ({
   title,
   marginBottom,
@@ -6,10 +8,7 @@ const SectionTitle = ({
   marginBottom?: number;
 }) => {
   return (
-    <h3
-      className="uppercase text-sm font-semibold mb-0.5"
-      style={{ marginBottom: marginBottom }}
-    >
+    <h3 className={styles.title} style={{ marginBottom: marginBottom }}>
       {title}
     </h3>
   );

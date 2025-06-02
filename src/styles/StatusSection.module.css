@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.8rem;
+}
+
+.emoji {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.8rem;
+}
+
+.status {
+  font-size: 0.95rem;
+  text-align: start;
+}

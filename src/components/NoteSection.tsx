@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
-import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
+import styles from "../styles/NoteSection.module.css";
 /**
  * Renders a Discord note section with a title, note content, and input field for adding notes.
  *
@@ -27,18 +27,18 @@ const NoteSection = ({
   useAutosizeTextArea(noteRef.current, note);
 
   return (
-    <BaseSection>
+    <section>
       {title ? <SectionTitle title={title} /> : <SectionTitle title="Note" />}
       <textarea
         placeholder={placeholder ? placeholder : "Add a note"}
         value={note}
-        className="text-[0.8rem] p-1 w-full bg-transparent border-0 resize-none outline-none text-sm"
+        className={styles.noteTextarea}
         onInput={handleInput}
         maxLength={255}
         ref={noteRef}
         rows={1}
       ></textarea>
-    </BaseSection>
+    </section>
   );
 };
 

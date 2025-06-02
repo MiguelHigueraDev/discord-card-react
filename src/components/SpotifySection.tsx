@@ -1,4 +1,3 @@
-import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
 import SeekBar from "./SeekBar";
 import SpotifyLogo from "./SpotifyLogo";
@@ -49,40 +48,32 @@ const SpotifySection = ({
   onText?: string;
 }) => {
   return (
-    <BaseSection>
-      <div className="flex justify-between" style={{ marginBottom: 6 }}>
+    <section>
+      <div className={styles.header}>
         <SectionTitle title={title || "Listening to Spotify"} />
         <SpotifyLogo />
       </div>
-      <div className="flex items-center gap-3">
+      <div className={styles.content}>
         {artUrl && (
-          <div className="min-w-[65px] self-start">
+          <div className={styles.albumArtContainer}>
             {trackUrl ? (
               <a href={trackUrl} target="_blank">
-                <img
-                  src={artUrl}
-                  className="w-[65px] h-[65px] select-none rounded-md"
-                  alt={album}
-                />
+                <img src={artUrl} className={styles.albumArt} alt={album} />
               </a>
             ) : (
-              <img
-                src={artUrl}
-                className="w-[65px] h-[65px] select-none rounded-md"
-                alt={album}
-              />
+              <img src={artUrl} className={styles.albumArt} alt={album} />
             )}
           </div>
         )}
         <div>
-          <div className="text-sm font-bold">
+          <div className={styles.songTitle}>
             {song.length <= 27 ? song : `${song.substring(0, 27)}...`}
           </div>
-          <div className="text-sm font-normal">
+          <div className={styles.songInfo}>
             {byText}{" "}
             {artist.length <= 27 ? artist : `${artist.substring(0, 27)}...`}
           </div>
-          <div className="text-sm font-normal">
+          <div className={styles.songInfo}>
             {onText}{" "}
             {album.length <= 27 ? album : `${album.substring(0, 27)}...`}
           </div>
@@ -98,18 +89,18 @@ const SpotifySection = ({
           <a
             target="_blank"
             href={trackUrl}
-            className={`block w-full text-sm py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white transition-[filter] ${styles["lighten"]}`}
+            className={`${styles.playButton} ${styles.lighten}`}
             style={{ backgroundColor: primaryColor }}
             aria-label={`Play ${song} by ${artist} on Spotify`}
           >
-            <div className="flex justify-center items-center gap-2">
+            <div className={styles.playButtonContent}>
               <SpotifyLogo color={"#fff"} size={16} />
               {playOnSpotifyText || "Play on Spotify"}
             </div>
           </a>
         </div>
       )}
-    </BaseSection>
+    </section>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Badge } from "../types";
+import styles from "../styles/BadgeSection.module.css";
 
 /**
  * Renders a list of badges in a <ul> container.
@@ -8,12 +9,12 @@ import { Badge } from "../types";
  */
 const BadgeSection = ({ badges }: { badges: Badge[] }) => {
   return (
-    <ul className="absolute max-w-[196px] flex items-end justify-end flex-wrap z-20 bottom-[-38px] right-[14px] bg-[#00000059] rounded-md p-[3px] select-none">
+    <ul className={styles.badgeContainer}>
       {badges.map((badge) => (
         <li key={badge.name}>
           <img
             src={badge.iconUrl}
-            className="w-[22px] h-[22px]"
+            className={styles.badgeIcon}
             alt={badge.name}
           />
         </li>

@@ -3,6 +3,7 @@ import { Party } from "../types";
 import BaseSection from "./BaseSection";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
+import styles from "../styles/ActivitySection.module.css";
 
 /**
  * Renders a section for displaying activity information.
@@ -62,20 +63,16 @@ const ActivitySection = ({
   return (
     <BaseSection>
       <SectionTitle title={title || "Playing a game"} marginBottom={6} />
-      <div className="flex items-center gap-3">
+      <div className={styles.activityContainer}>
         {largeImage ? (
-          <div className="flex gap-1 min-w-[65px] self-start">
-            <div className="relative justify-center items-center">
-              <img
-                src={largeImage}
-                alt=""
-                className="w-[65px] h-[65px] select-none object-cover rounded-md"
-              />
+          <div className={styles.imageContainer}>
+            <div className={styles.imageWrapper}>
+              <img src={largeImage} alt="" className={styles.largeImage} />
               {smallImage && (
                 <img
                   src={smallImage}
                   alt=""
-                  className="absolute bottom-[-3px] right-[-6px] w-[20px] h-[20px] rounded-full select-none object-cover"
+                  className={styles.smallImageOverlay}
                 />
               )}
             </div>
@@ -83,18 +80,18 @@ const ActivitySection = ({
         ) : (
           <>
             {smallImage && (
-              <div className="min-w-[65px] self-start">
+              <div className={styles.smallImageContainer}>
                 <img
                   src={smallImage}
                   alt=""
-                  className="w-[65px] h-[65px] select-none object-cover"
+                  className={styles.smallImageStandalone}
                 />
               </div>
             )}
           </>
         )}
-        <div className="text-sm font-normal">
-          {name && <p className="font-bold">{name}</p>}
+        <div className={styles.textContainer}>
+          {name && <p className={styles.activityName}>{name}</p>}
           {details && (
             <p>
               {details.length <= 30
@@ -133,7 +130,7 @@ const ActivitySection = ({
       </div>
       {buttonText && (
         <button
-          className="block w-full text-sm bg-[#383838] py-[6px] px-[4px] text-center mt-[8px] rounded-md text-white opacity-50 cursor-not-allowed"
+          className={styles.button}
           style={{ backgroundColor: primaryColor }}
           type="button"
         >

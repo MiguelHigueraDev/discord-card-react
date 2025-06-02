@@ -1,0 +1,18 @@
+.section {
+  margin-bottom: 0.5rem;
+}
+
+.displayName {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pronouns {
+  font-weight: normal;
+  font-size: 1rem;
+}

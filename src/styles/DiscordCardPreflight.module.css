@@ -1,0 +1,243 @@
+/* Scoped Tailwind Preflight for Discord Card Component */
+.discordCardScope,
+.discordCardScope *,
+.discordCardScope ::before,
+.discordCardScope ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+.discordCardScope ::before,
+.discordCardScope ::after {
+  --tw-content: "";
+}
+
+.discordCardScope {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+.discordCardScope hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+.discordCardScope abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+.discordCardScope h1,
+.discordCardScope h2,
+.discordCardScope h3,
+.discordCardScope h4,
+.discordCardScope h5,
+.discordCardScope h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.discordCardScope a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.discordCardScope b,
+.discordCardScope strong {
+  font-weight: bolder;
+}
+
+.discordCardScope code,
+.discordCardScope kbd,
+.discordCardScope samp,
+.discordCardScope pre {
+  font-family: ui-monospace, SFMono-Regular, "Roboto Mono", "Cascadia Code",
+    "Source Code Pro", Consolas, "Liberation Mono", Menlo, Monaco, "Courier New",
+    monospace;
+  font-size: 1em;
+}
+
+.discordCardScope small {
+  font-size: 80%;
+}
+
+.discordCardScope sub,
+.discordCardScope sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.discordCardScope sub {
+  bottom: -0.25em;
+}
+
+.discordCardScope sup {
+  top: -0.5em;
+}
+
+.discordCardScope table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+.discordCardScope button,
+.discordCardScope input,
+.discordCardScope optgroup,
+.discordCardScope select,
+.discordCardScope textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.discordCardScope button,
+.discordCardScope select {
+  text-transform: none;
+}
+
+.discordCardScope button,
+.discordCardScope [type="button"],
+.discordCardScope [type="reset"],
+.discordCardScope [type="submit"] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+.discordCardScope :-moz-focusring {
+  outline: auto;
+}
+
+.discordCardScope :-moz-ui-invalid {
+  box-shadow: none;
+}
+
+.discordCardScope progress {
+  vertical-align: baseline;
+}
+
+.discordCardScope ::-webkit-inner-spin-button,
+.discordCardScope ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.discordCardScope [type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+.discordCardScope ::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.discordCardScope ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+.discordCardScope summary {
+  display: list-item;
+}
+
+.discordCardScope blockquote,
+.discordCardScope dl,
+.discordCardScope dd,
+.discordCardScope h1,
+.discordCardScope h2,
+.discordCardScope h3,
+.discordCardScope h4,
+.discordCardScope h5,
+.discordCardScope h6,
+.discordCardScope hr,
+.discordCardScope figure,
+.discordCardScope p,
+.discordCardScope pre {
+  margin: 0;
+}
+
+.discordCardScope fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.discordCardScope legend {
+  padding: 0;
+}
+
+.discordCardScope ol,
+.discordCardScope ul,
+.discordCardScope menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.discordCardScope dialog {
+  padding: 0;
+}
+
+.discordCardScope textarea {
+  resize: vertical;
+}
+
+.discordCardScope input::placeholder,
+.discordCardScope textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+.discordCardScope button,
+.discordCardScope [role="button"] {
+  cursor: pointer;
+}
+
+.discordCardScope :disabled {
+  cursor: default;
+}
+
+.discordCardScope img,
+.discordCardScope svg,
+.discordCardScope video,
+.discordCardScope canvas,
+.discordCardScope audio,
+.discordCardScope iframe,
+.discordCardScope embed,
+.discordCardScope object {
+  display: block;
+  vertical-align: middle;
+}
+
+.discordCardScope img,
+.discordCardScope video {
+  max-width: 100%;
+  height: auto;
+}
+
+.discordCardScope [hidden] {
+  display: none;
+}
+
+/* Additional utility classes that may be used */
+.discordCardScope .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}

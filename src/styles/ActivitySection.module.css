@@ -1,0 +1,72 @@
+.activityContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.imageContainer {
+  display: flex;
+  gap: 0.25rem;
+  min-width: 65px;
+  align-self: flex-start;
+}
+
+.imageWrapper {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.largeImage {
+  width: 65px;
+  height: 65px;
+  user-select: none;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.smallImageOverlay {
+  position: absolute;
+  bottom: -3px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  user-select: none;
+  object-fit: cover;
+}
+
+.smallImageContainer {
+  min-width: 65px;
+  align-self: flex-start;
+}
+
+.smallImageStandalone {
+  width: 65px;
+  height: 65px;
+  user-select: none;
+  object-fit: cover;
+}
+
+.textContainer {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.activityName {
+  font-weight: 700;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  font-size: 0.875rem;
+  background-color: #383838;
+  padding: 6px 4px;
+  text-align: center;
+  margin-top: 8px;
+  border-radius: 0.375rem;
+  color: white;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

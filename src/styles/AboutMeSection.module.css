@@ -1,0 +1,13 @@
+.aboutMeSection {
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+}
+
+.aboutMeLink {
+  display: block;
+  color: rgb(59, 130, 246);
+}
+
+.aboutMeLink:hover {
+  color: rgb(96, 165, 250);
+}

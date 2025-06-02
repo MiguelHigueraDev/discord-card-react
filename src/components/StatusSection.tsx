@@ -1,3 +1,5 @@
+import styles from "../styles/StatusSection.module.css";
+
 /**
  * Renders a status section component with an optional icon, emoji, and status text.
  *
@@ -16,12 +18,10 @@ const StatusSection = ({
   status: string;
 }) => {
   return (
-    <section className="flex items-center justify-start gap-2">
-      {iconUrl && (
-        <img src={iconUrl} className="w-5 h-5 text-[0.8rem]" alt="" />
-      )}
-      {emoji && <p className="w-5 h-5 text-[0.8rem]">{emoji}</p>}
-      <p className="text-[0.95rem] text-start">{status}</p>
+    <section className={styles.container}>
+      {iconUrl && <img src={iconUrl} className={styles.icon} alt="" />}
+      {emoji && <p className={styles.emoji}>{emoji}</p>}
+      <p className={styles.status}>{status}</p>
     </section>
   );
 };

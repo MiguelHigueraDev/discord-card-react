@@ -24,6 +24,7 @@ import {
   LanyardSpotifySectionProps,
   ActivityPriority,
 } from "../types";
+import styles from "../styles/BaseDiscordCard.module.css";
 
 const LanyardDiscordCard = ({
   userId,
@@ -241,7 +242,7 @@ const LanyardDiscordCard = ({
             <Separator />
           </>
         )}
-        <div className="space-y-2">
+        <div className={styles.spaceY2}>
           {aboutMe && <AboutMeSection {...aboutMe} />}
           {memberSince && <MemberSinceSection {...memberSince} />}
           {renderSections()}

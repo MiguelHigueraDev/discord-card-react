@@ -1,0 +1,20 @@
+.badgeContainer {
+  position: absolute;
+  max-width: 196px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  z-index: 20;
+  bottom: -38px;
+  right: 14px;
+  background-color: #00000059;
+  border-radius: 0.375rem;
+  padding: 3px;
+  user-select: none;
+}
+
+.badgeIcon {
+  width: 22px;
+  height: 22px;
+}

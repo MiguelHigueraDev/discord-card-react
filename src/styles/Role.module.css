@@ -1,0 +1,25 @@
+.roleContainer {
+  background-color: rgba(75, 75, 75, 0.25);
+  padding: 8px;
+  border-radius: 4px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  user-select: none;
+  border: 0.5px solid rgba(136, 135, 135, 0.415);
+}
+
+.roleIcon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.roleText {
+  font-size: 0.73rem;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}

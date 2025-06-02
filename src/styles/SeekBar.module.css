@@ -1,0 +1,27 @@
+.container {
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.bar {
+  height: 0.25rem;
+  background-color: rgb(64, 64, 64);
+  border-radius: 0.75rem;
+}
+
+.progress {
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 0.75rem;
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.timeText {
+  margin: 0;
+  padding: 0;
+}

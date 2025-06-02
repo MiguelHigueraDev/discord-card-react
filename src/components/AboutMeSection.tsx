@@ -1,6 +1,7 @@
 import React from "react";
 import { AboutMeItem } from "../types";
 import SectionTitle from "./SectionTitle";
+import styles from "../styles/AboutMeSection.module.css";
 
 /**
  * Generates the About Me section with a title and optional items.
@@ -20,7 +21,7 @@ const AboutMeSection = ({
   items?: AboutMeItem[];
 }) => {
   return (
-    <section className="mb-1 text-[14px]">
+    <section className={styles.aboutMeSection}>
       <SectionTitle title={title || "About Me"} />
       {items &&
         items.map((item, index) =>
@@ -28,7 +29,7 @@ const AboutMeSection = ({
           item.href ? (
             <a
               key={index}
-              className="block text-blue-500 hover:text-blue-400"
+              className={styles.aboutMeLink}
               style={{ marginBottom: item.marginBottom }}
               href={item.href}
               target="_blank"
