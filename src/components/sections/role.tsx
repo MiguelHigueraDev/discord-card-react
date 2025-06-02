@@ -1,7 +1,7 @@
 import React from "react";
 import { Role as RoleItem } from "../../types";
 import SectionTitle from "../section-title";
-import Role from "../Role";
+import Role from "../role";
 import styles from "../../styles/RoleSection.module.css";
 
 /**

@@ -3,7 +3,7 @@ import { Activity, useLanyard } from "react-use-lanyard";
 import BasicInfoSection from "./sections/basic-info";
 import StatusSection from "./sections/status";
 import AboutMeSection from "./sections/about-me";
-import Separator from "./Separator";
+import Separator from "./separator";
 import MemberSinceSection from "./sections/member-since";
 import RoleSection from "./sections/role";
 import NoteSection from "./sections/note";
