@@ -1,8 +1,8 @@
 import React from "react";
-import { Role as RoleItem } from "../types";
-import SectionTitle from "./SectionTitle";
-import Role from "./Role";
-import styles from "../styles/RoleSection.module.css";
+import { Role as RoleItem } from "../../types";
+import SectionTitle from "../section-title";
+import Role from "../Role";
+import styles from "../../styles/RoleSection.module.css";
 
 /**
  * Render a section for displaying roles with an optional alternative title and list of roles.

@@ -1,6 +1,5 @@
-import BaseSection from "./BaseSection";
-import SectionTitle from "./SectionTitle";
-import styles from "../styles/MemberSinceSection.module.css";
+import SectionTitle from "../section-title";
+import styles from "../../styles/MemberSinceSection.module.css";
 /**
  * Renders a section displaying the member's join dates on Discord and the server.
  *
@@ -25,7 +24,7 @@ const MemberSinceSection = ({
   serverName?: string;
 }) => {
   return (
-    <BaseSection>
+    <section>
       <SectionTitle title={title || "Member since"} marginBottom={3} />
       <div className={styles.container}>
         {serverJoinDate ? (
@@ -62,7 +61,7 @@ const MemberSinceSection = ({
           <p className={styles.text}>{discordJoinDate}</p>
         )}
       </div>
-    </BaseSection>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-import styles from "../styles/BasicInfoSection.module.css";
+import styles from "../../styles/BasicInfoSection.module.css";
 
 /**
  * Renders a basic info section with display name, username, and pronouns.

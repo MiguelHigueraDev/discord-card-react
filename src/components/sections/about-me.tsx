@@ -1,7 +1,7 @@
 import React from "react";
-import { AboutMeItem } from "../types";
-import SectionTitle from "./SectionTitle";
-import styles from "../styles/AboutMeSection.module.css";
+import { AboutMeItem } from "../../types";
+import SectionTitle from "../section-title";
+import styles from "../../styles/AboutMeSection.module.css";
 
 /**
  * Generates the About Me section with a title and optional items.

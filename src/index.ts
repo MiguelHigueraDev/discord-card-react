@@ -1,6 +1,6 @@
-import DiscordCard from "./components/DiscordCard";
-import LanyardDiscordCard from "./components/LanyardDiscordCard";
-import BaseDiscordCard from "./components/BaseDiscordCard";
+import DiscordCard from "./components/discord-card";
+import LanyardDiscordCard from "./components/lanyard-discord-card";
+import BaseDiscordCard from "./components/base-discord-card";
 import "./App.css";
 
 export { DiscordCard, LanyardDiscordCard, BaseDiscordCard };

@@ -1,6 +1,6 @@
 import styles from "../styles/BaseDiscordCard.module.css";
 import preflightStyles from "../styles/DiscordCardPreflight.module.css";
-import BadgeSection from "./BadgeSection";
+import BadgeSection from "./sections/badge";
 import { Badge, ConnectionStatus } from "../types";
 
 const BaseDiscordCard = ({

@@ -36,16 +36,6 @@
   text-decoration: underline dotted;
 }
 
-.discordCardScope h1,
-.discordCardScope h2,
-.discordCardScope h3,
-.discordCardScope h4,
-.discordCardScope h5,
-.discordCardScope h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
 .discordCardScope a {
   color: inherit;
   text-decoration: inherit;

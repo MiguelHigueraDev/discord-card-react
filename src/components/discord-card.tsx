@@ -1,15 +1,14 @@
 import React from "react";
-import BaseDiscordCard from "./BaseDiscordCard";
-import BasicInfoSection from "./BasicInfoSection";
-import Separator from "./Separator";
-import StatusSection from "./StatusSection";
-import AboutMeSection from "./AboutMeSection";
-import MemberSinceSection from "./MemberSinceSection";
-import RoleSection from "./RoleSection";
-import NoteSection from "./NoteSection";
-import MessageSection from "./MessageSection";
-import SpotifySection from "./SpotifySection";
-import ActivitySection from "./ActivitySection";
+import BaseDiscordCard from "./base-discord-card";
+import BasicInfoSection from "./sections/basic-info";
+import StatusSection from "./sections/status";
+import AboutMeSection from "./sections/about-me";
+import MemberSinceSection from "./sections/member-since";
+import RoleSection from "./sections/role";
+import NoteSection from "./sections/note";
+import MessageSection from "./sections/message";
+import SpotifySection from "./sections/spotify";
+import ActivitySection from "./sections/activity";
 import {
   BasicInfoSectionProps,
   ConnectionStatus,
@@ -24,6 +23,7 @@ import {
   ActivitySectionProps,
 } from "../types";
 import styles from "../styles/BaseDiscordCard.module.css";
+import Separator from "./Separator";
 
 const DiscordCard = ({
   imageUrl,

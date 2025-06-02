@@ -1,5 +1,5 @@
-import { Badge } from "../types";
-import styles from "../styles/BadgeSection.module.css";
+import { Badge } from "../../types";
+import styles from "../../styles/BadgeSection.module.css";
 
 /**
  * Renders a list of badges in a <ul> container.

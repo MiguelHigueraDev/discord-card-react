@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
-import styles from "../styles/MessageSection.module.css";
+import useAutosizeTextArea from "../../hooks/useAutosizeTextArea";
+import styles from "../../styles/MessageSection.module.css";
 /**
  * Generates a Discord message section with a textarea for input.
  *

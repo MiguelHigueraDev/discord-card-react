@@ -1,4 +1,4 @@
-import styles from "../styles/StatusSection.module.css";
+import styles from "../../styles/StatusSection.module.css";
 
 /**
  * Renders a status section component with an optional icon, emoji, and status text.

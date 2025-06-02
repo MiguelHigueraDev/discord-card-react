@@ -2,7 +2,7 @@
  * Renders the seek bar for the SpotifySection component.
  */
 import { useEffect, useState } from "react";
-import { formatTime } from "../helpers/helperFunctions";
+import { formatTime } from "../helpers/helper-functions";
 import styles from "../styles/SeekBar.module.css";
 
 const SeekBar = ({

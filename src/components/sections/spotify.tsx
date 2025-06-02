@@ -1,7 +1,7 @@
-import SectionTitle from "./SectionTitle";
-import SeekBar from "./SeekBar";
-import SpotifyLogo from "./SpotifyLogo";
-import styles from "../styles/SpotifySection.module.css";
+import SectionTitle from "../section-title";
+import SeekBar from "../seek-bar";
+import styles from "../../styles/SpotifySection.module.css";
+import SpotifyLogo from "../spotify-logo";
 /**
  * Renders a section displaying Spotify song information.
  *

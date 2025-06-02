@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import useAutosizeTextArea from "../hooks/useAutosizeTextArea";
-import SectionTitle from "./SectionTitle";
-import styles from "../styles/NoteSection.module.css";
+import useAutosizeTextArea from "../../hooks/useAutosizeTextArea";
+import SectionTitle from "../section-title";
+import styles from "../../styles/NoteSection.module.css";
 /**
  * Renders a Discord note section with a title, note content, and input field for adding notes.
  *

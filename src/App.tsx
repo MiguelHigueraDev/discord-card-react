@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import DiscordCard from "./components/DiscordCard";
+import DiscordCard from "./components/discord-card";
 
 // This is an implementation example using Lanyard.
 function App() {
@@ -93,7 +93,8 @@ function App() {
         song: "Last Caress",
         artist: "Misfits",
         album: "Static Age",
-        artUrl: "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
+        artUrl:
+          "https://i.scdn.co/image/ab67616d0000b273f52e94692944d40e7faf3c81",
         trackUrl: "https://open.spotify.com/track/0S8LgLoseDB6W2HWd1ym6P",
         byText: "by",
         onText: "on",

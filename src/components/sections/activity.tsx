@@ -1,9 +1,9 @@
-import { formatTime } from "../helpers/helperFunctions";
-import { Party } from "../types";
-import BaseSection from "./BaseSection";
-import SectionTitle from "./SectionTitle";
+import { formatTime } from "../../helpers/helper-functions";
+import { Party } from "../../types";
+import BaseSection from "./base";
+import SectionTitle from "../section-title";
 import { useEffect, useState } from "react";
-import styles from "../styles/ActivitySection.module.css";
+import styles from "../../styles/ActivitySection.module.css";
 
 /**
  * Renders a section for displaying activity information.

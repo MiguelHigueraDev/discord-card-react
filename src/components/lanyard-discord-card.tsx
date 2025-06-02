@@ -1,15 +1,15 @@
-import BaseDiscordCard from "./BaseDiscordCard";
+import BaseDiscordCard from "./base-discord-card";
 import { Activity, useLanyard } from "react-use-lanyard";
-import BasicInfoSection from "./BasicInfoSection";
-import StatusSection from "./StatusSection";
-import AboutMeSection from "./AboutMeSection";
+import BasicInfoSection from "./sections/basic-info";
+import StatusSection from "./sections/status";
+import AboutMeSection from "./sections/about-me";
 import Separator from "./Separator";
-import MemberSinceSection from "./MemberSinceSection";
-import RoleSection from "./RoleSection";
-import NoteSection from "./NoteSection";
-import MessageSection from "./MessageSection";
-import SpotifySection from "./SpotifySection";
-import ActivitySection from "./ActivitySection";
+import MemberSinceSection from "./sections/member-since";
+import RoleSection from "./sections/role";
+import NoteSection from "./sections/note";
+import MessageSection from "./sections/message";
+import SpotifySection from "./sections/spotify";
+import ActivitySection from "./sections/activity";
 import { ReactNode } from "react";
 import {
   BasicInfoSectionProps,
