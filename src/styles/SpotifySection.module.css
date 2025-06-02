@@ -1,3 +1,60 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.albumArtContainer {
+  min-width: 65px;
+  align-self: flex-start;
+}
+
+.albumArt {
+  width: 65px;
+  height: 65px;
+  user-select: none;
+  border-radius: 0.375rem;
+}
+
+.songTitle {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.songInfo {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.playButton {
+  display: block;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 6px 4px;
+  text-align: center;
+  margin-top: 8px;
+  border-radius: 0.375rem;
+  color: white;
+  transition: filter 0.15s;
+  text-decoration: none;
+}
+
+.playButtonContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .lighten:hover {
-    filter: brightness(1.1);
+  filter: brightness(1.1);
 }

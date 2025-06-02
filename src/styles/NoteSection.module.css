@@ -1,0 +1,9 @@
+.noteTextarea {
+  font-size: 0.8rem;
+  padding: 4px;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  resize: none;
+  outline: none;
+}
