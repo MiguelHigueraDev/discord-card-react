@@ -23,7 +23,7 @@ import {
   ActivitySectionProps,
 } from "../types";
 import styles from "../styles/BaseDiscordCard.module.css";
-import Separator from "./separator";
+import Separator from "./Separator";
 
 const DiscordCard = ({
   imageUrl,
